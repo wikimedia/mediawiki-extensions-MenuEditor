@@ -1,0 +1,20 @@
+fileignoreconfig:
+- filename: doc/ExtendingEditor.md
+  checksum: 54cbe67cafe2a01d589b7d580dc0359609262965426ed242638c50d71f4bfbec
+- filename: i18n/en.json
+  checksum: d078c00503f941f4a6831893c865c4ef5c3089decd34dd740a3adc2ee533f0bf
+- filename: i18n/qqq.json
+  checksum: 869045b6ecd8b79d55477b3d63a6c9aa9a44c9414b6fedb7a561e33c36e23483
+- filename: resources/ui/data/node/KeywordNode.js
+  checksum: 61073b1ed1446915dd1d37a022269e7326dac5d5e7f5d25b458eb364800eb0c9
+- filename: src/Menu/MediawikiSidebar.php
+  checksum: 46f104f503d50e35ff8562ba491ea6b279f4a490286a76b1718d03a9b6b061c9
+- filename: src/Menu/MenuWithActionOverride.php
+  checksum: bad656c8d99ffa8f111160ed8a1342ea58abcf221b7b7ce6d7eb6cb4252983fd
+- filename: src/MenuAttributeRegistry.php
+  checksum: f37e26ecd823f339becf1b853e9cedb580a0bb2b388881298efe13c8754cbd67
+- filename: src/MenuFactory.php
+  checksum: dc790f909b1d0efcffc4f85338959ea471deaa9e3b1fc6cdf800165998adbd68
+- filename: src/Package/MenuRegistry.php
+  checksum: 53fe3dfdeb2c0151631f92ee68c052ffb11c608d752f05754a6e111d37b005e4
+version: "1.0"
