@@ -1,4 +1,4 @@
-ext.menueditor.ui.data.node.WikilinkNode = function( cfg ) {
+ext.menueditor.ui.data.node.WikilinkNode = function ( cfg ) {
 	ext.menueditor.ui.data.node.WikilinkNode.parent.call( this, cfg );
 };
 
@@ -6,18 +6,19 @@ OO.inheritClass( ext.menueditor.ui.data.node.WikilinkNode, ext.menueditor.ui.dat
 
 ext.menueditor.ui.data.node.WikilinkNode.static.canHaveChildren = false;
 
-ext.menueditor.ui.data.node.WikilinkNode.prototype.labelFromData = function( data ) {
+ext.menueditor.ui.data.node.WikilinkNode.prototype.labelFromData = function ( data ) {
 	if ( data.label ) {
 		return data.label + ' (' + data.target + ')';
 	}
 	return data.target;
 };
 
-ext.menueditor.ui.data.node.WikilinkNode.prototype.getIcon = function( data ) {
+// eslint-disable-next-line no-unused-vars
+ext.menueditor.ui.data.node.WikilinkNode.prototype.getIcon = function ( data ) {
 	return 'wikiText';
 };
 
-ext.menueditor.ui.data.node.WikilinkNode.prototype.getFormFields = function( ) {
+ext.menueditor.ui.data.node.WikilinkNode.prototype.getFormFields = function () {
 	return [
 		{
 			name: 'target',

@@ -1,4 +1,4 @@
-ext.menueditor.ui.data.node.KeywordNode = function( cfg ) {
+ext.menueditor.ui.data.node.KeywordNode = function ( cfg ) {
 	ext.menueditor.ui.data.node.KeywordNode.parent.call( this, cfg );
 };
 
@@ -6,15 +6,16 @@ OO.inheritClass( ext.menueditor.ui.data.node.KeywordNode, ext.menueditor.ui.data
 
 ext.menueditor.ui.data.node.KeywordNode.static.canHaveChildren = false;
 
-ext.menueditor.ui.data.node.KeywordNode.prototype.labelFromData = function( data ) {
+ext.menueditor.ui.data.node.KeywordNode.prototype.labelFromData = function ( data ) {
 	return data.keyword;
 };
 
-ext.menueditor.ui.data.node.KeywordNode.prototype.getIcon = function( data ) {
+// eslint-disable-next-line no-unused-vars
+ext.menueditor.ui.data.node.KeywordNode.prototype.getIcon = function ( data ) {
 	return 'markup';
 };
 
-ext.menueditor.ui.data.node.KeywordNode.prototype.getFormFields = function( ) {
+ext.menueditor.ui.data.node.KeywordNode.prototype.getFormFields = function () {
 	return [
 		{
 			name: 'keyword',
@@ -24,8 +25,9 @@ ext.menueditor.ui.data.node.KeywordNode.prototype.getFormFields = function( ) {
 				{ data: 'TOOLBOX' },
 				{ data: 'LANGUAGES' },
 				{ data: 'PAGESVISITED' },
-				{ data: 'YOUREDITS' },
+				{ data: 'YOUREDITS' }
 			],
+			// eslint-disable-next-line camelcase
 			widget_$overlay: true,
 			required: true,
 			label: mw.message( 'menueditor-ui-form-field-keyword' ).text()

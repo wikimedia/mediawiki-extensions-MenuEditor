@@ -1,24 +1,24 @@
-( function( mw, $ ) {
-	ext.menueditor.init.loadEntities = function() {
+( function ( mw, $ ) {
+	ext.menueditor.init.loadEntities = function () {
 		var dfd = $.Deferred();
 
 		function register( value, registry ) {
-			var dfd = $.Deferred(), modules = [];
+			var registerDfd = $.Deferred(), modules = [];
 			for ( var name in value ) {
-				if ( !value.hasOwnProperty( name ) ) {
+				if ( !value.hasOwnProperty( name ) ) { // eslint-disable-line no-prototype-builtins
 					continue;
 				}
-				modules.push( value[name].module );
-				registry.register( name, value[name].classname );
+				modules.push( value[ name ].module );
+				registry.register( name, value[ name ].classname );
 			}
 
-			mw.loader.using( $.unique( modules ), function() {
-				dfd.resolve();
-			}, function() {
-				dfd.reject();
+			mw.loader.using( $.uniqueSort( modules ), function () {
+				registerDfd.resolve();
+			}, function () {
+				registerDfd.reject();
 			} );
 
-			return dfd.promise();
+			return registerDfd.promise();
 		}
 
 		ext.menueditor.registry.menu = new OO.Registry();
@@ -27,7 +27,7 @@
 		$.when(
 			register( require( './menus.json' ), ext.menueditor.registry.menu, dfd ),
 			register( require( './nodes.json' ), ext.menueditor.registry.node, dfd )
-		).then( function() {
+		).then( function () {
 			dfd.resolve();
 		} );
 		return dfd.promise();

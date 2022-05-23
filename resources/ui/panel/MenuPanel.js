@@ -3,7 +3,9 @@ ext.menueditor.ui.panel.MenuPanel = function ( cfg, treeData, menuType ) {
 
 	this.pagename = cfg.pagename;
 	this.allowEdit = cfg.mode && cfg.mode === 'edit';
-	var classname = ext.menueditor.util.callbackFromString( ext.menueditor.registry.menu.registry[menuType] );
+	var classname = ext.menueditor.util.callbackFromString(
+		ext.menueditor.registry.menu.registry[ menuType ]
+	);
 
 	if ( typeof treeData === 'undefined' && !this.allowEdit ) {
 		this.$element.append(
@@ -15,6 +17,7 @@ ext.menueditor.ui.panel.MenuPanel = function ( cfg, treeData, menuType ) {
 		return;
 	}
 
+	// eslint-disable-next-line new-cap
 	this.tree = new classname( {
 		data: treeData || cfg.defaultData || [],
 		editable: this.allowEdit
@@ -27,14 +30,14 @@ ext.menueditor.ui.panel.MenuPanel = function ( cfg, treeData, menuType ) {
 		} );
 
 		this.saveButton.connect( this, {
-			click: function() {
+			click: function () {
 				this.saveButton.setDisabled( true );
 				var data = this.tree.getNodes();
 
-				ext.menueditor.api.save( this.pagename, data ).done( function() {
+				ext.menueditor.api.save( this.pagename, data ).done( function () {
 					this.saveButton.setDisabled( false );
 					this.emit( 'saveSuccess' );
-				}.bind( this ) ).fail( function( error ) {
+				}.bind( this ) ).fail( function ( error ) {
 					this.saveButton.setDisabled( false );
 					this.emit( 'saveFailed', error );
 				}.bind( this ) );
@@ -45,7 +48,7 @@ ext.menueditor.ui.panel.MenuPanel = function ( cfg, treeData, menuType ) {
 			framed: false
 		} );
 		this.cancelButton.connect( this, {
-			click: function() {
+			click: function () {
 				this.emit( 'cancel' );
 			}
 		} );
@@ -59,6 +62,6 @@ ext.menueditor.ui.panel.MenuPanel = function ( cfg, treeData, menuType ) {
 
 OO.inheritClass( ext.menueditor.ui.panel.MenuPanel, OO.ui.PanelLayout );
 
-ext.menueditor.ui.panel.MenuPanel.prototype.getTree = function() {
+ext.menueditor.ui.panel.MenuPanel.prototype.getTree = function () {
 	return this.tree;
 };

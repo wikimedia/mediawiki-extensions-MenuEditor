@@ -1,4 +1,4 @@
-ext.menueditor.ui.data.node.TreeNode = function( cfg ) {
+ext.menueditor.ui.data.node.TreeNode = function ( cfg ) {
 	this.nodeData = cfg.nodeData;
 	this.allowEdits = cfg.allowEdits || false;
 	cfg.label = this.labelFromData( this.nodeData );
@@ -8,30 +8,47 @@ ext.menueditor.ui.data.node.TreeNode = function( cfg ) {
 	this.$element.attr( 'data-level', cfg.level );
 };
 
+// eslint-disable-next-line no-undef
 OO.inheritClass( ext.menueditor.ui.data.node.TreeNode, OOJSPlus.ui.data.tree.Item );
 
-ext.menueditor.ui.data.node.TreeNode.prototype.labelFromData = function( data ) {
+// eslint-disable-next-line no-unused-vars
+ext.menueditor.ui.data.node.TreeNode.prototype.labelFromData = function ( data ) {
 	return '';
 };
 
-ext.menueditor.ui.data.node.TreeNode.prototype.getIcon = function( data ) {
+// eslint-disable-next-line no-unused-vars
+ext.menueditor.ui.data.node.TreeNode.prototype.getIcon = function ( data ) {
 	return '';
 };
 
-ext.menueditor.ui.data.node.TreeNode.prototype.getForm = function() {
+ext.menueditor.ui.data.node.TreeNode.prototype.getForm = function () {
 	var dfd = $.Deferred();
-	mw.loader.using( [ "ext.forms.standalone" ], function() {
+	mw.loader.using( [ 'ext.forms.standalone' ], function () {
+		// The following messages are used here
+		// * menueditor-ui-menu-wiki-link-label
+		// * menueditor-ui-menu-two-fold-link-spec-label
+		// * menueditor-ui-menu-raw-text-label
+		// * menueditor-ui-menu-keyword-label
+		var labelText = mw.message( 'menueditor-ui-' + this.nodeData.type + '-label' ).text();
+
+		// The following messages are used here
+		// * menueditor-ui-menu-wiki-link-help
+		// * menueditor-ui-menu-two-fold-link-spec-help
+		// * menueditor-ui-menu-raw-text-help
+		// * menueditor-ui-menu-keyword-help
+		var helpText = mw.message( 'menueditor-ui-' + this.nodeData.type + '-help' ).text();
 		var form = new mw.ext.forms.standalone.Form( {
 			data: this.getNodeData(),
 			definition: {
 				items: [
 					{
 						type: 'section_label',
-						title: mw.message( 'menueditor-ui-' + this.nodeData.type + '-label' ).text()
+						title: labelText
 					},
 					{
 						type: 'label',
-						widget_label: new OO.ui.HtmlSnippet( mw.message( 'menueditor-ui-' + this.nodeData.type + '-help' ).text() ),
+						// eslint-disable-next-line camelcase
+						widget_label: new OO.ui.HtmlSnippet( helpText ),
 						noLayout: true
 					},
 					{
@@ -43,13 +60,14 @@ ext.menueditor.ui.data.node.TreeNode.prototype.getForm = function() {
 				buttons: []
 			},
 			errorReporting: false,
-			showTitle: false,
+			showTitle: false
 		} );
 		form.render();
 		form.$element.addClass( 'menueditor-menu-node-form' );
 
 		dfd.resolve( form );
-	}.bind( this ), function() {
+	}.bind( this ), function () {
+		// eslint-disable-next-line no-console
 		console.error( 'Cannot load Forms framework' );
 		dfd.reject();
 	} );
@@ -57,12 +75,12 @@ ext.menueditor.ui.data.node.TreeNode.prototype.getForm = function() {
 	return dfd.promise();
 };
 
-ext.menueditor.ui.data.node.TreeNode.prototype.getFormFields = function() {
+ext.menueditor.ui.data.node.TreeNode.prototype.getFormFields = function () {
 	// STUB
 	return [];
 };
 
-ext.menueditor.ui.data.node.TreeNode.prototype.possiblyAddOptions = function() {
+ext.menueditor.ui.data.node.TreeNode.prototype.possiblyAddOptions = function () {
 	ext.menueditor.ui.data.node.TreeNode.parent.prototype.possiblyAddOptions.call( this );
 
 	if ( !this.allowEdits ) {
@@ -81,18 +99,18 @@ ext.menueditor.ui.data.node.TreeNode.prototype.possiblyAddOptions = function() {
 	this.optionsPanel.$element.prepend( editButton.$element );
 };
 
-ext.menueditor.ui.data.node.TreeNode.prototype.onEdit = function() {
+ext.menueditor.ui.data.node.TreeNode.prototype.onEdit = function () {
 	this.tree.editNode( this );
 };
 
-ext.menueditor.ui.data.node.TreeNode.prototype.getNodeData = function() {
+ext.menueditor.ui.data.node.TreeNode.prototype.getNodeData = function () {
 	var node = $.extend( {}, this.nodeData );
-	delete( node.items );
-	delete( node.name );
+	delete ( node.items );
+	delete ( node.name );
 	return node;
 };
 
-ext.menueditor.ui.data.node.TreeNode.prototype.updateData = function( data ) {
+ext.menueditor.ui.data.node.TreeNode.prototype.updateData = function ( data ) {
 	this.nodeData = $.extend( this.nodeData, data );
 	this.label = this.labelFromData( this.nodeData );
 	this.labelWidget.setLabel( this.label );

@@ -2,7 +2,8 @@
 	"name": "MenuEditor",
 	"private": true,
 	"scripts": {
-		"test": "grunt test"
+		"test": "grunt test",
+		"fix": "eslint --fix resources/"
 	},
 	"devDependencies": {
 		"eslint-config-wikimedia": "0.22.1",

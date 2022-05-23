@@ -1,4 +1,4 @@
-ext.menueditor.ui.data.node.TextNode = function( cfg ) {
+ext.menueditor.ui.data.node.TextNode = function ( cfg ) {
 	ext.menueditor.ui.data.node.TextNode.parent.call( this, cfg );
 };
 
@@ -6,15 +6,15 @@ OO.inheritClass( ext.menueditor.ui.data.node.TextNode, ext.menueditor.ui.data.no
 
 ext.menueditor.ui.data.node.TextNode.static.canHaveChildren = true;
 
-ext.menueditor.ui.data.node.TextNode.prototype.labelFromData = function( data ) {
+ext.menueditor.ui.data.node.TextNode.prototype.labelFromData = function ( data ) {
 	return data.text;
 };
 
-ext.menueditor.ui.data.node.TextNode.prototype.getIcon = function() {
+ext.menueditor.ui.data.node.TextNode.prototype.getIcon = function () {
 	return 'textLanguage';
 };
 
-ext.menueditor.ui.data.node.TextNode.prototype.getFormFields = function( ) {
+ext.menueditor.ui.data.node.TextNode.prototype.getFormFields = function () {
 	return [
 		{
 			name: 'text',

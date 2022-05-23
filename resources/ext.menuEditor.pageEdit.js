@@ -1,28 +1,27 @@
-( function( mw, $ ) {
-	$( function() {
-		var $c = $( '#menuEditor-container' );
+( function ( mw, $ ) {
+	$( function () {
+		var $c = $( '#menuEditor-container' ); // eslint-disable-line no-jquery/no-global-selector
 		if ( !$c.length ) {
 			return;
 		}
 
 		var data = $c.data();
-		console.log( $c.data( 'default' ) );
 		ext.menueditor.init.getPanelForPage(
 			mw.config.get( 'wgPageName' ), data.menuKey, mw.config.get( 'wgRevisionId' ), data.mode, {
 				defaultData: $c.data( 'default' )
 			}
-		).done( function( panel ) {
+		).done( function ( panel ) {
 			panel.connect( this, {
-				saveFail: function( error ) {
+				saveFail: function ( error ) {
 					$.prepend( new OO.ui.MessageWidget( {
 						type: 'error',
 						text: error
 					} ).$element );
 				},
-				saveSuccess: function() {
+				saveSuccess: function () {
 					window.location = mw.util.getUrl( mw.config.get( 'wgPageName' ) );
 				},
-				cancel: function() {
+				cancel: function () {
 					window.location = mw.util.getUrl( mw.config.get( 'wgPageName' ) );
 				}
 			} );

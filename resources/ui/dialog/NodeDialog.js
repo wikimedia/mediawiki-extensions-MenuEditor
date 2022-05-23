@@ -1,4 +1,4 @@
-ext.menueditor.ui.dialog.NodeDialog = function( config, node ) {
+ext.menueditor.ui.dialog.NodeDialog = function ( config, node ) {
 	ext.menueditor.ui.dialog.NodeDialog.super.call( this, config );
 	this.node = node;
 	this.allowedNodes = config.allowedNodes || [];
@@ -30,7 +30,7 @@ ext.menueditor.ui.dialog.NodeDialog.prototype.initialize = function () {
 	} );
 	if ( this.node ) {
 		this.pushPending();
-		this.node.getForm().done( function( form ) {
+		this.node.getForm().done( function ( form ) {
 			this.content.$element.append( form.$element );
 			this.setForm( form );
 		}.bind( this ) );
@@ -43,7 +43,7 @@ ext.menueditor.ui.dialog.NodeDialog.prototype.initialize = function () {
 			$overlay: true
 		} );
 		selector.getMenu().connect( this, {
-			select: function( item ) {
+			select: function ( item ) {
 				this.setItem( item.getData() );
 
 			}
@@ -72,8 +72,12 @@ ext.menueditor.ui.dialog.NodeDialog.prototype.getAllowedNodeOptions = function (
 		allowedValid = this.allowedNodes.length === 0 ?
 			all : all.filter( function ( x ) { return allowedConfig.indexOf( x ) !== -1; } );
 
-	console.log( all );
 	return allowedValid.map( function ( x ) {
+		// The following messages are used here
+		// * menueditor-ui-menu-wiki-link-label
+		// * menueditor-ui-menu-two-fold-link-spec-label
+		// * menueditor-ui-menu-raw-text-label
+		// * menueditor-ui-menu-keyword-label
 		var msg = mw.message( 'menueditor-ui-' + x + '-label' ),
 			label = msg.exists() ? msg.text() : x;
 		return new OO.ui.MenuOptionWidget( {
@@ -86,9 +90,13 @@ ext.menueditor.ui.dialog.NodeDialog.prototype.getAllowedNodeOptions = function (
 ext.menueditor.ui.dialog.NodeDialog.prototype.setItem = function ( type ) {
 	this.pushPending();
 
-	var classname = ext.menueditor.util.callbackFromString( ext.menueditor.registry.node.registry[type] );
-	var node = new classname( { nodeData: { type: type }, tree: this.tree } );
-	node.getForm().done( function( form ) {
+	var classname = ext.menueditor.util.callbackFromString(
+		ext.menueditor.registry.node.registry[ type ]
+	);
+	var params = { nodeData: { type: type }, tree: this.tree };
+	// eslint-disable-next-line new-cap
+	var node = new classname( params );
+	node.getForm().done( function ( form ) {
 		this.formCnt.$element.html( form.$element );
 		// make some space between the selector and form
 		form.$element.css( { 'margin-top': '20px' } );
@@ -101,7 +109,7 @@ ext.menueditor.ui.dialog.NodeDialog.prototype.setForm = function ( form ) {
 
 	if ( form ) {
 		form.connect( this, {
-			renderComplete: function() {
+			renderComplete: function () {
 				this.updateSize();
 			}
 		} );
@@ -114,6 +122,7 @@ ext.menueditor.ui.dialog.NodeDialog.prototype.setForm = function ( form ) {
 };
 
 ext.menueditor.ui.dialog.NodeDialog.prototype.getBodyHeight = function () {
+	// eslint-disable-next-line no-jquery/no-class-state
 	if ( !this.$errors.hasClass( 'oo-ui-element-hidden' ) ) {
 		return this.$element.find( '.oo-ui-processDialog-errors' )[ 0 ].scrollHeight;
 	}
@@ -124,11 +133,12 @@ ext.menueditor.ui.dialog.NodeDialog.prototype.getBodyHeight = function () {
 ext.menueditor.ui.dialog.NodeDialog.prototype.getActionProcess = function ( action ) {
 	if ( action === 'done' ) {
 		this.form.connect( this, {
-			dataSubmitted: function( data ) {
+			dataSubmitted: function ( data ) {
 				this.close( { action: action, data: data, node: this.node } );
 			}
 		} );
 		this.form.submit();
 	}
+	// eslint-disable-next-line max-len
 	return ext.menueditor.ui.dialog.NodeDialog.super.prototype.getActionProcess.call( this, action );
 };

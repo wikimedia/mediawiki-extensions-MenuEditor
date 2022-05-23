@@ -6,6 +6,11 @@
 		"wikimedia/mediawiki"
 	],
 	"rules": {
-		"no-implicit-globals": "off"
+		"no-undef": "warn"
+	},
+	"globals": {
+		"ext": "readonly",
+		"mediaWiki": "readonly",
+		"jQuery": "readonly"
 	}
 }
