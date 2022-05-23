@@ -4,6 +4,7 @@
 node_modules/**
 vendor/**
 .talismanrc
+.eslintcache
 
 composer.lock
 composer.phar

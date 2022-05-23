@@ -25,7 +25,7 @@ OO.inheritClass( ext.menueditor.ui.data.tree.Tree, OOJSPlus.ui.data.Tree );
 		level: lvl,
 		tree: this,
 		nodeData: item,
-		allowAdditions: this.allowAdditions && ( maxLevels ?  lvl + 1 <  maxLevels : true ) && classname.static.canHaveChildren,
+		allowAdditions: this.allowAdditions && ( maxLevels ? lvl + 1 < maxLevels : true ) && classname.static.canHaveChildren,
 		allowEdits: this.editable,
 		allowDeletions: this.allowDeletions
 	} );
@@ -95,7 +95,7 @@ ext.menueditor.ui.data.tree.Tree.prototype.onDragStart = function( item, $target
 
 ext.menueditor.ui.data.tree.Tree.prototype.allowedNestedDrag = function( item ) {
 	// Level of deepest child (root = 0) + 1 because max levels start at 1 (2 levels means root(0) + 1 sublevel)
-	return this.getMaxNestedLevelForItem( item )  + 1 <= this.getMaxLevels();
+	return this.getMaxNestedLevelForItem( item ) + 1 <= this.getMaxLevels();
 };
 
 ext.menueditor.ui.data.tree.Tree.prototype.getMaxNestedLevelForItem = function( item ) {

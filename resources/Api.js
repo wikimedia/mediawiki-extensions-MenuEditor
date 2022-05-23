@@ -35,7 +35,7 @@
 	};
 
 	ext.menueditor.api.Api.prototype.makeUrl = function ( path ) {
-		if ( path.charAt( 0 )  === '/' ) {
+		if ( path.charAt( 0 ) === '/' ) {
 			path = path.substring( 1 );
 		}
 		return mw.util.wikiScript( 'rest' ) + '/menueditor/' + path;

@@ -40,7 +40,7 @@ ext.menueditor.ui.panel.MenuPanel = function ( cfg, treeData, menuType ) {
 				}.bind( this ) );
 			}
 		} );
-		this.cancelButton  = new OO.ui.ButtonWidget( {
+		this.cancelButton = new OO.ui.ButtonWidget( {
 			label: mw.message( 'menueditor-ui-cancel' ).text(),
 			framed: false
 		} );
