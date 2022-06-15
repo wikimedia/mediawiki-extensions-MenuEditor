@@ -1,4 +1,6 @@
 {
-	"menueditor-desc": "Deutsche Beschreibung von MenuEditor",
-	"menueditor": "Menu Editor"
+	"@metadata": {
+		"authors": []
+	},
+	"menueditor-desc": "Deutsche Beschreibung von MenuEditor"
 }

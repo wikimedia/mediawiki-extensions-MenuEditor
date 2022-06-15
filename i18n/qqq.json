@@ -1,4 +1,7 @@
 {
+	"@metadata": {
+		"authors": []
+	},
 	"menueditor-desc": "Description of MenuEditor for [[Special:Version]]",
 	"menueditor-ui-menu-wiki-link-label": "Node label",
 	"menueditor-ui-menu-wiki-link-help": "ode description",
