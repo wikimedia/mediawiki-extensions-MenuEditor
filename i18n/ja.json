@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"MathXplore"
+		]
+	},
+	"menueditor-ui-menu-two-fold-link-spec-label": "リンク",
+	"menueditor-ui-menu-keyword-label": "キーワード",
+	"menueditor-ui-form-field-keyword": "キーワード",
+	"menueditor-ui-dialog-action-done": "完了",
+	"menueditor-ui-dialog-action-cancel": "キャンセル",
+	"menueditor-ui-submit": "保存",
+	"menueditor-ui-cancel": "キャンセル",
+	"menueditor-action-menueditsource": "ソースを編集",
+	"menueditor-action-menuedit": "編集"
+}
