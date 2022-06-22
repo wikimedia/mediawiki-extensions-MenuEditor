@@ -17,6 +17,7 @@
 	"menueditor-ui-dialog-action-cancel": "Ofbriechen",
 	"menueditor-ui-submit": "Späicheren",
 	"menueditor-ui-cancel": "Ofbriechen",
+	"menueditor-ui-redlink-notice": "Dëse Menü gëtt et nach net!",
 	"menueditor-action-menueditsource": "Quelltext änneren",
 	"menueditor-action-menuedit": "Änneren"
 }
