@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kareyac"
+		]
+	},
+	"menueditor-ui-menu-two-fold-link-spec-label": "Հղում",
+	"menueditor-ui-dialog-action-done": "Արված է",
+	"menueditor-ui-submit": "Հիշել",
+	"menueditor-ui-cancel": "Չեղարկել",
+	"menueditor-action-menuedit": "Խմբագրել"
+}

@@ -1,0 +1,21 @@
+{
+	"@metadata": {
+		"authors": [
+			"Winston Sung"
+		]
+	},
+	"menueditor-ui-menu-wiki-link-label": "wiki連結",
+	"menueditor-ui-menu-two-fold-link-spec-label": "連結",
+	"menueditor-ui-menu-raw-text-label": "文字或系統訊息鍵名",
+	"menueditor-ui-edit-node-label": "編輯節點",
+	"menueditor-ui-form-field-text": "文字或系統訊息鍵名",
+	"menueditor-ui-form-field-target": "連結目標",
+	"menueditor-ui-form-field-label": "連結文字",
+	"menueditor-ui-dialog-action-done": "完成",
+	"menueditor-ui-dialog-action-cancel": "取消",
+	"menueditor-ui-node-type-selector-label": "節點類型",
+	"menueditor-ui-submit": "儲存",
+	"menueditor-ui-cancel": "取消",
+	"menueditor-action-menueditsource": "編輯原始碼",
+	"menueditor-action-menuedit": "編輯"
+}
