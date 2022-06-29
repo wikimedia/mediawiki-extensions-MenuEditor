@@ -41,12 +41,12 @@
 			}
 		}
 	},
+	"callback": "mwsInitComponents",
 	"ExtensionMessagesFiles": {
 		"MenuEditorAlias": "languages/MenuEditor.i18n.alias.php"
 	},
 	"AutoloadNamespaces": {
-		"MediaWiki\\Extension\\MenuEditor\\": "src/",
-		"MediaWiki\\Extension\\MenuEditor\\Tests\\": "tests/phpunit"
+		"MediaWiki\\Extension\\MenuEditor\\": "src/"
 	},
 	"ServiceWiringFiles": [
 		"includes/ServiceWiring.php"
@@ -175,5 +175,6 @@
 			"services": [ "WikitextParserFactory", "TitleFactory" ]
 		}
 	],
+	"load_composer_autorloader": true,
 	"manifest_version": 2
 }
