@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Verdy p"
 		]
 	},
 	"menueditor-desc": "Description of MenuEditor for [[Special:Version]]",
@@ -24,6 +25,6 @@
 	"menueditor-ui-submit": "Panel action label\n{{identical|Save}}",
 	"menueditor-ui-cancel": "Panel action label\n{{identical|Cancel}}",
 	"menueditor-ui-redlink-notice": "Notice shown when menu page does not exist",
-	"menueditor-action-menueditsource": "Label for \"menueditsource\" action",
+	"menueditor-action-menueditsource": "Label for \"menueditsource\" action.\n{{Identical/Edit source}}",
 	"menueditor-action-menuedit": "Label override for \"edit\" action\n{{identical|Edit}}"
 }

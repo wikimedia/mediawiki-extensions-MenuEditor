@@ -1,13 +1,20 @@
 {
 	"@metadata": {
 		"authors": [
-			"Winston Sung"
+			"Winston Sung",
+			"Kly"
 		]
 	},
+	"menueditor-desc": "用於選單頁面的圖形化編輯器",
 	"menueditor-ui-menu-wiki-link-label": "wiki連結",
+	"menueditor-ui-menu-wiki-link-help": "連結到一個 wiki 頁面",
 	"menueditor-ui-menu-two-fold-link-spec-label": "連結",
+	"menueditor-ui-menu-two-fold-link-spec-help": "連結格式。<br>目標可以是：<ul><li>可解析頁面名稱的 message-key</li><li>外部連結</li><li>在 wiki 上的頁面名稱</li><li>內部 wiki 連結</li></ul>",
 	"menueditor-ui-menu-raw-text-label": "文字或系統訊息鍵名",
+	"menueditor-ui-menu-keyword-label": "關鍵字",
+	"menueditor-ui-menu-keyword-help": "可用的'''關鍵字'''之一，將會顯示合適的小工具",
 	"menueditor-ui-edit-node-label": "編輯節點",
+	"menueditor-ui-form-field-keyword": "關鍵字",
 	"menueditor-ui-form-field-text": "文字或系統訊息鍵名",
 	"menueditor-ui-form-field-target": "連結目標",
 	"menueditor-ui-form-field-label": "連結文字",
@@ -16,6 +23,7 @@
 	"menueditor-ui-node-type-selector-label": "節點類型",
 	"menueditor-ui-submit": "儲存",
 	"menueditor-ui-cancel": "取消",
+	"menueditor-ui-redlink-notice": "此選單不存在！",
 	"menueditor-action-menueditsource": "編輯原始碼",
 	"menueditor-action-menuedit": "編輯"
 }
