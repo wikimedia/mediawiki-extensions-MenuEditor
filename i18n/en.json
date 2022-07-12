@@ -1,4 +1,9 @@
 {
+	"@metadata": {
+		"authors": [
+			"Mschlindwein"
+		]
+	},
 	"menueditor-desc": "Graphical editor for menu pages",
 	"menueditor-ui-menu-wiki-link-label": "Wiki link",
 	"menueditor-ui-menu-wiki-link-help": "Link to a wiki page",
