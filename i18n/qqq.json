@@ -2,7 +2,7 @@
 	"menueditor-desc": "Description of MenuEditor for [[Special:Version]]",
 	"menueditor-ui-menu-wiki-link-label": "Node label",
 	"menueditor-ui-menu-wiki-link-help": "ode description",
-	"menueditor-ui-menu-two-fold-link-spec-label": "Node label",
+	"menueditor-ui-menu-two-fold-link-spec-label": "Node label\n{{identical|Link}}",
 	"menueditor-ui-menu-two-fold-link-spec-help": "Node description",
 	"menueditor-ui-menu-raw-text-label": "Node label",
 	"menueditor-ui-menu-raw-text-help": "Node description",
@@ -13,12 +13,18 @@
 	"menueditor-ui-form-field-text": "Form field label",
 	"menueditor-ui-form-field-target": "Form field label",
 	"menueditor-ui-form-field-label": "Form field label",
-	"menueditor-ui-dialog-action-done": "Dialog action label",
-	"menueditor-ui-dialog-action-cancel": "Dialog action label",
+	"menueditor-ui-dialog-action-done": "Dialog action label\n{{identical|Done}}",
+	"menueditor-ui-dialog-action-cancel": "Dialog action label\n{{identical|Cancel}}",
 	"menueditor-ui-node-type-selector-label": "Label for the node selector",
-	"menueditor-ui-submit": "Panel action label",
-	"menueditor-ui-cancel": "Panel action label",
+	"menueditor-ui-submit": "Panel action label\n{{identical|Save}}",
+	"menueditor-ui-cancel": "Panel action label\n{{identical|Cancel}}",
 	"menueditor-ui-redlink-notice": "Notice shown when menu page does not exist",
-	"menueditor-action-menueditsource": "Label for \"menueditsource\" action",
-	"menueditor-action-menuedit": "Label override for \"edit\" action"
+	"menueditor-action-menueditsource": "Label for \"menueditsource\" action.\n{{Identical/Edit source}}",
+	"menueditor-action-menuedit": "Label override for \"edit\" action\n{{identical|Edit}}",
+	"@metadata": {
+		"authors": [
+			"Robby",
+			"Verdy p"
+		]
+	}
 }

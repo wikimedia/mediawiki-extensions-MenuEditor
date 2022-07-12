@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kareyac",
+			"Pacha Tchernof"
+		]
+	},
+	"menueditor-ui-menu-wiki-link-help": "Ссылка на вики-страницу",
+	"menueditor-ui-menu-two-fold-link-spec-label": "Ссылка",
+	"menueditor-ui-menu-keyword-label": "Ключевое слово",
+	"menueditor-ui-form-field-keyword": "Ключевое слово",
+	"menueditor-ui-dialog-action-done": "Готово",
+	"menueditor-ui-dialog-action-cancel": "Отмена",
+	"menueditor-ui-submit": "Сохранить",
+	"menueditor-ui-cancel": "Отмена",
+	"menueditor-action-menuedit": "Править"
+}

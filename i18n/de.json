@@ -1,4 +1,12 @@
 {
 	"menueditor-desc": "Deutsche Beschreibung von MenuEditor",
-	"menueditor": "Menu Editor"
+	"menueditor": "Menu Editor",
+	"@metadata": {
+		"authors": [
+			"ThisCarthing"
+		]
+	},
+	"menueditor-ui-submit": "Speichern",
+	"menueditor-ui-cancel": "Abbrechen",
+	"menueditor-ui-redlink-notice": "Dieses Menü ist noch nicht vorhanden!"
 }
