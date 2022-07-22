@@ -5,3 +5,15 @@
 .menueditor-menu-node-form .forms-section {
 	margin-top: 0;
 }
+
+.mw-ext-forms-form.menueditor-menu-node-form {
+	padding-top: 0;
+}
+
+.menueditor-menu-node-form.mw-ext-forms-form .forms-section {
+	margin-top: 0;
+}
+
+.menueditor-selector-widget {
+	margin-bottom: 10px;
+}

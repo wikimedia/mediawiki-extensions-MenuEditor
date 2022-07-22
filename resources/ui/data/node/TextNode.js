@@ -20,7 +20,8 @@ ext.menueditor.ui.data.node.TextNode.prototype.getFormFields = function () {
 			name: 'text',
 			type: 'text',
 			required: true,
-			label: mw.message( 'menueditor-ui-form-field-text' ).text()
+			label: mw.message( 'menueditor-ui-form-field-text' ).text(),
+			help: mw.message( 'menueditor-ui-menu-raw-text-help' ).text()
 		}
 	];
 };

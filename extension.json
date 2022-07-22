@@ -17,8 +17,7 @@
 		"MenuEditor": {
 			"Menus": {
 				"mediawiki-sidebar": {
-					"class": "MediaWiki\\Extension\\MenuEditor\\Menu\\MediawikiSidebar",
-					"services": [ "HookContainer" ]
+					"class": "MediaWiki\\Extension\\MenuEditor\\Menu\\MediawikiSidebar"
 				}
 			},
 			"Nodes": {
@@ -96,7 +95,8 @@
 				"menueditor-ui-dialog-action-done",
 				"menueditor-ui-dialog-action-cancel",
 				"menueditor-ui-edit-node-label",
-				"menueditor-ui-node-type-selector-label"
+				"menueditor-ui-node-type-selector-label",
+				"menueditor-ui-dialog-title"
 			],
 			"dependencies": [
 				"ext.oOJSPlus.data"
@@ -128,7 +128,12 @@
 				"menueditor-ui-form-field-text",
 				"menueditor-ui-form-field-target",
 				"menueditor-ui-form-field-label",
-				"menueditor-ui-menu-raw-text-help"
+				"menueditor-ui-menu-raw-text-help",
+				"menueditor-ui-menu-wiki-link-label-edit",
+				"menueditor-ui-menu-two-fold-link-spec-label-edit",
+				"menueditor-ui-menu-raw-text-label-edit",
+				"menueditor-ui-menu-keyword-label-edit",
+				"menueditor-ui-cancel"
 			]
 		},
 		"ext.menuEditor.panel": {
@@ -150,12 +155,21 @@
 		"remoteExtPath": "MenuEditor/resources"
 	},
 	"Hooks": {
-		"BeforeInitialize": "initializeMenus"
+		"BeforeInitialize": "initializeMenus",
+		"SkinTemplateNavigation::Universal": "editActions",
+		"MediaWikiPerformAction": "editActions",
+		"BlueSpiceDiscoveryTemplateDataProviderAfterInit": "editActions"
 	},
 	"HookHandlers": {
 		"initializeMenus": {
 			"class": "MediaWiki\\Extension\\MenuEditor\\Hook\\InitializeMenus",
 			"services": [ "MenuEditorMenuFactory" ]
+		},
+		"editActions": {
+			"class": "MediaWiki\\Extension\\MenuEditor\\Hook\\EditActionHookHandler",
+			"services": [
+				"HookContainer", "MenuEditorMenuFactory"
+			]
 		}
 	},
 	"Actions": {

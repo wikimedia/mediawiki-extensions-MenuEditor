@@ -2,9 +2,10 @@
 
 namespace MediaWiki\Extension\MenuEditor\Menu;
 
+use MediaWiki\Extension\MenuEditor\IMenu;
 use Title;
 
-class MediawikiSidebar extends MenuWithActionOverride {
+class MediawikiSidebar implements IMenu {
 	/**
 	 * @inheritDoc
 	 */

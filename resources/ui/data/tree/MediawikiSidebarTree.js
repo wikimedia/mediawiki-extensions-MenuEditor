@@ -11,7 +11,7 @@ ext.menueditor.ui.data.tree.MediawikiSidebarTree.prototype.getPossibleNodesForLe
 		case 0:
 			return [ 'menu-raw-text' ];
 		case 1:
-			return [ 'menu-two-fold-link-spec', 'menu-keyword' ];
+			return [ 'menu-two-fold-link-spec' ];
 		default:
 			return [];
 	}

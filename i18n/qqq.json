@@ -7,13 +7,17 @@
 	},
 	"menueditor-desc": "Description of MenuEditor for [[Special:Version]]",
 	"menueditor-ui-menu-wiki-link-label": "Node label",
-	"menueditor-ui-menu-wiki-link-help": "ode description",
+	"menueditor-ui-menu-wiki-link-help": "Node description",
+	"menueditor-ui-menu-wiki-link-label-edit": "Label for edit node",
 	"menueditor-ui-menu-two-fold-link-spec-label": "Node label\n{{identical|Link}}",
+	"menueditor-ui-menu-two-fold-link-spec-label-edit": "Label for edit node",
 	"menueditor-ui-menu-two-fold-link-spec-help": "Node description",
 	"menueditor-ui-menu-raw-text-label": "Node label",
+	"menueditor-ui-menu-raw-text-label-edit": "Label for edit node",
 	"menueditor-ui-menu-raw-text-help": "Node description",
 	"menueditor-ui-menu-keyword-label": "Node label",
-	"menueditor-ui-menu-keyword-help": "ode description",
+	"menueditor-ui-menu-keyword-label-edit": "Label for edit node",
+	"menueditor-ui-menu-keyword-help": "Node description",
 	"menueditor-ui-edit-node-label": "Button label to edit the tree node",
 	"menueditor-ui-form-field-keyword": "Form field label",
 	"menueditor-ui-form-field-text": "Form field label",
@@ -26,5 +30,6 @@
 	"menueditor-ui-cancel": "Panel action label\n{{identical|Cancel}}",
 	"menueditor-ui-redlink-notice": "Notice shown when menu page does not exist",
 	"menueditor-action-menueditsource": "Label for \"menueditsource\" action.\n{{Identical/Edit source}}",
-	"menueditor-action-menuedit": "Label override for \"edit\" action\n{{identical|Edit}}"
+	"menueditor-action-menuedit": "Label override for \"edit\" action\n{{identical|Edit}}",
+	"menueditor-ui-dialog-title": "Title for dialog to edit nodes"
 }
