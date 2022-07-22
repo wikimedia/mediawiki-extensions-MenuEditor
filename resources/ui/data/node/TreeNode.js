@@ -29,14 +29,8 @@ ext.menueditor.ui.data.node.TreeNode.prototype.getForm = function () {
 		// * menueditor-ui-menu-two-fold-link-spec-label
 		// * menueditor-ui-menu-raw-text-label
 		// * menueditor-ui-menu-keyword-label
-		var labelText = mw.message( 'menueditor-ui-' + this.nodeData.type + '-label' ).text();
+		var labelText = mw.message( 'menueditor-ui-' + this.nodeData.type + '-label-edit' ).text();
 
-		// The following messages are used here
-		// * menueditor-ui-menu-wiki-link-help
-		// * menueditor-ui-menu-two-fold-link-spec-help
-		// * menueditor-ui-menu-raw-text-help
-		// * menueditor-ui-menu-keyword-help
-		var helpText = mw.message( 'menueditor-ui-' + this.nodeData.type + '-help' ).text();
 		var form = new mw.ext.forms.standalone.Form( {
 			data: this.getNodeData(),
 			definition: {
@@ -44,12 +38,6 @@ ext.menueditor.ui.data.node.TreeNode.prototype.getForm = function () {
 					{
 						type: 'section_label',
 						title: labelText
-					},
-					{
-						type: 'label',
-						// eslint-disable-next-line camelcase
-						widget_label: new OO.ui.HtmlSnippet( helpText ),
-						noLayout: true
 					},
 					{
 						type: 'text',

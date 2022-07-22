@@ -10,6 +10,8 @@ OO.inheritClass( ext.menueditor.ui.dialog.NodeDialog, OO.ui.ProcessDialog );
 
 ext.menueditor.ui.dialog.NodeDialog.static.name = 'base-edit-menu-dialog';
 
+ext.menueditor.ui.dialog.NodeDialog.static.title = mw.message( 'menueditor-ui-dialog-title' ).text();
+
 ext.menueditor.ui.dialog.NodeDialog.static.actions = [
 	{
 		action: 'done',
@@ -36,25 +38,28 @@ ext.menueditor.ui.dialog.NodeDialog.prototype.initialize = function () {
 		}.bind( this ) );
 	} else {
 		this.actions.setAbilities( { done: false } );
+		var selectionItems = this.getAllowedNodeOptions();
 		var selector = new OO.ui.DropdownWidget( {
 			menu: {
-				items: this.getAllowedNodeOptions()
+				items: selectionItems
 			},
 			$overlay: true
 		} );
 		selector.getMenu().connect( this, {
 			select: function ( item ) {
 				this.setItem( item.getData() );
-
 			}
 		} );
 
-		this.content.$element.append(
-			new OO.ui.FieldLayout( selector, {
-				label: mw.message( 'menueditor-ui-node-type-selector-label' ).text(),
-				align: 'top'
-			} ).$element
-		);
+		if ( selectionItems.length > 1 ) {
+			this.content.$element.append(
+				new OO.ui.FieldLayout( selector, {
+					label: mw.message( 'menueditor-ui-node-type-selector-label' ).text(),
+					align: 'top',
+					classes: [ 'menueditor-selector-widget' ]
+				} ).$element
+			);
+		}
 		this.formCnt = new OO.ui.PanelLayout( { padded: false, expanded: false } );
 		this.content.$element.append( this.formCnt.$element );
 
@@ -98,8 +103,6 @@ ext.menueditor.ui.dialog.NodeDialog.prototype.setItem = function ( type ) {
 	var node = new classname( params );
 	node.getForm().done( function ( form ) {
 		this.formCnt.$element.html( form.$element );
-		// make some space between the selector and form
-		form.$element.css( { 'margin-top': '20px' } );
 		this.setForm( form );
 	}.bind( this ) );
 };

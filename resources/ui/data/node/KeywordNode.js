@@ -30,7 +30,8 @@ ext.menueditor.ui.data.node.KeywordNode.prototype.getFormFields = function () {
 			// eslint-disable-next-line camelcase
 			widget_$overlay: true,
 			required: true,
-			label: mw.message( 'menueditor-ui-form-field-keyword' ).text()
+			label: mw.message( 'menueditor-ui-form-field-keyword' ).text(),
+			help: mw.message( 'menueditor-ui-menu-keyword-help' ).text()
 		}
 	];
 };

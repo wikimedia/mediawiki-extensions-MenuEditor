@@ -1,14 +1,13 @@
 <?php
 
-namespace MediaWiki\Extension\MenuEditor\Menu;
+namespace MediaWiki\Extension\MenuEditor\Hook;
 
 use Article;
 use BlueSpice\Discovery\Hook\BlueSpiceDiscoveryTemplateDataProviderAfterInit;
 use BlueSpice\Discovery\ITemplateDataProvider;
 use Html;
 use MediaWiki;
-use MediaWiki\Extension\MenuEditor\IMenu;
-
+use MediaWiki\Extension\MenuEditor\MenuFactory;
 use MediaWiki\Hook\MediaWikiPerformActionHook;
 use MediaWiki\Hook\SkinTemplateNavigation__UniversalHook;
 use MediaWiki\HookContainer\HookContainer;
@@ -18,8 +17,7 @@ use Title;
 use User;
 use WebRequest;
 
-abstract class MenuWithActionOverride implements
-	IMenu,
+class EditActionHookHandler implements
 	MediaWikiPerformActionHook,
 	SkinTemplateNavigation__UniversalHook,
 	BlueSpiceDiscoveryTemplateDataProviderAfterInit
@@ -27,10 +25,15 @@ abstract class MenuWithActionOverride implements
 	/** @var Title|null */
 	private $title = null;
 
+	/** @var MenuFactory */
+	private $menuFactory;
+
 	/**
 	 * @param HookContainer $hookContainer
+	 * @param MenuFactory $menuFactory
 	 */
-	public function __construct( HookContainer $hookContainer ) {
+	public function __construct( HookContainer $hookContainer, MenuFactory $menuFactory ) {
+		$this->menuFactory = $menuFactory;
 		$hookContainer->register( 'MediaWikiPerformAction', [ $this, 'onMediaWikiPerformAction' ] );
 		$hookContainer->register(
 			'SkinTemplateNavigation::Universal',
@@ -53,6 +56,7 @@ abstract class MenuWithActionOverride implements
 	 */
 	public function onMediaWikiPerformAction( $output, $article, $title, $user, $request, $mediaWiki ) {
 		$action = $request->getText( 'action', $request->getText( 'veaction', 'view' ) );
+
 		if ( !in_array( $action, [ 'view', 'menueditsource', 'edit', 'create' ] ) ) {
 			return true;
 		}
@@ -61,9 +65,19 @@ abstract class MenuWithActionOverride implements
 			$request->setVal( 'action', 'edit' );
 			return true;
 		}
-		if ( !$this->appliesToTitle( $title ) ) {
+		$menus = $this->menuFactory->getAllMenus();
+		$applied = false;
+
+		foreach ( $menus as $key => $menu ) {
+			if ( $menu->appliesToTitle( $title ) ) {
+				$applied = true;
+				$appliedMenu = $menu;
+			}
+		}
+		if ( !$applied ) {
 			return true;
 		}
+
 		$this->title = $title;
 
 		$output->setPageTitle( $title->getPrefixedText() );
@@ -71,8 +85,8 @@ abstract class MenuWithActionOverride implements
 		$output->addHTML( Html::element( 'div', [
 			'id' => 'menuEditor-container',
 			'data-mode' => $action,
-			'data-menu-key' => $this->getKey(),
-			'data-default' => json_encode( $this->getEmptyContent() ),
+			'data-menu-key' => $appliedMenu->getKey(),
+			'data-default' => json_encode( $appliedMenu->getEmptyContent() ),
 		] ) );
 		if ( $action === 'edit' ) {
 			$request->setVal( 'action', 'menuedit' );
@@ -97,6 +111,7 @@ abstract class MenuWithActionOverride implements
 			'id' => 'ca-menueditsource',
 			'position' => 12,
 		];
+
 		$links['views']['edit'] = array_merge( $links['views']['edit'], [
 			'text' => $sktemplate->msg( "menueditor-action-menuedit" )->text(),
 		] );
