@@ -24,7 +24,8 @@ ext.menueditor.ui.data.node.WikilinkNode.prototype.getFormFields = function () {
 			name: 'target',
 			type: 'title',
 			required: true,
-			label: mw.message( 'menueditor-ui-form-field-target' ).text()
+			label: mw.message( 'menueditor-ui-form-field-target' ).text(),
+			help: mw.message( 'menueditor-ui-menu-wiki-link-help' ).text()
 		},
 		{
 			name: 'label',
