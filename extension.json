@@ -189,6 +189,6 @@
 			"services": [ "WikitextParserFactory", "TitleFactory" ]
 		}
 	],
-	"load_composer_autorloader": true,
+	"load_composer_autoloader": true,
 	"manifest_version": 2
 }
