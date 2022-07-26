@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Kareyac",
-			"Pacha Tchernof"
+			"Pacha Tchernof",
+			"Person or Persons Unknown"
 		]
 	},
 	"menueditor-ui-menu-wiki-link-help": "Ссылка на вики-страницу",
@@ -13,5 +14,10 @@
 	"menueditor-ui-dialog-action-cancel": "Отмена",
 	"menueditor-ui-submit": "Сохранить",
 	"menueditor-ui-cancel": "Отмена",
-	"menueditor-action-menuedit": "Править"
+	"menueditor-action-menuedit": "Править",
+	"menueditor-ui-menu-wiki-link-label-edit": "Редактировать вики-ссылку",
+	"menueditor-ui-menu-two-fold-link-spec-label-edit": "Редактировать ссылку",
+	"menueditor-ui-menu-raw-text-label-edit": "Изменить текст или ключ сообщения",
+	"menueditor-ui-menu-keyword-label-edit": "Изменить ключевое слово",
+	"menueditor-ui-dialog-title": "Редактировать элемент"
 }
