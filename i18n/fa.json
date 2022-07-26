@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jeeputer"
+		]
+	},
+	"menueditor-ui-menu-wiki-link-label-edit": "ویرایش ویکی‌پیوند",
+	"menueditor-ui-menu-two-fold-link-spec-label-edit": "ویرایش پیوند",
+	"menueditor-ui-menu-raw-text-label-edit": "ویرایش کلید متن یا پیام",
+	"menueditor-ui-menu-keyword-label-edit": "ویرایش کلیدواژه",
+	"menueditor-ui-dialog-title": "ویرایش عنصر"
+}

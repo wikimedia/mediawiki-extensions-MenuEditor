@@ -3,10 +3,20 @@
 	"menueditor": "Menu Editor",
 	"@metadata": {
 		"authors": [
+			"Mschlindwein",
 			"ThisCarthing"
 		]
 	},
 	"menueditor-ui-submit": "Speichern",
 	"menueditor-ui-cancel": "Abbrechen",
-	"menueditor-ui-redlink-notice": "Dieses Menü ist noch nicht vorhanden!"
+	"menueditor-ui-redlink-notice": "Dieses Menü ist noch nicht vorhanden!",
+	"menueditor-ui-menu-wiki-link-label": "Wiki-Link",
+	"menueditor-ui-menu-wiki-link-help": "Link zu einer Wiki-Seite",
+	"menueditor-ui-menu-two-fold-link-spec-label": "Link",
+	"menueditor-ui-menu-two-fold-link-spec-help": "Linkspezifikation.<br> Ziel kann sein:<ul><li> ein Nachrichtenschlüssel, der sich in einen Seitennamen auflöst</li><li> ein externer Link</li><li> Name der Seite im Wiki</li><li> Interwiki-Link</li></ul>",
+	"menueditor-ui-form-field-target": "Linkziel",
+	"menueditor-ui-dialog-action-done": "Fertig",
+	"menueditor-ui-dialog-action-cancel": "Abbrechen",
+	"menueditor-action-menueditsource": "Quelltext bearbeiten",
+	"menueditor-action-menuedit": "Bearbeiten"
 }

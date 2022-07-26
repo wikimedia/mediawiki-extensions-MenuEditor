@@ -24,5 +24,10 @@
 	"menueditor-ui-cancel": "Annuler",
 	"menueditor-ui-redlink-notice": "Ce menu n’existe pas encore !",
 	"menueditor-action-menueditsource": "Modifier la source",
-	"menueditor-action-menuedit": "Modifier"
+	"menueditor-action-menuedit": "Modifier",
+	"menueditor-ui-menu-wiki-link-label-edit": "Modifier le lien wiki",
+	"menueditor-ui-menu-two-fold-link-spec-label-edit": "Modifier le lien",
+	"menueditor-ui-menu-raw-text-label-edit": "Modifier le texte ou la clé de message",
+	"menueditor-ui-menu-keyword-label-edit": "Modifier le mot-clé",
+	"menueditor-ui-dialog-title": "Modifier l’élément"
 }
