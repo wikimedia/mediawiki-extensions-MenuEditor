@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Bjankuloski06"
+			"Bjankuloski06",
+			"Vlad5250"
 		]
 	},
 	"menueditor-desc": "Графички уредник за страници во мени",
@@ -24,5 +25,10 @@
 	"menueditor-ui-cancel": "Откажи",
 	"menueditor-ui-redlink-notice": "Ова мени сè уште не постои!",
 	"menueditor-action-menueditsource": "Уреди извор",
-	"menueditor-action-menuedit": "Уреди"
+	"menueditor-action-menuedit": "Уреди",
+	"menueditor-ui-menu-wiki-link-label-edit": "Уреди викиврска",
+	"menueditor-ui-menu-two-fold-link-spec-label-edit": "Уреди врска",
+	"menueditor-ui-menu-raw-text-label-edit": "Уреди текст или клуч на порака",
+	"menueditor-ui-menu-keyword-label-edit": "Уреди клучен збор",
+	"menueditor-ui-dialog-title": "Уреди елемент"
 }
