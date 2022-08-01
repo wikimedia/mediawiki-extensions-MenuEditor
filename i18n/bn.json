@@ -2,11 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"Yahya",
+			"আজিজ",
 			"আফতাবুজ্জামান"
 		]
 	},
 	"menueditor-ui-menu-wiki-link-label": "উইকি সংযোগ",
+	"menueditor-ui-menu-wiki-link-label-edit": "উইকি সংযোগ সম্পাদনা করুন",
 	"menueditor-ui-menu-two-fold-link-spec-label": "সংযোগ",
+	"menueditor-ui-menu-two-fold-link-spec-label-edit": "সংযোগ সম্পাদনা করুন",
 	"menueditor-ui-menu-keyword-label": "মূলশব্দ",
 	"menueditor-ui-edit-node-label": "নোড সম্পাদনা",
 	"menueditor-ui-form-field-keyword": "মূলশব্দ",
@@ -16,5 +19,6 @@
 	"menueditor-ui-cancel": "বাতিল",
 	"menueditor-ui-redlink-notice": "এই পাতাটি এখনো বিদ্যমান নয়!",
 	"menueditor-action-menueditsource": "উৎস সম্পাদনা",
-	"menueditor-action-menuedit": "সম্পাদনা"
+	"menueditor-action-menuedit": "সম্পাদনা",
+	"menueditor-ui-dialog-title": "উপাদান সম্পাদনা করুন"
 }
