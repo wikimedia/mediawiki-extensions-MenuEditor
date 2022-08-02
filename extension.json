@@ -36,11 +36,15 @@
 				"menu-two-fold-link-spec": {
 					"classname": "ext.menueditor.ui.data.node.TwoFoldLinkSpecNode",
 					"module": "ext.menuEditor.node"
+				},
+				"mediawiki-sidebar-keyword": {
+					"classname": "ext.menueditor.ui.data.node.MediawikiSidebarKeywordNode",
+					"module": "ext.menuEditor.node.keyword"
 				}
 			}
 		}
 	},
-	"callback": "mwsInitComponents",
+	"callback": "MediaWiki\\Extension\\MenuEditor\\Extension::onRegistration",
 	"ExtensionMessagesFiles": {
 		"MenuEditorAlias": "languages/MenuEditor.i18n.alias.php"
 	},
@@ -148,6 +152,22 @@
 			"dependencies": [
 				"oojs-ui"
 			]
+		},
+		"ext.menuEditor.node.keyword": {
+			"packageFiles": [
+				"ui/data/node/MediawikiSidebarKeywordNode.js",
+				{
+					"name": "ui/data/node/config.json",
+					"callback": "MediaWiki\\Extension\\MenuEditor\\ClientConfig::makeConfigJson"
+				}
+			],
+			"messages": [
+				"menueditor-ui-mediawiki-sidebar-keyword-label-edit",
+				"menueditor-ui-mediawiki-sidebar-keyword-label"
+			],
+			"dependencies": [
+				"ext.menuEditor.node"
+			]
 		}
 	},
 	"ResourceFileModulePaths": {
@@ -174,6 +194,11 @@
 	},
 	"Actions": {
 		"menueditsource": "EditAction"
+	},
+	"config": {
+		"MenuEditorMediawikiSidebarAllowedKeywords": {
+			"value": [ "SEARCH", "TOOLBOX", "LANGUAGES" ]
+		}
 	},
 	"RestRoutes": [
 		{

@@ -30,5 +30,7 @@
 	"menueditor-ui-redlink-notice": "This menu does not exist yet!",
 	"menueditor-action-menueditsource": "Edit source",
 	"menueditor-action-menuedit": "Edit",
-	"menueditor-ui-dialog-title": "Edit element"
+	"menueditor-ui-dialog-title": "Edit element",
+	"menueditor-ui-mediawiki-sidebar-keyword-label-edit": "Edit keyword",
+	"menueditor-ui-mediawiki-sidebar-keyword-label": "Keyword"
 }

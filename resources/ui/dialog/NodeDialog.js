@@ -4,6 +4,7 @@ ext.menueditor.ui.dialog.NodeDialog = function ( config, node ) {
 	this.allowedNodes = config.allowedNodes || [];
 	this.tree = config.tree || {};
 	this.form = null;
+	this.items = {};
 };
 
 OO.inheritClass( ext.menueditor.ui.dialog.NodeDialog, OO.ui.ProcessDialog );
@@ -71,13 +72,33 @@ ext.menueditor.ui.dialog.NodeDialog.prototype.initialize = function () {
 	this.$body.append( this.content.$element );
 };
 
+ext.menueditor.ui.dialog.NodeDialog.prototype.initializeItems = function () {
+	for ( var i = 0; i < this.allowedValid.length; i++ ) {
+		var type = this.allowedValid[ i ];
+		var classname = ext.menueditor.util.callbackFromString(
+			ext.menueditor.registry.node.registry[ type ]
+		);
+		var params = { nodeData: { type: type }, tree: this.tree };
+		// eslint-disable-next-line new-cap
+		var node = new classname( params );
+		if ( !node.shouldRender() ) {
+			this.allowedValid.splice( this.allowedValid.indexOf( node ), 2 );
+		} else {
+			this.items[ type ] = node;
+		}
+	}
+
+};
+
 ext.menueditor.ui.dialog.NodeDialog.prototype.getAllowedNodeOptions = function () {
 	var all = Object.keys( ext.menueditor.registry.node.registry ),
-		allowedConfig = this.allowedNodes,
-		allowedValid = this.allowedNodes.length === 0 ?
-			all : all.filter( function ( x ) { return allowedConfig.indexOf( x ) !== -1; } );
+		allowedConfig = this.allowedNodes;
+	this.allowedValid = this.allowedNodes.length === 0 ?
+		all : all.filter( function ( x ) { return allowedConfig.indexOf( x ) !== -1; } );
 
-	return allowedValid.map( function ( x ) {
+	this.initializeItems();
+
+	return this.allowedValid.map( function ( x ) {
 		// The following messages are used here
 		// * menueditor-ui-menu-wiki-link-label
 		// * menueditor-ui-menu-two-fold-link-spec-label
@@ -95,12 +116,8 @@ ext.menueditor.ui.dialog.NodeDialog.prototype.getAllowedNodeOptions = function (
 ext.menueditor.ui.dialog.NodeDialog.prototype.setItem = function ( type ) {
 	this.pushPending();
 
-	var classname = ext.menueditor.util.callbackFromString(
-		ext.menueditor.registry.node.registry[ type ]
-	);
-	var params = { nodeData: { type: type }, tree: this.tree };
-	// eslint-disable-next-line new-cap
-	var node = new classname( params );
+	var node = this.items[ type ];
+
 	node.getForm().done( function ( form ) {
 		this.formCnt.$element.html( form.$element );
 		this.setForm( form );

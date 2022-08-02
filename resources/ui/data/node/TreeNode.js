@@ -104,3 +104,7 @@ ext.menueditor.ui.data.node.TreeNode.prototype.updateData = function ( data ) {
 	this.labelWidget.setLabel( this.label );
 	this.$element.attr( 'data-type', this.nodeData.type );
 };
+
+ext.menueditor.ui.data.node.TreeNode.prototype.shouldRender = function () {
+	return true;
+};
