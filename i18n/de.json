@@ -25,5 +25,7 @@
 	"menueditor-ui-redlink-notice": "Dieses Menü ist noch nicht vorhanden!",
 	"menueditor-action-menueditsource": "Quelltext bearbeiten",
 	"menueditor-action-menuedit": "Bearbeiten",
-	"menueditor-ui-dialog-title": "Element bearbeiten"
+	"menueditor-ui-dialog-title": "Element bearbeiten",
+	"menueditor-ui-mediawiki-sidebar-keyword-label-edit": "Schlüsselwort bearbeiten",
+	"menueditor-ui-mediawiki-sidebar-keyword-label": "Schlüsselwort"
 }
