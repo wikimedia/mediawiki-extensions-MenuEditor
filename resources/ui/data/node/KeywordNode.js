@@ -35,3 +35,7 @@ ext.menueditor.ui.data.node.KeywordNode.prototype.getFormFields = function () {
 		}
 	];
 };
+
+ext.menueditor.ui.data.node.KeywordNode.prototype.shouldRender = function () {
+	return true;
+};

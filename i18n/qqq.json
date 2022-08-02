@@ -31,5 +31,7 @@
 	"menueditor-ui-redlink-notice": "Notice shown when menu page does not exist",
 	"menueditor-action-menueditsource": "Label for \"menueditsource\" action.\n{{Identical/Edit source}}",
 	"menueditor-action-menuedit": "Label override for \"edit\" action\n{{identical|Edit}}",
-	"menueditor-ui-dialog-title": "Title for dialog to edit nodes"
+	"menueditor-ui-dialog-title": "Title for dialog to edit nodes",
+	"menueditor-ui-mediawiki-sidebar-keyword-label-edit": "Form field label",
+	"menueditor-ui-mediawiki-sidebar-keyword-label": "Node label"
 }

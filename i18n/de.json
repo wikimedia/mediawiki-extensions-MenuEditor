@@ -26,5 +26,7 @@
 	"menueditor-ui-menu-keyword-help": "Eines der verfügbaren '''Schlüsselwörter''', das das entsprechende Widget anzeigt",
 	"menueditor-ui-form-field-keyword": "Schlüsselwort",
 	"menueditor-ui-form-field-label": "Link-Label",
-	"menueditor-ui-dialog-title": "Element bearbeiten"
+	"menueditor-ui-dialog-title": "Element bearbeiten",
+	"menueditor-ui-mediawiki-sidebar-keyword-label-edit": "Schlüsselwort bearbeiten",
+	"menueditor-ui-mediawiki-sidebar-keyword-label": "Schlüsselwort"
 }
