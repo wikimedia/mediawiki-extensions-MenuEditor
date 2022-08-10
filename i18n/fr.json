@@ -29,5 +29,7 @@
 	"menueditor-ui-redlink-notice": "Ce menu n’existe pas encore !",
 	"menueditor-action-menueditsource": "Modifier la source",
 	"menueditor-action-menuedit": "Modifier",
-	"menueditor-ui-dialog-title": "Modifier l’élément"
+	"menueditor-ui-dialog-title": "Modifier l’élément",
+	"menueditor-ui-mediawiki-sidebar-keyword-label-edit": "Modifier le mot-clé",
+	"menueditor-ui-mediawiki-sidebar-keyword-label": "Mot-clé"
 }
