@@ -14,5 +14,7 @@
 	"menueditor-action-menueditsource": "ソースを編集",
 	"menueditor-action-menuedit": "編集",
 	"menueditor-ui-menu-two-fold-link-spec-label-edit": "リンクを編集",
-	"menueditor-ui-menu-keyword-label-edit": "キーワードを編集"
+	"menueditor-ui-menu-keyword-label-edit": "キーワードを編集",
+	"menueditor-ui-mediawiki-sidebar-keyword-label-edit": "キーワードを編集",
+	"menueditor-ui-mediawiki-sidebar-keyword-label": "キーワード"
 }

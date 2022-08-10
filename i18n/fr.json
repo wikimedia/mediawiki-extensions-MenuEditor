@@ -29,5 +29,7 @@
 	"menueditor-ui-menu-two-fold-link-spec-label-edit": "Modifier le lien",
 	"menueditor-ui-menu-raw-text-label-edit": "Modifier le texte ou la clé de message",
 	"menueditor-ui-menu-keyword-label-edit": "Modifier le mot-clé",
-	"menueditor-ui-dialog-title": "Modifier l’élément"
+	"menueditor-ui-dialog-title": "Modifier l’élément",
+	"menueditor-ui-mediawiki-sidebar-keyword-label-edit": "Modifier le mot-clé",
+	"menueditor-ui-mediawiki-sidebar-keyword-label": "Mot-clé"
 }
