@@ -17,3 +17,11 @@
 .menueditor-selector-widget {
 	margin-bottom: 10px;
 }
+
+.toolbar-actions {
+	float: right;
+}
+
+.oojsplus-data-tree-items {
+	margin-top: 10px;
+}

@@ -153,6 +153,19 @@
 				"oojs-ui"
 			]
 		},
+		"ext.menuEditor.toolbar": {
+			"scripts": [
+				"ui/widget/MenuToolbar.js"
+			],
+			"messages": [
+				"menueditor-toolbar-submit",
+				"menueditor-toolbar-cancel",
+				"menueditor-toolbar-add"
+			],
+			"dependencies": [
+				"oojs-ui"
+			]
+		},
 		"ext.menuEditor.node.keyword": {
 			"packageFiles": [
 				"ui/data/node/MediawikiSidebarKeywordNode.js",
