@@ -20,7 +20,7 @@ ext.menueditor = {
 						// TODO: Check results, that menuType is registered...
 						dfd.resolve(
 							new ext.menueditor.ui.panel.MenuPanel( $.extend( {
-								pagename: pagename, expanded: false, padded: true, mode: mode
+								pagename: pagename, expanded: false, mode: mode
 							}, cfg ), nodes, menuType )
 						);
 					},
@@ -41,7 +41,8 @@ ext.menueditor = {
 			node: {}
 		},
 		panel: {},
-		dialog: {}
+		dialog: {},
+		widget: {}
 	},
 	registry: {},
 	api: {
