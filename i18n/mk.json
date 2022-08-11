@@ -30,5 +30,7 @@
 	"menueditor-ui-redlink-notice": "Ова мени сè уште не постои!",
 	"menueditor-action-menueditsource": "Уреди извор",
 	"menueditor-action-menuedit": "Уреди",
-	"menueditor-ui-dialog-title": "Уреди елемент"
+	"menueditor-ui-dialog-title": "Уреди елемент",
+	"menueditor-ui-mediawiki-sidebar-keyword-label-edit": "Уреди клучен збор",
+	"menueditor-ui-mediawiki-sidebar-keyword-label": "Клучен збор"
 }
