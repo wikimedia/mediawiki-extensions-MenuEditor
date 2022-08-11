@@ -32,5 +32,8 @@
 	"menueditor-action-menuedit": "Edit",
 	"menueditor-ui-dialog-title": "Edit element",
 	"menueditor-ui-mediawiki-sidebar-keyword-label-edit": "Edit keyword",
-	"menueditor-ui-mediawiki-sidebar-keyword-label": "Keyword"
+	"menueditor-ui-mediawiki-sidebar-keyword-label": "Keyword",
+	"menueditor-toolbar-submit": "Save changes",
+	"menueditor-toolbar-cancel": "Cancel edit",
+	"menueditor-toolbar-add": "Add new element"
 }
