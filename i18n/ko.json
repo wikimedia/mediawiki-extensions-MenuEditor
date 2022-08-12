@@ -21,5 +21,10 @@
 	"menueditor-ui-menu-two-fold-link-spec-label-edit": "링크 편집",
 	"menueditor-ui-menu-raw-text-label-edit": "텍스트 또는 메시지 키 편집",
 	"menueditor-ui-menu-keyword-label-edit": "키워드 편집",
-	"menueditor-ui-dialog-title": "요소 편집"
+	"menueditor-ui-dialog-title": "요소 편집",
+	"menueditor-ui-mediawiki-sidebar-keyword-label-edit": "키워드 편집",
+	"menueditor-ui-mediawiki-sidebar-keyword-label": "키워드",
+	"menueditor-toolbar-submit": "변경사항 저장",
+	"menueditor-toolbar-cancel": "편집 취소",
+	"menueditor-toolbar-add": "새 요소 추가"
 }
