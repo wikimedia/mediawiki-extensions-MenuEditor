@@ -19,5 +19,7 @@
 	"menueditor-ui-cancel": "Ofbriechen",
 	"menueditor-ui-redlink-notice": "Dëse Menü gëtt et nach net!",
 	"menueditor-action-menueditsource": "Quelltext änneren",
-	"menueditor-action-menuedit": "Änneren"
+	"menueditor-action-menuedit": "Änneren",
+	"menueditor-toolbar-submit": "Ännerunge späicheren",
+	"menueditor-toolbar-add": "Neit Element derbäisetzen"
 }
