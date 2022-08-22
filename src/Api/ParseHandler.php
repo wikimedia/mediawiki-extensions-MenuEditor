@@ -3,13 +3,13 @@
 namespace MediaWiki\Extension\MenuEditor\Api;
 
 use Exception;
+use MediaWiki\Extension\MenuEditor\Parser\WikitextMenuParser;
 use MediaWiki\Rest\Handler;
 use MediaWiki\Rest\HttpException;
 use MediaWiki\Storage\RevisionRecord;
 use MediaWiki\Storage\RevisionStore;
-use MWStake\MediaWiki\Component\Wikitext\INode;
-use MWStake\MediaWiki\Component\Wikitext\Node\Menu\MenuNode;
 use MWStake\MediaWiki\Component\Wikitext\ParserFactory;
+use MWStake\MediaWiki\Lib\Nodes\INode;
 use Title;
 use TitleFactory;
 use Wikimedia\ParamValidator\ParamValidator;
@@ -46,7 +46,9 @@ class ParseHandler extends Handler {
 		if ( !$revision ) {
 			return $this->getResponseFactory()->createNoContent();
 		}
-		$parser = $this->parserFactory->newMenuParser( $revision );
+		$parser = new WikitextMenuParser(
+			$revision, $this->parserFactory->getNodeProcessors()
+		);
 		$nodes = $parser->parse();
 
 		$data = $params['flat'] ? $nodes : $this->makeTree( $nodes );

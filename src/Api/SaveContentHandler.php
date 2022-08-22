@@ -2,6 +2,7 @@
 
 namespace MediaWiki\Extension\MenuEditor\Api;
 
+use MediaWiki\Extension\MenuEditor\Parser\WikitextMenuParser;
 use MediaWiki\Rest\Handler;
 use MediaWiki\Rest\HttpException;
 use MediaWiki\Rest\Validator\JsonBodyValidator;
@@ -37,7 +38,10 @@ class SaveContentHandler extends Handler {
 		$page = $this->makeTitle( $params['pagename'] );
 		$body = $this->getValidatedBody();
 
-		$parser = $this->parserFactory->newEmptyMenuParser( $page );
+		$parser = new WikitextMenuParser(
+			$this->parserFactory->getRevisionForText( '', $page ),
+			$this->parserFactory->getNodeProcessors()
+		);
 		$parser->addNodesFromData( $body );
 
 		$rev = $parser->saveRevision( RequestContext::getMain()->getUser() );

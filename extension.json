@@ -49,7 +49,8 @@
 		"MenuEditorAlias": "languages/MenuEditor.i18n.alias.php"
 	},
 	"AutoloadNamespaces": {
-		"MediaWiki\\Extension\\MenuEditor\\": "src/"
+		"MediaWiki\\Extension\\MenuEditor\\": "src/",
+		"MediaWiki\\Extension\\MenuEditor\\Tests\\": "tests/phpunit/"
 	},
 	"ServiceWiringFiles": [
 		"includes/ServiceWiring.php"
