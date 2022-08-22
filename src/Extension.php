@@ -2,7 +2,11 @@
 
 namespace MediaWiki\Extension\MenuEditor;
 
-use MWStake\MediaWiki\Component\Wikitext\NodeProcessor\Menu\GenericKeywordNodeProcessor;
+use MediaWiki\Extension\MenuEditor\NodeProcessor\GenericKeywordNodeProcessor;
+use MediaWiki\Extension\MenuEditor\NodeProcessor\KeywordNodeProcessor;
+use MediaWiki\Extension\MenuEditor\NodeProcessor\RawTextNodeProcessor;
+use MediaWiki\Extension\MenuEditor\NodeProcessor\TwoFoldLinkSpecNodeProcessor;
+use MediaWiki\Extension\MenuEditor\NodeProcessor\WikiLinkNodeProcessor;
 
 class Extension {
 
@@ -10,13 +14,23 @@ class Extension {
 		mwsInitComponents();
 
 		$GLOBALS['mwsgWikitextNodeProcessorRegistry'] += [
-			"menu-mediawiki-sidebar-keyword" => [
-				"factory" => static function () {
-					return new GenericKeywordNodeProcessor(
-						'mediawiki-sidebar-keyword',
-						[ 'TOOLBOX', 'LANGUAGES', 'SEARCH' ]
-					);
-				}
+			'menu-raw-text' => [
+				'class' => RawTextNodeProcessor::class
+			],
+			'menu-keyword' => [
+				'class' => KeywordNodeProcessor::class
+			],
+			'menu-wiki-link' => [
+				'class' => WikiLinkNodeProcessor::class,
+				'services' => [ 'TitleFactory' ]
+			],
+			'menu-two-fold-link-spec' => [
+				'class' => TwoFoldLinkSpecNodeProcessor::class,
+				'services' => [ 'TitleFactory' ]
+			],
+			'menu-mediawiki-sidebar-keyword' => [
+				'class' => GenericKeywordNodeProcessor::class,
+				'args' => [ 'mediawiki-sidebar-keyword', [ 'TOOLBOX', 'LANGUAGES', 'SEARCH' ] ]
 			]
 		];
 	}
