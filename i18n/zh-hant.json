@@ -25,5 +25,15 @@
 	"menueditor-ui-cancel": "取消",
 	"menueditor-ui-redlink-notice": "此選單不存在！",
 	"menueditor-action-menueditsource": "編輯原始碼",
-	"menueditor-action-menuedit": "編輯"
+	"menueditor-action-menuedit": "編輯",
+	"menueditor-ui-menu-wiki-link-label-edit": "編輯 wiki 連結",
+	"menueditor-ui-menu-two-fold-link-spec-label-edit": "編輯連結",
+	"menueditor-ui-menu-raw-text-label-edit": "編輯文字或是訊息鍵名稱",
+	"menueditor-ui-menu-keyword-label-edit": "編輯關鍵字",
+	"menueditor-ui-dialog-title": "編輯元素",
+	"menueditor-ui-mediawiki-sidebar-keyword-label-edit": "編輯關鍵字",
+	"menueditor-ui-mediawiki-sidebar-keyword-label": "關鍵字",
+	"menueditor-toolbar-submit": "儲存更改",
+	"menueditor-toolbar-cancel": "取消編輯",
+	"menueditor-toolbar-add": "添加新元素"
 }
