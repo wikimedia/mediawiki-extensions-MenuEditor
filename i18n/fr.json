@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"McDutchie",
 			"Verdy p"
 		]
 	},
@@ -8,7 +9,7 @@
 	"menueditor-ui-menu-wiki-link-label": "Lien wiki",
 	"menueditor-ui-menu-wiki-link-help": "Lien vers une page wiki",
 	"menueditor-ui-menu-two-fold-link-spec-label": "Lien",
-	"menueditor-ui-menu-two-fold-link-spec-help": "Spécification du lien.<br /> La cible peut être :<ul><li>une clé de message, qui se sésoud en un nom de page ;</li><li>un lien externe ;</li><li>le nom d’une page sur le wiki ;</li><li>un lien interwiki.<li></ul>",
+	"menueditor-ui-menu-two-fold-link-spec-help": "Spécification du lien.<br /> La cible peut être :<ul><li>une clé de message, qui se résout en un nom de page ;</li><li>un lien externe ;</li><li>le nom d’une page sur le wiki ;</li><li>un lien interwiki.<li></ul>",
 	"menueditor-ui-menu-raw-text-label": "Texte ou clé de message",
 	"menueditor-ui-menu-keyword-label": "Mot-clé",
 	"menueditor-ui-menu-keyword-help": "Un des '''mots-clés''' disponibles, qui affichera le widget approprié",
