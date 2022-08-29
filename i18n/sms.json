@@ -6,5 +6,7 @@
 	},
 	"menueditor-ui-submit": "Ruõkk",
 	"menueditor-action-menuedit": "Muuʹtt",
-	"menueditor-action-menueditsource": "Muuʹtt wikiteeʹkst"
+	"menueditor-action-menueditsource": "Muuʹtt wikiteeʹkst",
+	"menueditor-ui-dialog-action-cancel": "Jõõsk",
+	"menueditor-ui-cancel": "Jõõsk"
 }
