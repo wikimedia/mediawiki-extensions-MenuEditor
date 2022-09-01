@@ -39,6 +39,8 @@ OO.inheritClass( ext.menueditor.ui.widget.NewItemTool, OO.ui.Tool );
 ext.menueditor.ui.widget.NewItemTool.static.name = 'newItem';
 ext.menueditor.ui.widget.NewItemTool.static.icon = 'add';
 ext.menueditor.ui.widget.NewItemTool.static.title = mw.message( 'menueditor-toolbar-add' );
+ext.menueditor.ui.widget.NewItemTool.static.label = mw.message( 'menueditor-toolbar-add' );
+ext.menueditor.ui.widget.NewItemTool.static.displayBothIconAndLabel = true;
 
 ext.menueditor.ui.widget.NewItemTool.prototype.onSelect = function () {
 	this.setActive( false );
@@ -54,6 +56,7 @@ ext.menueditor.ui.widget.CancelTool = function () {
 OO.inheritClass( ext.menueditor.ui.widget.CancelTool, OO.ui.Tool );
 ext.menueditor.ui.widget.CancelTool.static.name = 'cancel';
 ext.menueditor.ui.widget.CancelTool.static.icon = 'cancel';
+ext.menueditor.ui.widget.CancelTool.static.flags = [ 'destructive' ];
 ext.menueditor.ui.widget.CancelTool.static.title = mw.message( 'menueditor-toolbar-cancel' );
 
 ext.menueditor.ui.widget.CancelTool.prototype.onSelect = function () {
