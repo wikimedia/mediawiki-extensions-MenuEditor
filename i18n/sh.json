@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vlad5250"
+		]
+	},
+	"menueditor-ui-submit": "Sačuvaj",
+	"menueditor-ui-cancel": "Otkaži",
+	"menueditor-action-menueditsource": "Uredi kôd",
+	"menueditor-action-menuedit": "Uredi",
+	"menueditor-toolbar-submit": "Sačuvaj izmjene"
+}
