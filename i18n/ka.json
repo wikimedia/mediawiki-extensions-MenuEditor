@@ -20,7 +20,7 @@
 	"menueditor-ui-form-field-keyword": "საკვანძო სიტყვა",
 	"menueditor-ui-form-field-text": "ტექსტი ან შეტყობინების გასაღები",
 	"menueditor-ui-form-field-target": "ბმულის სამიზნე",
-	"menueditor-ui-form-field-label": "ბმულის წარწერა",
+	"menueditor-ui-form-field-label": "ბმულის ტექსტი",
 	"menueditor-ui-dialog-action-done": "გაკეთდა",
 	"menueditor-ui-dialog-action-cancel": "გაუქმება",
 	"menueditor-ui-node-type-selector-label": "კვანძის ტიპი",
