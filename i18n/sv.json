@@ -24,5 +24,15 @@
 	"menueditor-ui-cancel": "Avbryt",
 	"menueditor-ui-redlink-notice": "Menyn finns ännu inte",
 	"menueditor-action-menueditsource": "Redigera källa",
-	"menueditor-action-menuedit": "Redigera"
+	"menueditor-action-menuedit": "Redigera",
+	"menueditor-ui-menu-wiki-link-label-edit": "Redigera wikilänk",
+	"menueditor-ui-menu-two-fold-link-spec-label-edit": "Redigera länk",
+	"menueditor-ui-menu-raw-text-label-edit": "Redigera text eller meddelandenyckel",
+	"menueditor-ui-menu-keyword-label-edit": "Redigera nyckelord",
+	"menueditor-ui-dialog-title": "Redigera element",
+	"menueditor-ui-mediawiki-sidebar-keyword-label-edit": "Redigera nyckelord",
+	"menueditor-ui-mediawiki-sidebar-keyword-label": "Nyckelord",
+	"menueditor-toolbar-submit": "Spara ändringar",
+	"menueditor-toolbar-cancel": "Avbryt redigering",
+	"menueditor-toolbar-add": "Lägg till nytt element"
 }
