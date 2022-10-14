@@ -26,6 +26,8 @@
 				}
 			} );
 			$c.html( panel.$element );
+		} ).fail( function ( e ) {
+			console.error( e ); // eslint-disable-line no-console
 		} );
 	} );
 }( mediaWiki, jQuery ) );

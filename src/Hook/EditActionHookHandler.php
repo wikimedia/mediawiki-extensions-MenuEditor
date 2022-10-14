@@ -61,6 +61,10 @@ class EditActionHookHandler implements
 			return true;
 		}
 
+		if ( $request->getVal( 'diff' ) !== null ) {
+			return true;
+		}
+
 		if ( $action === 'menueditsource' ) {
 			$request->setVal( 'action', 'edit' );
 			return true;
@@ -79,7 +83,6 @@ class EditActionHookHandler implements
 		}
 
 		$this->title = $title;
-
 		$output->setPageTitle( $title->getPrefixedText() );
 		$output->addModules( 'ext.menuEditor.pageEditOverride' );
 		$output->addHTML( Html::element( 'div', [

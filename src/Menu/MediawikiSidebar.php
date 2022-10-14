@@ -2,10 +2,24 @@
 
 namespace MediaWiki\Extension\MenuEditor\Menu;
 
-use MediaWiki\Extension\MenuEditor\IMenu;
+use MediaWiki\Extension\MenuEditor\ParsableMenu;
+use MediaWiki\Extension\MenuEditor\Parser\IMenuParser;
+use MediaWiki\Extension\MenuEditor\Parser\WikitextMenuParser;
+use MediaWiki\Storage\RevisionRecord;
+use MWStake\MediaWiki\Component\Wikitext\ParserFactory;
 use Title;
 
-class MediawikiSidebar implements IMenu {
+class MediawikiSidebar implements ParsableMenu {
+	/** @var ParserFactory */
+	private $parserFactory;
+
+	/**
+	 * @param ParserFactory $parserFactory
+	 */
+	public function __construct( ParserFactory $parserFactory ) {
+		$this->parserFactory = $parserFactory;
+	}
+
 	/**
 	 * @inheritDoc
 	 */
@@ -39,5 +53,21 @@ class MediawikiSidebar implements IMenu {
 	 */
 	public function getEmptyContent(): array {
 		return [];
+	}
+
+	/**
+	 * @param Title $title
+	 * @param RevisionRecord|null $revision
+	 *
+	 * @return IMenuParser
+	 * @throws \MWException
+	 */
+	public function getParser( Title $title, ?RevisionRecord $revision = null ): IMenuParser {
+		if ( !$revision ) {
+			$revision = $this->parserFactory->getRevisionForText( '', $title );
+		}
+		return new WikitextMenuParser(
+			$revision, $this->parserFactory->getNodeProcessors()
+		);
 	}
 }

@@ -39,6 +39,7 @@ class MenuFactory {
 		if ( $this->menus === null ) {
 			$this->menus = [];
 			$data = $this->registry->getAllValues();
+
 			foreach ( $data as $key => $spec ) {
 				$object = $this->objectFactory->createObject( $spec );
 				if ( !( $object instanceof IMenu ) ) {

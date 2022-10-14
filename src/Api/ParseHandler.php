@@ -3,35 +3,32 @@
 namespace MediaWiki\Extension\MenuEditor\Api;
 
 use Exception;
-use MediaWiki\Extension\MenuEditor\Parser\WikitextMenuParser;
-use MediaWiki\Rest\Handler;
+use MediaWiki\Extension\MenuEditor\MenuFactory;
+use MediaWiki\Extension\MenuEditor\Node\MenuNode;
 use MediaWiki\Rest\HttpException;
+use MediaWiki\Revision\RevisionStore;
 use MediaWiki\Storage\RevisionRecord;
-use MediaWiki\Storage\RevisionStore;
 use MWStake\MediaWiki\Component\Wikitext\ParserFactory;
 use MWStake\MediaWiki\Lib\Nodes\INode;
 use Title;
 use TitleFactory;
 use Wikimedia\ParamValidator\ParamValidator;
 
-class ParseHandler extends Handler {
-	/** @var ParserFactory */
-	private $parserFactory;
-	/** @var TitleFactory */
-	private $titleFactory;
+class ParseHandler extends MenuHandler {
 	/** @var RevisionStore */
 	private $revisionStore;
 
 	/**
-	 * @param ParserFactory $parserFactory
 	 * @param TitleFactory $titleFactory
+	 * @param MenuFactory $menuFactory
+	 * @param ParserFactory $parserFactory
 	 * @param RevisionStore $revisionStore
 	 */
 	public function __construct(
-		ParserFactory $parserFactory, TitleFactory $titleFactory, RevisionStore $revisionStore
+		TitleFactory $titleFactory, MenuFactory $menuFactory,
+		ParserFactory $parserFactory, RevisionStore $revisionStore
 	) {
-		$this->parserFactory = $parserFactory;
-		$this->titleFactory = $titleFactory;
+		parent::__construct( $titleFactory, $menuFactory, $parserFactory );
 		$this->revisionStore = $revisionStore;
 	}
 
@@ -46,9 +43,7 @@ class ParseHandler extends Handler {
 		if ( !$revision ) {
 			return $this->getResponseFactory()->createNoContent();
 		}
-		$parser = new WikitextMenuParser(
-			$revision, $this->parserFactory->getNodeProcessors()
-		);
+		$parser = $this->getParserForRevision( $page, $revision );
 		$nodes = $parser->parse();
 
 		$data = $params['flat'] ? $nodes : $this->makeTree( $nodes );
@@ -77,44 +72,6 @@ class ParseHandler extends Handler {
 				ParamValidator::PARAM_DEFAULT => false
 			]
 		];
-	}
-
-	/**
-	 * @param string $pagename
-	 * @return Title
-	 * @throws HttpException
-	 */
-	private function makeTitle( string $pagename ) {
-		$pagename = urldecode( $pagename );
-
-		$title = $this->titleFactory->newFromText( $pagename );
-		if ( !( $title instanceof Title ) ) {
-			throw new HttpException( 'invalidtitle' );
-		}
-
-		return $title;
-	}
-
-	/**
-	 * @param Title $page
-	 * @param int|null $revid
-	 * @return RevisionRecord|null
-	 * @throws HttpException
-	 */
-	private function getRevision( Title $page, ?int $revid ): ?RevisionRecord {
-		if ( !$page->exists() ) {
-			return null;
-		}
-		if ( $revid === null ) {
-			$revid = 0;
-		}
-
-		$revision = $this->revisionStore->getRevisionByTitle( $page, $revid );
-		if ( !$revision ) {
-			return null;
-		}
-
-		return $revision;
 	}
 
 	/**
@@ -151,7 +108,7 @@ class ParseHandler extends Handler {
 			if ( $parentFound ) {
 				if ( $childNode->getLevel() === $node->getLevel() + 1 ) {
 					$children[] = $this->getNodeData( $childNode ) + $this->getChildren( $nodes, $childNode );
-				} else {
+				} elseif ( $childNode->getLevel() <= $node->getLevel() ) {
 					return [ 'items' => $children ];
 				}
 			}
@@ -171,5 +128,26 @@ class ParseHandler extends Handler {
 		$data['name'] = 'menunode_' . random_int( 1, 999999 );
 
 		return $data;
+	}
+
+	/**
+	 * @param Title $page
+	 * @param int|null $revid
+	 * @return RevisionRecord|null
+	 */
+	private function getRevision( Title $page, ?int $revid ): ?RevisionRecord {
+		if ( !$page->exists() ) {
+			return null;
+		}
+		if ( $revid === null ) {
+			$revid = 0;
+		}
+
+		$revision = $this->revisionStore->getRevisionByTitle( $page, $revid );
+		if ( !$revision ) {
+			return null;
+		}
+
+		return $revision;
 	}
 }
