@@ -31,7 +31,7 @@ ext.menueditor.ui.data.node.TreeNode.prototype.getForm = function () {
 		// * menueditor-ui-menu-keyword-label
 		var labelText = mw.message( 'menueditor-ui-' + this.nodeData.type + '-label-edit' ).text();
 
-		var form = new mw.ext.forms.standalone.Form( {
+		var form = new mw.ext.forms.standalone.Form( $.extend( {
 			data: this.getNodeData(),
 			definition: {
 				items: [
@@ -49,7 +49,7 @@ ext.menueditor.ui.data.node.TreeNode.prototype.getForm = function () {
 			},
 			errorReporting: false,
 			showTitle: false
-		} );
+		}, this.getFormConfig() ) );
 		form.render();
 		form.$element.addClass( 'menueditor-menu-node-form' );
 
@@ -66,6 +66,11 @@ ext.menueditor.ui.data.node.TreeNode.prototype.getForm = function () {
 ext.menueditor.ui.data.node.TreeNode.prototype.getFormFields = function () {
 	// STUB
 	return [];
+};
+
+ext.menueditor.ui.data.node.TreeNode.prototype.getFormConfig = function () {
+	// STUB
+	return {};
 };
 
 ext.menueditor.ui.data.node.TreeNode.prototype.possiblyAddOptions = function () {

@@ -15,7 +15,7 @@
 			mw.loader.using( $.uniqueSort( modules ), function () {
 				registerDfd.resolve();
 			}, function () {
-				registerDfd.reject();
+				registerDfd.reject( 'Cannot load modules:' + $.uniqueSort( modules ) );
 			} );
 
 			return registerDfd.promise();
@@ -29,6 +29,9 @@
 			register( require( './nodes.json' ), ext.menueditor.registry.node, dfd )
 		).then( function () {
 			dfd.resolve();
+		}, function ( e ) {
+			console.error( e ); // eslint-disable-line no-console
+			dfd.reject( e );
 		} );
 		return dfd.promise();
 	};

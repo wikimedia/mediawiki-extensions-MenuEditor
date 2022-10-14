@@ -2,32 +2,12 @@
 
 namespace MediaWiki\Extension\MenuEditor\Api;
 
-use MediaWiki\Extension\MenuEditor\Parser\WikitextMenuParser;
-use MediaWiki\Rest\Handler;
 use MediaWiki\Rest\HttpException;
 use MediaWiki\Rest\Validator\JsonBodyValidator;
-use MWStake\MediaWiki\Component\Wikitext\ParserFactory;
 use RequestContext;
-use Title;
-use TitleFactory;
 use Wikimedia\ParamValidator\ParamValidator;
 
-class SaveContentHandler extends Handler {
-	/** @var ParserFactory */
-	private $parserFactory;
-	/** @var TitleFactory */
-	private $titleFactory;
-
-	/**
-	 * @param ParserFactory $parserFactory
-	 * @param TitleFactory $titleFactory
-	 */
-	public function __construct(
-		ParserFactory $parserFactory, TitleFactory $titleFactory
-	) {
-		$this->parserFactory = $parserFactory;
-		$this->titleFactory = $titleFactory;
-	}
+class SaveContentHandler extends MenuHandler {
 
 	/**
 	 * @return \MediaWiki\Rest\Response|mixed
@@ -38,14 +18,10 @@ class SaveContentHandler extends Handler {
 		$page = $this->makeTitle( $params['pagename'] );
 		$body = $this->getValidatedBody();
 
-		$parser = new WikitextMenuParser(
-			$this->parserFactory->getRevisionForText( '', $page ),
-			$this->parserFactory->getNodeProcessors()
-		);
+		$parser = $this->getParserForRevision( $page );
 		$parser->addNodesFromData( $body );
 
 		$rev = $parser->saveRevision( RequestContext::getMain()->getUser() );
-
 		if ( !$rev ) {
 			throw new HttpException( 'save-failed' );
 		}
@@ -77,20 +53,5 @@ class SaveContentHandler extends Handler {
 			throw new HttpException( 'ContentType header must be application/json' );
 		}
 		return new JsonBodyValidator( [] );
-	}
-
-	/**
-	 * @param string $pagename
-	 * @return Title
-	 * @throws HttpException
-	 */
-	private function makeTitle( string $pagename ) {
-		$pagename = urldecode( $pagename );
-		$title = $this->titleFactory->newFromText( $pagename );
-		if ( !( $title instanceof Title ) ) {
-			throw new HttpException( 'invalidtitle' );
-		}
-
-		return $title;
 	}
 }

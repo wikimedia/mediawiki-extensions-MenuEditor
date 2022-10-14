@@ -12,7 +12,7 @@ use MWStake\MediaWiki\Lib\Nodes\INode;
 use MWStake\MediaWiki\Lib\Nodes\INodeProcessor;
 use MWStake\MediaWiki\Lib\Nodes\IParser;
 
-class WikitextMenuParser extends MutableWikitextParser implements IParser {
+class WikitextMenuParser extends MutableWikitextParser implements IParser, IMenuParser {
 	/** @var INodeProcessor[] */
 	private $nodeProcessors;
 	/** @var INode[] */
@@ -51,11 +51,9 @@ class WikitextMenuParser extends MutableWikitextParser implements IParser {
 	}
 
 	/**
-	 * @param array $nodes
-	 * @param bool|null $replace
-	 * @return void
+	 * @inheritDoc
 	 */
-	public function addNodesFromData( array $nodes, $replace = false ) {
+	public function addNodesFromData( array $nodes, bool $replace = false ) {
 		if ( $replace ) {
 			// Clear wikitext
 			$this->setRawData( '' );
