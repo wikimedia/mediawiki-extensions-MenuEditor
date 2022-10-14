@@ -59,7 +59,7 @@ class MenuParserTest extends TestCase {
 	 */
 	private function getProcessors() {
 		$processorFactory = MediaWikiServices::getInstance()->getService(
-			'WikitextNodeProcessorRegistryFactory'
+			'MWStakeWikitextNodeProcessorRegistryFactory'
 		);
 		return $processorFactory->getAll();
 	}

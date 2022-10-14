@@ -17,7 +17,10 @@
 		"MenuEditor": {
 			"Menus": {
 				"mediawiki-sidebar": {
-					"class": "MediaWiki\\Extension\\MenuEditor\\Menu\\MediawikiSidebar"
+					"class": "MediaWiki\\Extension\\MenuEditor\\Menu\\MediawikiSidebar",
+					"services": [
+						"MWStakeWikitextParserFactory"
+					]
 				}
 			},
 			"Nodes": {
@@ -219,13 +222,13 @@
 			"method": "GET",
 			"path": "/menueditor/parse/{pagename}",
 			"class": "MediaWiki\\Extension\\MenuEditor\\Api\\ParseHandler",
-			"services": [ "WikitextParserFactory", "TitleFactory", "RevisionStore" ]
+			"services": [ "TitleFactory", "MenuEditorMenuFactory", "MWStakeWikitextParserFactory", "RevisionStore" ]
 		},
 		{
 			"method": "PUT",
 			"path": "/menueditor/{pagename}",
 			"class": "MediaWiki\\Extension\\MenuEditor\\Api\\SaveContentHandler",
-			"services": [ "WikitextParserFactory", "TitleFactory" ]
+			"services": [ "TitleFactory", "MenuEditorMenuFactory", "MWStakeWikitextParserFactory" ]
 		}
 	],
 	"load_composer_autoloader": true,
