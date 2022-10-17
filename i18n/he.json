@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80"
+		]
+	},
+	"menueditor-ui-dialog-action-cancel": "ביטול",
+	"menueditor-ui-submit": "שמירה",
+	"menueditor-ui-cancel": "ביטול",
+	"menueditor-toolbar-submit": "שמירת השינויים",
+	"menueditor-toolbar-cancel": "ביטול עריכה"
+}
