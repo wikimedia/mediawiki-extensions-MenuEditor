@@ -5,7 +5,7 @@ declare( strict_types = 1 );
 namespace MediaWiki\Extension\MenuEditor;
 
 use MediaWiki\Extension\MenuEditor\Parser\IMenuParser;
-use MediaWiki\Storage\RevisionRecord;
+use MediaWiki\Revision\RevisionRecord;
 use Title;
 
 interface ParsableMenu extends IMenu {
