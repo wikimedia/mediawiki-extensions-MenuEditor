@@ -3,8 +3,6 @@
 namespace MediaWiki\Extension\MenuEditor\Hook;
 
 use Article;
-use BlueSpice\Discovery\Hook\BlueSpiceDiscoveryTemplateDataProviderAfterInit;
-use BlueSpice\Discovery\ITemplateDataProvider;
 use Html;
 use MediaWiki;
 use MediaWiki\Extension\MenuEditor\MenuFactory;
@@ -19,8 +17,7 @@ use WebRequest;
 
 class EditActionHookHandler implements
 	MediaWikiPerformActionHook,
-	SkinTemplateNavigation__UniversalHook,
-	BlueSpiceDiscoveryTemplateDataProviderAfterInit
+	SkinTemplateNavigation__UniversalHook
 {
 	/** @var Title|null */
 	private $title = null;
@@ -38,10 +35,6 @@ class EditActionHookHandler implements
 		$hookContainer->register(
 			'SkinTemplateNavigation::Universal',
 			[ $this, 'onSkinTemplateNavigation__Universal' ]
-		);
-		$hookContainer->register(
-			'BlueSpiceDiscoveryTemplateDataProviderAfterInit',
-			[ $this, 'onBlueSpiceDiscoveryTemplateDataProviderAfterInit' ]
 		);
 	}
 
@@ -118,17 +111,5 @@ class EditActionHookHandler implements
 		$links['views']['edit'] = array_merge( $links['views']['edit'], [
 			'text' => $sktemplate->msg( "menueditor-action-menuedit" )->text(),
 		] );
-	}
-
-	/**
-	 * @param ITemplateDataProvider $registry
-	 */
-	public function onBlueSpiceDiscoveryTemplateDataProviderAfterInit( $registry ): void {
-		if ( !$this->title ) {
-			return;
-		}
-		$registry->register( 'panel/edit', 'ca-menueditsource' );
-		$registry->unregister( 'panel/edit', 'ca-new-section' );
-		$registry->unregister( 'panel/edit', 'ca-ve-edit' );
 	}
 }
