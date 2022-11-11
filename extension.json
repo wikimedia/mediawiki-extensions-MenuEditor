@@ -195,7 +195,7 @@
 		"BeforeInitialize": "initializeMenus",
 		"SkinTemplateNavigation::Universal": "editActions",
 		"MediaWikiPerformAction": "editActions",
-		"BlueSpiceDiscoveryTemplateDataProviderAfterInit": "editActions"
+		"BlueSpiceDiscoveryTemplateDataProviderAfterInit": "discovery-skin"
 	},
 	"HookHandlers": {
 		"initializeMenus": {
@@ -206,6 +206,12 @@
 			"class": "MediaWiki\\Extension\\MenuEditor\\Hook\\EditActionHookHandler",
 			"services": [
 				"HookContainer", "MenuEditorMenuFactory"
+			]
+		},
+		"discovery-skin": {
+			"class": "MediaWiki\\Extension\\MenuEditor\\Hook\\DiscoverySkin",
+			"services": [
+				"HookContainer"
 			]
 		}
 	},
