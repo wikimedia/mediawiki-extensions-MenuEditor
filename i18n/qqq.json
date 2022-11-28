@@ -2,10 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Robby",
+			"Umherirrender",
 			"Verdy p"
 		]
 	},
-	"menueditor-desc": "Description of MenuEditor for [[Special:Version]]",
+	"menueditor-desc": "{{desc|name=MenuEditor|url=https://www.mediawiki.org/wiki/Extension:MenuEditor}}",
 	"menueditor-ui-menu-wiki-link-label": "Node label",
 	"menueditor-ui-menu-wiki-link-help": "Node description",
 	"menueditor-ui-menu-wiki-link-label-edit": "Label for edit node",
