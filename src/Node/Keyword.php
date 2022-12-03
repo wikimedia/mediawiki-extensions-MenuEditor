@@ -58,7 +58,7 @@ class Keyword extends MenuNode {
 	/**
 	 * @return array
 	 */
-	public function jsonSerialize() {
+	public function jsonSerialize(): array {
 		return [
 			'type' => $this->getType(),
 			'level' => $this->getLevel(),
