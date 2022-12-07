@@ -5,7 +5,7 @@ namespace MediaWiki\Extension\MenuEditor\Menu;
 use MediaWiki\Extension\MenuEditor\ParsableMenu;
 use MediaWiki\Extension\MenuEditor\Parser\IMenuParser;
 use MediaWiki\Extension\MenuEditor\Parser\WikitextMenuParser;
-use MediaWiki\Storage\RevisionRecord;
+use MediaWiki\Revision\RevisionRecord;
 use MWStake\MediaWiki\Component\Wikitext\ParserFactory;
 use Title;
 

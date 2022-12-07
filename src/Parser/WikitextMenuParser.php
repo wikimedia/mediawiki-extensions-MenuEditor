@@ -4,8 +4,8 @@ namespace MediaWiki\Extension\MenuEditor\Parser;
 
 use MediaWiki\Extension\MenuEditor\IMenuNodeProcessor;
 use MediaWiki\Extension\MenuEditor\Node\MenuNode;
+use MediaWiki\Revision\RevisionRecord;
 use MediaWiki\Revision\SlotRecord;
-use MediaWiki\Storage\RevisionRecord;
 use MWStake\MediaWiki\Component\Wikitext\NodeSource\WikitextSource;
 use MWStake\MediaWiki\Component\Wikitext\Parser\MutableWikitextParser;
 use MWStake\MediaWiki\Lib\Nodes\INode;
