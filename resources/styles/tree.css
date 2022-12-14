@@ -32,25 +32,6 @@
 	margin-top: 10px;
 }
 
-li > ul.tree-node-list li:after {
-	content: '';
-	position: absolute;
-	border-top: 2px dashed #e3e3e3;
-	top: 16px;
-	left: -15px;
-	width: 35px;
-}
-
-li > ul.tree-node-list li:before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: -15px;
-	border-left: 2px dashed #e3e3e3;
-	width: 1px;
-	height: 100%;
-}
-
 li > ul.tree-node-list li:last-child:before {
 	height: 50%;
 }
@@ -80,11 +61,70 @@ li > ul.tree-node-list li:last-child:before {
 }
 
 /* stylelint-disable selector-max-id */
+/* stylelint-disable declaration-no-important */
+#menuEditor-container .oojsplus-data-tree-expander a {
+	padding: 22px 10px 10px !important;
+}
+/* stylelint-enable declaration-no-important */
+
 #mw-content-text .oo-ui-tool-name-cancel a:hover {
 	background-color: #c8ccd1;
 }
-/* stylelint-enable selector-max-id */
 
 .oo-ui-barToolGroup-tools > .oo-ui-tool + .oo-ui-tool {
 	margin-left: 0;
+}
+
+#menuEditor-container .oo-ui-buttonElement-button:hover {
+	background-color: transparent;
+}
+
+#menuEditor-container .tree-item-options-btn {
+	float: right;
+}
+
+#menuEditor-container .tree-item-options-btn .oo-ui-buttonElement-button > .oo-ui-iconElement-icon {
+	opacity: 0.2;
+}
+
+#menuEditor-container .tree-item-options-btn .oo-ui-buttonElement-button:hover > .oo-ui-iconElement-icon {
+	opacity: 0.87;
+}
+
+#menuEditor-container .oo-ui-buttonWidget {
+	margin-right: 0;
+}
+
+#menuEditor-container li > :not( ul ) {
+	padding: 2px 10px;
+	margin: 5px 0;
+	background-color: #f8f9fa;
+	border-radius: 2px;
+}
+
+#menuEditor-container li:hover > :not( ul ) {
+	cursor: pointer;
+}
+
+#menuEditor-container .oojsplus-data-tree-expander {
+	top: 0;
+	margin-top: 0;
+	height: 35px;
+}
+
+/* stylelint-disable unit-disallowed-list */
+#menuEditor-container .oo-ui-buttonElement-button > span {
+	font-weight: normal;
+	font-size: 0.8rem;
+	min-width: 0;
+}
+/* stylelint-enable unit-disallowed-list */
+
+#menuEditor-container .oojsplus-data-tree-expander + div {
+	margin-bottom: 10px;
+}
+/* stylelint-enable selector-max-id */
+
+.oojsplus-data-tree-items .oojs-ui-data-tree-item {
+	padding-right: 30px;
 }

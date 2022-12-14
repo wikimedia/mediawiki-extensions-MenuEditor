@@ -2,6 +2,10 @@ ext.menueditor.ui.data.node.TreeNode = function ( cfg ) {
 	this.nodeData = cfg.nodeData;
 	this.allowEdits = cfg.allowEdits || false;
 	cfg.label = this.labelFromData( this.nodeData );
+	cfg.style = {
+		IconExpand: 'next',
+		IconCollapse: 'expand'
+	};
 	ext.menueditor.ui.data.node.TreeNode.parent.call( this, cfg );
 
 	this.$element.attr( 'data-type', this.nodeData.type );
