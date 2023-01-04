@@ -5,5 +5,6 @@
 		]
 	},
 	"menueditor-action-menueditsource": "Uredi vir",
-	"menueditor-ui-menu-keyword-help": "Ena od razpoložljivih '''ključnih besed''', ki bodo prikazale ustrezni gradnik"
+	"menueditor-ui-menu-keyword-help": "Ena od razpoložljivih '''ključnih besed''', ki bodo prikazale ustrezni gradnik",
+	"menueditor-action-menuedit": "Uredi"
 }
