@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Hedda"
+			"Hedda",
+			"Rapsar"
 		]
 	},
 	"menueditor-desc": "Menü sayfaları için grafik düzenleyici",
@@ -24,5 +25,5 @@
 	"menueditor-ui-cancel": "İptal",
 	"menueditor-ui-redlink-notice": "Bu menü henüz mevcut değil!",
 	"menueditor-action-menueditsource": "Kaynağı düzenle",
-	"menueditor-action-menuedit": "Düzenle"
+	"menueditor-action-menuedit": "Değiştir"
 }
