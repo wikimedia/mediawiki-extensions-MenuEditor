@@ -24,6 +24,6 @@
 	"menueditor-ui-submit": "Kaydet",
 	"menueditor-ui-cancel": "İptal",
 	"menueditor-ui-redlink-notice": "Bu menü henüz mevcut değil!",
-	"menueditor-action-menueditsource": "Kaynağı düzenle",
+	"menueditor-action-menueditsource": "Kaynağı değiştir",
 	"menueditor-action-menuedit": "Değiştir"
 }
