@@ -206,9 +206,7 @@
 		},
 		"discovery-skin": {
 			"class": "MediaWiki\\Extension\\MenuEditor\\Hook\\DiscoverySkin",
-			"services": [
-				"HookContainer"
-			]
+			"services": [ "MenuEditorMenuFactory" ]
 		}
 	},
 	"Actions": {
