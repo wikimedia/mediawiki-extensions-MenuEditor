@@ -29,6 +29,7 @@ ext.menueditor.ui.data.tree.Tree.prototype.createItemWidget = function ( item, l
 		level: lvl,
 		tree: this,
 		nodeData: item,
+		leaf: isLeaf,
 		// eslint-disable-next-line max-len
 		allowAdditions: this.allowAdditions && ( maxLevels ? lvl + 1 < maxLevels : true ) && classname.static.canHaveChildren,
 		allowEdits: this.editable,
