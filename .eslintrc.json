@@ -6,7 +6,8 @@
 		"wikimedia/mediawiki"
 	],
 	"rules": {
-		"no-undef": "warn"
+		"no-undef": "warn",
+		"es-x/no-regexp-prototype-flags": "warn"
 	},
 	"globals": {
 		"ext": "readonly",
