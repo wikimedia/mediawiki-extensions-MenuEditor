@@ -2,6 +2,7 @@ ext.menueditor.ui.data.node.TreeNode = function ( cfg ) {
 	this.nodeData = cfg.nodeData;
 	this.allowEdits = cfg.allowEdits || false;
 	cfg.label = this.labelFromData( this.nodeData );
+	cfg.labelAdd = mw.message( 'menueditor-ui-add-sub-element-label' ).text();
 	cfg.style = {
 		IconExpand: 'next',
 		IconCollapse: 'expand'
@@ -85,7 +86,7 @@ ext.menueditor.ui.data.node.TreeNode.prototype.possiblyAddOptions = function () 
 	}
 	var editButton = new OO.ui.ButtonWidget( {
 		framed: false,
-		label: mw.message( 'menueditor-ui-edit-node-label' ).text(),
+		label: mw.message( 'menueditor-ui-edit-label' ).text(),
 		icon: 'edit'
 	} );
 	editButton.connect( this, {

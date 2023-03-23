@@ -64,9 +64,14 @@ ext.menueditor.ui.dialog.NodeDialog.prototype.initialize = function () {
 		this.formCnt = new OO.ui.PanelLayout( { padded: false, expanded: false } );
 		this.content.$element.append( this.formCnt.$element );
 
-		var first = selector.getMenu().findFirstSelectableItem();
-		if ( first ) {
-			selector.getMenu().selectItem( first );
+		var internal = selector.getMenu().findItemFromData( 'enhanced-sidebar-internal-link' );
+		if ( internal ) {
+			selector.getMenu().selectItem( internal );
+		} else {
+			var first = selector.getMenu().findFirstSelectableItem();
+			if ( first ) {
+				selector.getMenu().selectItem( first );
+			}
 		}
 	}
 	this.$body.append( this.content.$element );

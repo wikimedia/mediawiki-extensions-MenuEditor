@@ -17,7 +17,6 @@
 	"menueditor-ui-menu-keyword-label": "Keyword",
 	"menueditor-ui-menu-keyword-label-edit": "Edit keyword",
 	"menueditor-ui-menu-keyword-help": "One of the available '''keywords''', that will show appropriate widget",
-	"menueditor-ui-edit-node-label": "Edit node",
 	"menueditor-ui-form-field-keyword": "Keyword",
 	"menueditor-ui-form-field-text": "Text or a message key",
 	"menueditor-ui-form-field-target": "Link target",
@@ -35,5 +34,7 @@
 	"menueditor-ui-mediawiki-sidebar-keyword-label": "Keyword",
 	"menueditor-toolbar-submit": "Save changes",
 	"menueditor-toolbar-cancel": "Cancel edit",
-	"menueditor-toolbar-add": "Add new element"
+	"menueditor-toolbar-add-label": "Add element",
+	"menueditor-ui-edit-label": "Edit",
+	"menueditor-ui-add-sub-element-label": "Add sub element"
 }
