@@ -36,11 +36,17 @@ li > ul.tree-node-list li:last-child:before {
 	height: 50%;
 }
 
+/* stylelint-disable unit-disallowed-list */
 /* stylelint-disable selector-max-id */
+#menuEditor-container .oojsplus-data-tree-label .oo-ui-iconElement-icon {
+	font-size: 0.8rem;
+	margin-left: 6px;
+}
+/* stylelint-enable unit-disallowed-list */
+
 #mw-content-text .oojsplus-data-tree-label a .oo-ui-iconElement-icon {
 	opacity: 0.2;
 }
-/* stylelint-enable selector-max-id */
 
 .tree-item-options-btn {
 	color: #e3e3e3;
@@ -60,7 +66,10 @@ li > ul.tree-node-list li:last-child:before {
 	background-color: #eaecf0;
 }
 
-/* stylelint-disable selector-max-id */
+#menuEditor-container .tree-node-list {
+	margin-left: 0;
+}
+
 /* stylelint-disable declaration-no-important */
 #menuEditor-container .oojsplus-data-tree-expander a {
 	padding: 22px 10px 10px !important;
@@ -84,11 +93,11 @@ li > ul.tree-node-list li:last-child:before {
 }
 
 #menuEditor-container .tree-item-options-btn .oo-ui-buttonElement-button > .oo-ui-iconElement-icon {
-	opacity: 0.2;
+	opacity: 0.6;
 }
 
 #menuEditor-container .tree-item-options-btn .oo-ui-buttonElement-button:hover > .oo-ui-iconElement-icon {
-	opacity: 0.87;
+	opacity: 0.6;
 }
 
 #menuEditor-container .oo-ui-buttonWidget {
@@ -96,35 +105,42 @@ li > ul.tree-node-list li:last-child:before {
 }
 
 #menuEditor-container li > :not( ul ) {
-	padding: 2px 10px;
+	padding: 2px 4px;
 	margin: 5px 0;
 	background-color: #f8f9fa;
 	border-radius: 2px;
 }
 
 #menuEditor-container li:hover > :not( ul ) {
-	cursor: pointer;
+	cursor: grabbing;
 }
 
-#menuEditor-container .oojsplus-data-tree-expander {
-	top: 0;
-	margin-top: 0;
-	height: 35px;
+#menuEditor-container .oojsplus-data-tree-label .oo-ui-labelElement-label {
+	margin-left: 5px;
+}
+
+#menuEditor-container .oojsplus-data-tree-label {
+	margin-left: 2px;
+}
+
+#menuEditor-container .oojs-ui-data-tree-item {
+	padding-left: 20px;
 }
 
 /* stylelint-disable unit-disallowed-list */
-#menuEditor-container .oo-ui-buttonElement-button > span {
-	font-weight: normal;
-	font-size: 0.8rem;
-	min-width: 0;
+#menuEditor-container .oojsplus-data-tree-expander {
+	top: 0;
+	margin-top: 0;
+	height: 2.3rem;
 }
 /* stylelint-enable unit-disallowed-list */
+
+#menuEditor-container .oo-ui-buttonElement-button > span {
+	font-weight: normal;
+	min-width: 0;
+}
 
 #menuEditor-container .oojsplus-data-tree-expander + div {
 	margin-bottom: 10px;
 }
 /* stylelint-enable selector-max-id */
-
-.oojsplus-data-tree-items .oojs-ui-data-tree-item {
-	padding-right: 30px;
-}

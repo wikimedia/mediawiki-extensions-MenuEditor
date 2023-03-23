@@ -38,8 +38,8 @@ ext.menueditor.ui.widget.NewItemTool = function () {
 OO.inheritClass( ext.menueditor.ui.widget.NewItemTool, OO.ui.Tool );
 ext.menueditor.ui.widget.NewItemTool.static.name = 'newItem';
 ext.menueditor.ui.widget.NewItemTool.static.icon = 'add';
-ext.menueditor.ui.widget.NewItemTool.static.title = mw.message( 'menueditor-toolbar-add' );
-ext.menueditor.ui.widget.NewItemTool.static.label = mw.message( 'menueditor-toolbar-add' );
+ext.menueditor.ui.widget.NewItemTool.static.title = mw.message( 'menueditor-toolbar-add-label' );
+ext.menueditor.ui.widget.NewItemTool.static.label = mw.message( 'menueditor-toolbar-add-label' );
 ext.menueditor.ui.widget.NewItemTool.static.flags = [ 'progressive' ];
 ext.menueditor.ui.widget.NewItemTool.static.displayBothIconAndLabel = true;
 

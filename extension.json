@@ -102,7 +102,7 @@
 			"messages": [
 				"menueditor-ui-dialog-action-done",
 				"menueditor-ui-dialog-action-cancel",
-				"menueditor-ui-edit-node-label",
+				"menueditor-ui-edit-label",
 				"menueditor-ui-node-type-selector-label",
 				"menueditor-ui-dialog-title"
 			],
@@ -131,7 +131,7 @@
 				"menueditor-ui-menu-raw-text-label",
 				"menueditor-ui-menu-keyword-label",
 				"menueditor-ui-menu-keyword-help",
-				"menueditor-ui-edit-node-label",
+				"menueditor-ui-edit-label",
 				"menueditor-ui-form-field-keyword",
 				"menueditor-ui-form-field-text",
 				"menueditor-ui-form-field-target",
@@ -141,7 +141,8 @@
 				"menueditor-ui-menu-two-fold-link-spec-label-edit",
 				"menueditor-ui-menu-raw-text-label-edit",
 				"menueditor-ui-menu-keyword-label-edit",
-				"menueditor-ui-cancel"
+				"menueditor-ui-cancel",
+				"menueditor-ui-add-sub-element-label"
 			]
 		},
 		"ext.menuEditor.panel": {
@@ -164,7 +165,7 @@
 			"messages": [
 				"menueditor-toolbar-submit",
 				"menueditor-toolbar-cancel",
-				"menueditor-toolbar-add"
+				"menueditor-toolbar-add-label"
 			],
 			"dependencies": [
 				"oojs-ui"
