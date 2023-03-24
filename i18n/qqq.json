@@ -37,5 +37,8 @@
 	"menueditor-ui-mediawiki-sidebar-keyword-label": "Node label",
 	"menueditor-toolbar-submit": "Title for toolbar action save\n{{identical|savechanges}}",
 	"menueditor-toolbar-cancel": "Title for toolbar action cancel",
-	"menueditor-toolbar-add": "Title for toolbar action new item"
+	"menueditor-toolbar-add": "Title for toolbar action new item",
+	"menueditor-toolbar-add-label": "Title for toolbar action new item",
+	"menueditor-ui-edit-label": "Button label for edit node element\n{{identical|Edit}}",
+	"menueditor-ui-add-sub-element-label": "Label for action add sub element"
 }
