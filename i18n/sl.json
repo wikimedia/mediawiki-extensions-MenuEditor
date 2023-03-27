@@ -16,7 +16,6 @@
 	"menueditor-ui-menu-keyword-label": "Ključna beseda",
 	"menueditor-ui-menu-keyword-label-edit": "Uredi ključno besedo",
 	"menueditor-ui-menu-keyword-help": "Ena od razpoložljivih '''ključnih besed''', ki bodo prikazale ustrezni gradnik",
-	"menueditor-ui-edit-node-label": "Uredi vozlišče",
 	"menueditor-ui-form-field-keyword": "Ključna beseda",
 	"menueditor-ui-form-field-text": "Besedilo ali ključ sporočila",
 	"menueditor-ui-form-field-target": "Cilj povezave",
@@ -34,5 +33,7 @@
 	"menueditor-ui-mediawiki-sidebar-keyword-label": "Ključna beseda",
 	"menueditor-toolbar-submit": "Shrani spremembe",
 	"menueditor-toolbar-cancel": "Prekliči urejanje",
-	"menueditor-toolbar-add": "Dodaj nov element"
+	"menueditor-toolbar-add-label": "Dodaj element",
+	"menueditor-ui-edit-label": "Uredi",
+	"menueditor-ui-add-sub-element-label": "Dodaj podelement"
 }
