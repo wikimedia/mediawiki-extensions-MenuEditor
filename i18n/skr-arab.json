@@ -8,5 +8,7 @@
 	"menueditor-ui-dialog-action-done": "تھی ڳیا",
 	"menueditor-ui-dialog-action-cancel": "منسوخ",
 	"menueditor-ui-cancel": "منسوخ",
-	"menueditor-action-menueditsource": "ماخذ وچ لکھو"
+	"menueditor-action-menueditsource": "ماخذ وچ لکھو",
+	"menueditor-toolbar-add-label": "عنصر شامل کرو",
+	"menueditor-ui-edit-label": "لکھو"
 }

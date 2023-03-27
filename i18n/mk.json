@@ -35,5 +35,8 @@
 	"menueditor-ui-mediawiki-sidebar-keyword-label": "Клучен збор",
 	"menueditor-toolbar-submit": "Зачувај промени",
 	"menueditor-toolbar-cancel": "Откажи уредување",
-	"menueditor-toolbar-add": "Додај нов елемент"
+	"menueditor-toolbar-add": "Додај нов елемент",
+	"menueditor-toolbar-add-label": "Додај елемент",
+	"menueditor-ui-edit-label": "Уреди",
+	"menueditor-ui-add-sub-element-label": "Додај поделемент"
 }

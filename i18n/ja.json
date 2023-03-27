@@ -18,5 +18,6 @@
 	"menueditor-ui-mediawiki-sidebar-keyword-label-edit": "キーワードを編集",
 	"menueditor-ui-mediawiki-sidebar-keyword-label": "キーワード",
 	"menueditor-toolbar-submit": "変更を保存",
-	"menueditor-toolbar-cancel": "編集をキャンセル"
+	"menueditor-toolbar-cancel": "編集をキャンセル",
+	"menueditor-ui-edit-label": "編集"
 }
