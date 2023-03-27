@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robby"
+			"Robby",
+			"Volvox"
 		]
 	},
 	"menueditor-ui-menu-wiki-link-label": "Wiki-Link",
@@ -21,5 +22,6 @@
 	"menueditor-action-menueditsource": "Quelltext änneren",
 	"menueditor-action-menuedit": "Änneren",
 	"menueditor-toolbar-submit": "Ännerunge späicheren",
-	"menueditor-toolbar-add": "Neit Element derbäisetzen"
+	"menueditor-toolbar-add": "Neit Element derbäisetzen",
+	"menueditor-ui-edit-label": "Änneren"
 }

@@ -35,5 +35,8 @@
 	"menueditor-ui-mediawiki-sidebar-keyword-label": "Mot-clé",
 	"menueditor-toolbar-submit": "Enregistrer les modifications",
 	"menueditor-toolbar-cancel": "Annuler les modifications",
-	"menueditor-toolbar-add": "Ajouter un nouvel élément"
+	"menueditor-toolbar-add": "Ajouter un nouvel élément",
+	"menueditor-toolbar-add-label": "Ajouter un élément",
+	"menueditor-ui-edit-label": "Modifier",
+	"menueditor-ui-add-sub-element-label": "Ajouter un sous-élément"
 }

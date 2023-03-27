@@ -34,5 +34,8 @@
 	"menueditor-ui-mediawiki-sidebar-keyword-label": "Ključna beseda",
 	"menueditor-toolbar-submit": "Shrani spremembe",
 	"menueditor-toolbar-cancel": "Prekliči urejanje",
-	"menueditor-toolbar-add": "Dodaj nov element"
+	"menueditor-toolbar-add": "Dodaj nov element",
+	"menueditor-toolbar-add-label": "Dodaj element",
+	"menueditor-ui-edit-label": "Uredi",
+	"menueditor-ui-add-sub-element-label": "Dodaj podelement"
 }
