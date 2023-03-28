@@ -16,7 +16,6 @@
 	"menueditor-ui-menu-keyword-label": "Parola-clave",
 	"menueditor-ui-menu-keyword-label-edit": "Modificar le parola-clave",
 	"menueditor-ui-menu-keyword-help": "Un del '''parolas-clave''' disponibile, le qual monstrara le widget appropriate",
-	"menueditor-ui-edit-node-label": "Modificar nodo",
 	"menueditor-ui-form-field-keyword": "Parola-clave",
 	"menueditor-ui-form-field-text": "Texto o clave de message",
 	"menueditor-ui-form-field-target": "Destination del ligamine",
@@ -34,5 +33,7 @@
 	"menueditor-ui-mediawiki-sidebar-keyword-label": "Parola-clave",
 	"menueditor-toolbar-submit": "Salveguardar modificationes",
 	"menueditor-toolbar-cancel": "Cancellar modification",
-	"menueditor-toolbar-add": "Adder nove elemento"
+	"menueditor-toolbar-add-label": "Adder elemento",
+	"menueditor-ui-edit-label": "Modificar",
+	"menueditor-ui-add-sub-element-label": "Adder subelemento"
 }

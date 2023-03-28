@@ -17,7 +17,6 @@
 	"menueditor-ui-menu-keyword-label": "Mot-clé",
 	"menueditor-ui-menu-keyword-label-edit": "Modifier le mot-clé",
 	"menueditor-ui-menu-keyword-help": "Un des '''mots-clés''' disponibles, qui affichera le widget approprié",
-	"menueditor-ui-edit-node-label": "Modifier le nœud",
 	"menueditor-ui-form-field-keyword": "Mot-clé",
 	"menueditor-ui-form-field-text": "Texte ou clé de message",
 	"menueditor-ui-form-field-target": "Cible du lien",
@@ -35,5 +34,7 @@
 	"menueditor-ui-mediawiki-sidebar-keyword-label": "Mot-clé",
 	"menueditor-toolbar-submit": "Enregistrer les modifications",
 	"menueditor-toolbar-cancel": "Annuler les modifications",
-	"menueditor-toolbar-add": "Ajouter un nouvel élément"
+	"menueditor-toolbar-add-label": "Ajouter un élément",
+	"menueditor-ui-edit-label": "Modifier",
+	"menueditor-ui-add-sub-element-label": "Ajouter un sous-élément"
 }
