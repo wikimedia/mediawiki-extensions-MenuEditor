@@ -34,5 +34,8 @@
 	"menueditor-ui-menu-two-fold-link-spec-label-edit": "עריכת קישור",
 	"menueditor-ui-menu-two-fold-link-spec-help": "הגדרת קישור.<br>היעד יכול להיות:<ul><li>מפתח הודעה שיכול להיפתר לשם דף</li><li>קישור חיצוני</li><li>שם של דף בוויקי</li><li>קישור בינוויקי</li></ul>",
 	"menueditor-ui-menu-raw-text-label": "טקסט או מפתח הודעה",
-	"menueditor-ui-menu-raw-text-label-edit": "עריכת טקסט או מפתח הודעה"
+	"menueditor-ui-menu-raw-text-label-edit": "עריכת טקסט או מפתח הודעה",
+	"menueditor-toolbar-add-label": "הוספת רכיב",
+	"menueditor-ui-edit-label": "עריכה",
+	"menueditor-ui-add-sub-element-label": "הוסף רכיב־משנה"
 }
