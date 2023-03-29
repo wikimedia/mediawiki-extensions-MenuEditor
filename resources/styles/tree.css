@@ -32,7 +32,7 @@
 	margin-top: 10px;
 }
 
-li > ul.tree-node-list li:last-child:before {
+li > ul.tree-node-list li:last-child::before {
 	height: 50%;
 }
 
@@ -52,8 +52,8 @@ li > ul.tree-node-list li:last-child:before {
 	color: #e3e3e3;
 }
 
-.in-drag li > ul.tree-node-list li:after,
-.in-drag li > ul.tree-node-list li:before {
+.in-drag li > ul.tree-node-list li::after,
+.in-drag li > ul.tree-node-list li::before {
 	display: none;
 }
 
