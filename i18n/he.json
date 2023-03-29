@@ -32,5 +32,8 @@
 	"menueditor-ui-mediawiki-sidebar-keyword-label-edit": "עריכת מילת מפתח",
 	"menueditor-ui-mediawiki-sidebar-keyword-label": "מילת מפתח",
 	"menueditor-toolbar-submit": "שמירת השינויים",
-	"menueditor-toolbar-cancel": "ביטול עריכה"
+	"menueditor-toolbar-cancel": "ביטול עריכה",
+	"menueditor-toolbar-add-label": "הוספת רכיב",
+	"menueditor-ui-edit-label": "עריכה",
+	"menueditor-ui-add-sub-element-label": "הוסף רכיב־משנה"
 }
