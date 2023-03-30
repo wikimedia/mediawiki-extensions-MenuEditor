@@ -104,9 +104,10 @@ class EditActionHookHandler implements
 			'id' => 'ca-menueditsource',
 			'position' => 12,
 		];
-
-		$links['views']['edit'] = array_merge( $links['views']['edit'], [
-			'text' => $sktemplate->msg( "menueditor-action-menuedit" )->text(),
-		] );
+		if ( isset( $links['views']['edit'] ) ) {
+			$links['views']['edit'] = array_merge( $links['views']['edit'], [
+				'text' => $sktemplate->msg( "menueditor-action-menuedit" )->text(),
+			] );
+		}
 	}
 }
