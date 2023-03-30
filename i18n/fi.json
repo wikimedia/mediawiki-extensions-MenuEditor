@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"MITO",
-			"Nike"
+			"Nike",
+			"Pyscowicz"
 		]
 	},
 	"menueditor-ui-menu-wiki-link-label": "Wikilinkki",
@@ -15,5 +16,6 @@
 	"menueditor-ui-submit": "Tallenna",
 	"menueditor-ui-cancel": "Peruuta",
 	"menueditor-action-menueditsource": "Muokkaa wikitekstiä",
-	"menueditor-action-menuedit": "Muokkaa"
+	"menueditor-action-menuedit": "Muokkaa",
+	"menueditor-ui-edit-label": "Muokkaa"
 }
