@@ -11,5 +11,6 @@
 	"menueditor-ui-submit": "Հիշել",
 	"menueditor-ui-cancel": "Չեղարկել",
 	"menueditor-action-menuedit": "Խմբագրել",
-	"menueditor-ui-dialog-title": "Խմբագրել տարրը"
+	"menueditor-ui-dialog-title": "Խմբագրել տարրը",
+	"menueditor-ui-edit-label": "Խմբագրել"
 }
