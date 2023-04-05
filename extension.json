@@ -206,7 +206,7 @@
 		"editActions": {
 			"class": "MediaWiki\\Extension\\MenuEditor\\Hook\\EditActionHookHandler",
 			"services": [
-				"HookContainer", "MenuEditorMenuFactory"
+				"HookContainer", "MenuEditorMenuFactory", "PermissionManager"
 			]
 		},
 		"discovery-skin": {
