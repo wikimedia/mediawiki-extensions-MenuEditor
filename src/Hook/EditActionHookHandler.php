@@ -9,6 +9,7 @@ use MediaWiki\Extension\MenuEditor\MenuFactory;
 use MediaWiki\Hook\MediaWikiPerformActionHook;
 use MediaWiki\Hook\SkinTemplateNavigation__UniversalHook;
 use MediaWiki\HookContainer\HookContainer;
+use MediaWiki\Permissions\PermissionManager;
 use OutputPage;
 use SkinTemplate;
 use Title;
@@ -25,12 +26,22 @@ class EditActionHookHandler implements
 	/** @var MenuFactory */
 	private $menuFactory;
 
+	/** @var PermissionManager */
+	private $permissionManager;
+
 	/**
 	 * @param HookContainer $hookContainer
 	 * @param MenuFactory $menuFactory
+	 * @param PermissionManager $permissionManager
+	 *
 	 */
-	public function __construct( HookContainer $hookContainer, MenuFactory $menuFactory ) {
+	public function __construct(
+		HookContainer $hookContainer,
+		MenuFactory $menuFactory,
+		PermissionManager $permissionManager
+	) {
 		$this->menuFactory = $menuFactory;
+		$this->permissionManager = $permissionManager;
 		$hookContainer->register( 'MediaWikiPerformAction', [ $this, 'onMediaWikiPerformAction' ] );
 		$hookContainer->register(
 			'SkinTemplateNavigation::Universal',
@@ -97,6 +108,10 @@ class EditActionHookHandler implements
 		if ( !$this->title ) {
 			return;
 		}
+
+		$user = $sktemplate->getUser();
+		$userCanEdit = $this->permissionManager->userCan( 'edit', $user, $this->title );
+
 		$links['views']['menueditsource'] = [
 			'text' => $sktemplate->msg( "menueditor-action-menueditsource" )->text(),
 			'href' => $this->title->getLocalURL( [ 'action' => 'menueditsource' ] ),
@@ -104,10 +119,15 @@ class EditActionHookHandler implements
 			'id' => 'ca-menueditsource',
 			'position' => 12,
 		];
-		if ( isset( $links['views']['edit'] ) ) {
-			$links['views']['edit'] = array_merge( $links['views']['edit'], [
+
+		if ( $userCanEdit ) {
+			$links['views']['edit'] = [
 				'text' => $sktemplate->msg( "menueditor-action-menuedit" )->text(),
-			] );
+				'href' => $this->title->getLocalURL( [ 'action' => 'edit' ] ),
+				'class' => false,
+				'id' => 'ca-edit',
+				'position' => 10,
+			];
 		}
 	}
 }
