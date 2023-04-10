@@ -33,5 +33,6 @@
 	"menueditor-ui-mediawiki-sidebar-keyword-label": "کلیدواژه",
 	"menueditor-toolbar-submit": "ذخیره کردن تغییرات",
 	"menueditor-toolbar-cancel": "لغو ویرایش",
-	"menueditor-toolbar-add": "افزودن عنصر جدید"
+	"menueditor-toolbar-add": "افزودن عنصر جدید",
+	"menueditor-ui-edit-label": "ویرایش"
 }
