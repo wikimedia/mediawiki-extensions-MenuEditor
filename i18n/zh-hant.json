@@ -17,7 +17,6 @@
 	"menueditor-ui-menu-keyword-label": "關鍵字",
 	"menueditor-ui-menu-keyword-label-edit": "編輯關鍵字",
 	"menueditor-ui-menu-keyword-help": "可用的'''關鍵字'''之一，將會顯示合適的小工具",
-	"menueditor-ui-edit-node-label": "編輯節點",
 	"menueditor-ui-form-field-keyword": "關鍵字",
 	"menueditor-ui-form-field-text": "文字或系統訊息鍵名",
 	"menueditor-ui-form-field-target": "連結目標",
@@ -35,5 +34,5 @@
 	"menueditor-ui-mediawiki-sidebar-keyword-label": "關鍵字",
 	"menueditor-toolbar-submit": "儲存更改",
 	"menueditor-toolbar-cancel": "取消編輯",
-	"menueditor-toolbar-add": "添加新元素"
+	"menueditor-ui-edit-label": "編輯"
 }

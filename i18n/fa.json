@@ -15,7 +15,6 @@
 	"menueditor-ui-menu-keyword-label": "کلیدواژه",
 	"menueditor-ui-menu-keyword-label-edit": "ویرایش کلیدواژه",
 	"menueditor-ui-menu-keyword-help": "یکی از '''کلیدواژه‌های''' در دسترس، که ویجت مناسب را نمایش خواهد داد",
-	"menueditor-ui-edit-node-label": "ویرایش گره",
 	"menueditor-ui-form-field-keyword": "کلیدواژه",
 	"menueditor-ui-form-field-text": "متن یا کلید پیام",
 	"menueditor-ui-form-field-target": "هدف پیوند",
@@ -33,5 +32,5 @@
 	"menueditor-ui-mediawiki-sidebar-keyword-label": "کلیدواژه",
 	"menueditor-toolbar-submit": "ذخیره کردن تغییرات",
 	"menueditor-toolbar-cancel": "لغو ویرایش",
-	"menueditor-toolbar-add": "افزودن عنصر جدید"
+	"menueditor-ui-edit-label": "ویرایش"
 }
