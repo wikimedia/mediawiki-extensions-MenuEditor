@@ -16,14 +16,14 @@ ext.menueditor.ui.data.node.MediawikiSidebarKeywordNode = function ( cfg ) {
 OO.inheritClass( ext.menueditor.ui.data.node.MediawikiSidebarKeywordNode,
 	ext.menueditor.ui.data.node.KeywordNode );
 
-ext.menueditor.ui.data.node.MediawikiSidebarKeywordNode.prototype.getFormFields = function () {
+ext.menueditor.ui.data.node.MediawikiSidebarKeywordNode.prototype.getFormFields = function ( dialog ) {
 	return [
 		{
 			name: 'keyword',
 			type: 'dropdown',
 			options: this.options,
 			// eslint-disable-next-line camelcase
-			widget_$overlay: true,
+			widget_$overlay: dialog.$overlay,
 			required: true,
 			label: mw.message( 'menueditor-ui-form-field-keyword' ).text(),
 			help: mw.message( 'menueditor-ui-menu-keyword-help' ).text()
