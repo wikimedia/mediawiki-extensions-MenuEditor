@@ -21,7 +21,7 @@ ext.menueditor.ui.data.node.TreeNode.prototype.getIcon = function ( data ) {
 	return '';
 };
 
-ext.menueditor.ui.data.node.TreeNode.prototype.getForm = function () {
+ext.menueditor.ui.data.node.TreeNode.prototype.getForm = function ( dialog ) {
 	var dfd = $.Deferred();
 	mw.loader.using( [ 'ext.forms.standalone' ], function () {
 		// The following messages are used here
@@ -44,7 +44,7 @@ ext.menueditor.ui.data.node.TreeNode.prototype.getForm = function () {
 						name: 'type',
 						hidden: true
 					}
-				].concat( this.getFormFields() ),
+				].concat( this.getFormFields( dialog ) ),
 				buttons: []
 			},
 			errorReporting: false,
@@ -63,7 +63,8 @@ ext.menueditor.ui.data.node.TreeNode.prototype.getForm = function () {
 	return dfd.promise();
 };
 
-ext.menueditor.ui.data.node.TreeNode.prototype.getFormFields = function () {
+// eslint-disable-next-line no-unused-vars
+ext.menueditor.ui.data.node.TreeNode.prototype.getFormFields = function ( dialog ) {
 	// STUB
 	return [];
 };

@@ -14,7 +14,8 @@ ext.menueditor.ui.data.node.TextNode.prototype.getIcon = function () {
 	return 'textLanguage';
 };
 
-ext.menueditor.ui.data.node.TextNode.prototype.getFormFields = function () {
+// eslint-disable-next-line no-unused-vars
+ext.menueditor.ui.data.node.TextNode.prototype.getFormFields = function ( dialog ) {
 	return [
 		{
 			name: 'text',
