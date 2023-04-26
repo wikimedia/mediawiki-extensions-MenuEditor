@@ -15,7 +15,7 @@ ext.menueditor.ui.data.node.KeywordNode.prototype.getIcon = function ( data ) {
 	return 'markup';
 };
 
-ext.menueditor.ui.data.node.KeywordNode.prototype.getFormFields = function () {
+ext.menueditor.ui.data.node.KeywordNode.prototype.getFormFields = function ( dialog ) {
 	return [
 		{
 			name: 'keyword',
@@ -28,7 +28,7 @@ ext.menueditor.ui.data.node.KeywordNode.prototype.getFormFields = function () {
 				{ data: 'YOUREDITS' }
 			],
 			// eslint-disable-next-line camelcase
-			widget_$overlay: true,
+			widget_$overlay: dialog.$overlay,
 			required: true,
 			label: mw.message( 'menueditor-ui-form-field-keyword' ).text(),
 			help: mw.message( 'menueditor-ui-menu-keyword-help' ).text()

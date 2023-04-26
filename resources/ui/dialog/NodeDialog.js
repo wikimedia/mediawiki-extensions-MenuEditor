@@ -33,7 +33,7 @@ ext.menueditor.ui.dialog.NodeDialog.prototype.initialize = function () {
 	} );
 	if ( this.node ) {
 		this.pushPending();
-		this.node.getForm().done( function ( form ) {
+		this.node.getForm( this ).done( function ( form ) {
 			this.content.$element.append( form.$element );
 			this.setForm( form );
 		}.bind( this ) );
@@ -44,7 +44,7 @@ ext.menueditor.ui.dialog.NodeDialog.prototype.initialize = function () {
 			menu: {
 				items: selectionItems
 			},
-			$overlay: true
+			$overlay: this.$overlay
 		} );
 		selector.getMenu().connect( this, {
 			select: function ( item ) {
@@ -123,7 +123,7 @@ ext.menueditor.ui.dialog.NodeDialog.prototype.setItem = function ( type ) {
 
 	var node = this.items[ type ];
 
-	node.getForm().done( function ( form ) {
+	node.getForm( this ).done( function ( form ) {
 		this.formCnt.$element.html( form.$element );
 		this.setForm( form );
 	}.bind( this ) );

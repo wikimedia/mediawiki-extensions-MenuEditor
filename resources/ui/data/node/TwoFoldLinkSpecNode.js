@@ -16,7 +16,8 @@ ext.menueditor.ui.data.node.TwoFoldLinkSpecNode.prototype.getIcon = function ( d
 	return 'link';
 };
 
-ext.menueditor.ui.data.node.TwoFoldLinkSpecNode.prototype.getFormFields = function () {
+// eslint-disable-next-line no-unused-vars
+ext.menueditor.ui.data.node.TwoFoldLinkSpecNode.prototype.getFormFields = function ( dialog ) {
 	return [
 		{
 			name: 'target',
