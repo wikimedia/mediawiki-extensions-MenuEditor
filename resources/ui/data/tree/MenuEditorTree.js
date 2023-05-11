@@ -4,6 +4,8 @@ ext.menueditor.ui.data.tree.Tree = function ( cfg ) {
 		cfg.allowAdditions = false;
 		cfg.allowDeletions = false;
 		cfg.fixed = true;
+	} else {
+		cfg.$containTo = 'self';
 	}
 
 	ext.menueditor.ui.data.tree.Tree.parent.call( this, cfg );
@@ -84,18 +86,17 @@ ext.menueditor.ui.data.tree.Tree.prototype.onDragStart = function ( item, $targe
 	this.$itemsContainer.find( 'ul.tree-sortable' ).each( function ( i, el ) {
 		var lvl = $( el ).data( 'level' ),
 			allowed = this.getPossibleNodesForLevel( lvl );
-
 		if (
 			( allowed.length > 0 && allowed.indexOf( item.getNodeData().type ) === -1 ) ||
 			( this.getMaxLevels() && lvl >= this.getMaxLevels() ) ||
 			( !this.isLeaf( item.getName() ) && !this.allowedNestedDrag( item ) )
 		) {
 			$( el ).sortable( 'disable' );
+		} else {
+			$( ui.sender ).sortable( 'refresh' );
+			$( el ).sortable( 'refresh' );
+			$target.sortable( 'refresh' );
 		}
-
-		$( ui.sender ).sortable( 'refresh' );
-		$( el ).sortable( 'refresh' );
-		$target.sortable( 'refresh' );
 	}.bind( this ) );
 };
 
