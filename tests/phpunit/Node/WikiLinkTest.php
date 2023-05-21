@@ -27,7 +27,7 @@ class WikiLinkTest extends TwoFoldLinkSpecTest {
 	/**
 	 * @return array[]
 	 */
-	public function provideData() {
+	public static function provideData() {
 		return [
 			'no-mutate' => [
 				'input' => [

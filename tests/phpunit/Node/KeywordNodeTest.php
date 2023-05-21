@@ -26,7 +26,7 @@ class KeywordNodeTest extends RawTextNodeTest {
 	/**
 	 * @return array[]
 	 */
-	public function provideData() {
+	public static function provideData() {
 		$data = parent::provideData();
 		$data['mutate-level-and-text']['mutate'] = [
 			'level' => $data['mutate-level-and-text']['mutate']['level'],

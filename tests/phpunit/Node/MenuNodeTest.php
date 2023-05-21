@@ -51,5 +51,5 @@ abstract class MenuNodeTest extends TestCase {
 	 */
 	abstract protected function provideNode( $input );
 
-	abstract public function provideData();
+	abstract public static function provideData();
 }
