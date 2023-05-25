@@ -73,6 +73,7 @@ class EditActionHookHandler implements
 			$request->setVal( 'action', 'edit' );
 			return true;
 		}
+
 		$menus = $this->menuFactory->getAllMenus();
 		$applied = false;
 
@@ -96,7 +97,10 @@ class EditActionHookHandler implements
 			'data-default' => json_encode( $appliedMenu->getEmptyContent() ),
 		] ) );
 		if ( $action === 'edit' ) {
-			$request->setVal( 'action', 'menuedit' );
+			$userCanEdit = $this->permissionManager->userCan( 'edit', $user, $title );
+			if ( $userCanEdit ) {
+				$request->setVal( 'action', 'menuedit' );
+			}
 		}
 
 		return false;
@@ -115,15 +119,14 @@ class EditActionHookHandler implements
 		$user = $sktemplate->getUser();
 		$userCanEdit = $this->permissionManager->userCan( 'edit', $user, $this->title );
 
-		$links['views']['menueditsource'] = [
-			'text' => $sktemplate->msg( "menueditor-action-menueditsource" )->text(),
-			'href' => $this->title->getLocalURL( [ 'action' => 'menueditsource' ] ),
-			'class' => false,
-			'id' => 'ca-menueditsource',
-			'position' => 12,
-		];
-
 		if ( $userCanEdit ) {
+			$links['views']['menueditsource'] = [
+				'text' => $sktemplate->msg( "menueditor-action-menueditsource" )->text(),
+				'href' => $this->title->getLocalURL( [ 'action' => 'menueditsource' ] ),
+				'class' => false,
+				'id' => 'ca-menueditsource',
+				'position' => 12,
+			];
 			$links['views']['edit'] = [
 				'text' => $sktemplate->msg( "menueditor-action-menuedit" )->text(),
 				'href' => $this->title->getLocalURL( [ 'action' => 'edit' ] ),
