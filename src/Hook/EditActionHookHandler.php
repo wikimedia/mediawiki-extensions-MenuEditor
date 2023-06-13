@@ -87,6 +87,11 @@ class EditActionHookHandler implements
 			return true;
 		}
 
+		$userCanEdit = $user->isAllowed( 'editinterface' );
+		if ( !$userCanEdit ) {
+			return true;
+		}
+
 		$this->title = $title;
 		$output->setPageTitle( $title->getPrefixedText() );
 		$output->addModules( 'ext.menuEditor.pageEditOverride' );
@@ -96,11 +101,8 @@ class EditActionHookHandler implements
 			'data-menu-key' => $appliedMenu->getKey(),
 			'data-default' => json_encode( $appliedMenu->getEmptyContent() ),
 		] ) );
-		if ( $action === 'edit' ) {
-			$userCanEdit = $this->permissionManager->userCan( 'edit', $user, $title );
-			if ( $userCanEdit ) {
-				$request->setVal( 'action', 'menuedit' );
-			}
+		if ( $action === 'edit' && $userCanEdit ) {
+			$request->setVal( 'action', 'menuedit' );
 		}
 
 		return false;
@@ -117,7 +119,7 @@ class EditActionHookHandler implements
 		}
 
 		$user = $sktemplate->getUser();
-		$userCanEdit = $this->permissionManager->userCan( 'edit', $user, $this->title );
+		$userCanEdit = $user->isAllowed( 'editinterface' );
 
 		if ( $userCanEdit ) {
 			$links['views']['menueditsource'] = [
