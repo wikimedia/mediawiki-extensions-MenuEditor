@@ -36,5 +36,7 @@
 	"menueditor-toolbar-submit": "儲存更改",
 	"menueditor-toolbar-cancel": "取消編輯",
 	"menueditor-toolbar-add": "添加新元素",
-	"menueditor-ui-edit-label": "編輯"
+	"menueditor-ui-edit-label": "編輯",
+	"menueditor-toolbar-add-label": "新增元素",
+	"menueditor-ui-add-sub-element-label": "新增子元素"
 }
