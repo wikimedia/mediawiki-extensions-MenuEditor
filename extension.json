@@ -21,6 +21,12 @@
 					"services": [
 						"MWStakeWikitextParserFactory"
 					]
+				},
+				"footerlinks": {
+					"class": "MediaWiki\\Extension\\MenuEditor\\Menu\\FooterLinks",
+					"services": [
+						"MWStakeWikitextParserFactory"
+					]
 				}
 			},
 			"Nodes": {
@@ -94,7 +100,8 @@
 			"scripts": [
 				"ui/dialog/NodeDialog.js",
 				"ui/data/tree/MenuEditorTree.js",
-				"ui/data/tree/MediawikiSidebarTree.js"
+				"ui/data/tree/MediawikiSidebarTree.js",
+				"ui/data/tree/FooterLinksTree.js"
 			],
 			"styles": [
 				"styles/tree.css"
