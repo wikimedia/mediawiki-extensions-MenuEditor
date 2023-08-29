@@ -237,7 +237,7 @@
 			"services": [ "TitleFactory", "MenuEditorMenuFactory", "MWStakeWikitextParserFactory", "RevisionStore" ]
 		},
 		{
-			"method": "PUT",
+			"method": "POST",
 			"path": "/menueditor/{pagename}",
 			"class": "MediaWiki\\Extension\\MenuEditor\\Api\\SaveContentHandler",
 			"services": [ "TitleFactory", "MenuEditorMenuFactory", "MWStakeWikitextParserFactory" ]

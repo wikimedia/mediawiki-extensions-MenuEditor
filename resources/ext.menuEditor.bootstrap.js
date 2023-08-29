@@ -65,7 +65,7 @@ ext.menueditor = {
 			var dfd = $.Deferred();
 			mw.loader.using( 'ext.menuEditor.api', function () {
 				var api = new ext.menueditor.api.Api();
-				api.put( ext.menueditor.util.escapePagenameForRest( pagename ), nodes )
+				api.post( ext.menueditor.util.escapePagenameForRest( pagename ), nodes )
 					.done( function ( response ) {
 						dfd.resolve( response );
 					} )
