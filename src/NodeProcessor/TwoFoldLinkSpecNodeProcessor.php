@@ -36,7 +36,9 @@ class TwoFoldLinkSpecNodeProcessor extends MenuNodeProcessor {
 		$target = array_shift( $bits );
 		$label = !empty( $bits ) ? array_shift( $bits ) : '';
 
-		return new TwoFoldLinkSpec( $target, $label, $source->getWikitext(), $this->titleFactory );
+		return new TwoFoldLinkSpec(
+			$target, $label, $source->getWikitext(), $this->titleFactory, $this->getLevel( $source->getWikitext() )
+		);
 	}
 
 	/**
@@ -55,7 +57,8 @@ class TwoFoldLinkSpecNodeProcessor extends MenuNodeProcessor {
 			$data['target'],
 			$data['label'],
 			$data['wikitext'] ?? '',
-			$this->titleFactory
+			$this->titleFactory,
+			$data['level']
 		);
 	}
 }

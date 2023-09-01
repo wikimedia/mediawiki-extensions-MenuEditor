@@ -10,11 +10,8 @@ class WikiLink extends TwoFoldLinkSpec {
 	 * @param string $originalWikitext
 	 * @param \TitleFactory $titleFactory
 	 */
-	public function __construct(
-		int $level, $target, $label, $originalWikitext, \TitleFactory $titleFactory
-	) {
-		parent::__construct( $target, $label, $originalWikitext, $titleFactory );
-		$this->setLevel( $level );
+	public function __construct( int $level, $target, $label, $originalWikitext, \TitleFactory $titleFactory ) {
+		parent::__construct( $target, $label, $originalWikitext, $titleFactory, $level );
 	}
 
 	/**

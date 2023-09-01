@@ -20,7 +20,9 @@ class TwoFoldLinkSpecTest extends MenuNodeTest {
 	}
 
 	protected function provideNode( $input ) {
+		$level = array_pop( $input );
 		$input['titleFactory'] = $this->getTitleFactoryMock();
+		$input['level'] = $level;
 		return new TwoFoldLinkSpec( ...array_values( $input ) );
 	}
 
@@ -45,7 +47,8 @@ class TwoFoldLinkSpecTest extends MenuNodeTest {
 				'input' => [
 					'target' => 'Foo',
 					'label' => 'dummy',
-					'wikitext' => "** Foo|dummy"
+					'wikitext' => "** Foo|dummy",
+					'level' => 2,
 				],
 				'mutate' => null,
 				'expected' => "** Foo|dummy"
@@ -54,7 +57,8 @@ class TwoFoldLinkSpecTest extends MenuNodeTest {
 				'input' => [
 					'target' => 'Foo',
 					'label' => 'dummy',
-					'wikitext' => "** Foo|dummy"
+					'wikitext' => "** Foo|dummy",
+					'level' => 2,
 				],
 				'mutate' => [
 					'target' => 'https://test.com',
@@ -62,13 +66,14 @@ class TwoFoldLinkSpecTest extends MenuNodeTest {
 					'level' => 3,
 					'label' => 'quick-brown-fox'
 				],
-				'expected' => "** https://test.com|quick-brown-fox"
+				'expected' => "*** https://test.com|quick-brown-fox"
 			],
 			'mutate-invalid' => [
 				'input' => [
 					'target' => 'Foo',
 					'label' => 'dummy',
-					'wikitext' => "** Foo|dummy"
+					'wikitext' => "** Foo|dummy",
+					'level' => 2,
 				],
 				'mutate' => [
 					'target' => 'Invalid@title',
