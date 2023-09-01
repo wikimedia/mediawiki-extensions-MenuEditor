@@ -15,9 +15,10 @@ class TwoFoldLinkSpec extends MenuNode {
 	 * @param string $label
 	 * @param string $originalWikitext
 	 * @param \TitleFactory $titleFactory
+	 * @param int|null $level
 	 */
-	public function __construct( $target, $label, $originalWikitext, \TitleFactory $titleFactory ) {
-		parent::__construct( 2, $originalWikitext );
+	public function __construct( $target, $label, $originalWikitext, \TitleFactory $titleFactory, ?int $level = 2 ) {
+		parent::__construct( $level, $originalWikitext );
 		$this->titleFactory = $titleFactory;
 		$this->target = $target;
 		$this->label = $label;
@@ -74,7 +75,7 @@ class TwoFoldLinkSpec extends MenuNode {
 	 * @return string
 	 */
 	public function getCurrentData(): string {
-		return "** {$this->getTarget()}|{$this->getLabel()}";
+		return "{$this->getLevelString()} {$this->getTarget()}|{$this->getLabel()}";
 	}
 
 	/**

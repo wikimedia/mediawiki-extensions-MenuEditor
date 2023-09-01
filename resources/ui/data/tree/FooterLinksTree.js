@@ -9,7 +9,7 @@ OO.inheritClass( ext.menueditor.ui.data.tree.FooterLinksTree, ext.menueditor.ui.
 ext.menueditor.ui.data.tree.FooterLinksTree.prototype.getPossibleNodesForLevel = function ( lvl ) {
 	switch ( lvl ) {
 		case 0:
-			return [ 'menu-wiki-link' ];
+			return [ 'menu-two-fold-link-spec' ];
 		default:
 			return [];
 	}

@@ -45,7 +45,6 @@ class ParseHandler extends MenuHandler {
 		}
 		$parser = $this->getParserForRevision( $page, $revision );
 		$nodes = $parser->parse();
-
 		$data = $params['flat'] ? $nodes : $this->makeTree( $nodes );
 		return $this->getResponseFactory()->createJson( $data );
 	}
