@@ -51,11 +51,6 @@
 		return this.ajax( path, JSON.stringify( params ), 'POST' );
 	};
 
-	ext.menueditor.api.Api.prototype.put = function ( path, params ) {
-		params = params || {};
-		return this.ajax( path, JSON.stringify( params ), 'PUT' );
-	};
-
 	ext.menueditor.api.Api.prototype.delete = function ( path, params ) {
 		params = params || {};
 		return this.ajax( path, JSON.stringify( params ), 'DELETE' );
