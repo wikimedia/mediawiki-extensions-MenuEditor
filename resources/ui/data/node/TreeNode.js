@@ -119,3 +119,15 @@ ext.menueditor.ui.data.node.TreeNode.prototype.updateData = function ( data ) {
 ext.menueditor.ui.data.node.TreeNode.prototype.shouldRender = function () {
 	return true;
 };
+
+ext.menueditor.ui.data.node.TreeNode.prototype.addLabel = function () {
+	this.labelWidget = new OOJSPlus.ui.widget.LabelWidget(
+		$.extend( {},
+			{
+				icon: this.getIcon()
+			}, this.buttonCfg
+		)
+	);
+
+	this.$wrapper.append( this.labelWidget.$element );
+};
