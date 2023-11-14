@@ -194,6 +194,15 @@
 			"dependencies": [
 				"ext.menuEditor.node"
 			]
+		},
+		"ext.menuEditor.footerlinks.banner": {
+			"scripts": "ext.menuEditor.footerlinks.banner.js",
+			"dependencies": [
+				"oojs-ui"
+			],
+			"messages": [
+				"menueditor-footerlinks-banner-text"
+			]
 		}
 	},
 	"ResourceFileModulePaths": {
@@ -204,7 +213,8 @@
 		"BeforeInitialize": "initializeMenus",
 		"SkinTemplateNavigation::Universal": "editActions",
 		"MediaWikiPerformAction": "editActions",
-		"BlueSpiceDiscoveryTemplateDataProviderAfterInit": "discovery-skin"
+		"BlueSpiceDiscoveryTemplateDataProviderAfterInit": "discovery-skin",
+		"BeforePageDisplay": "AddFooterLinksBanner"
 	},
 	"HookHandlers": {
 		"initializeMenus": {
@@ -220,6 +230,10 @@
 		"discovery-skin": {
 			"class": "MediaWiki\\Extension\\MenuEditor\\Hook\\DiscoverySkin",
 			"services": [ "MenuEditorMenuFactory" ]
+		},
+		"AddFooterLinksBanner": {
+			"class": "MediaWiki\\Extension\\MenuEditor\\HookHandler\\AddFooterLinksBanner",
+			"services": [ "TitleFactory" ]
 		}
 	},
 	"Actions": {
