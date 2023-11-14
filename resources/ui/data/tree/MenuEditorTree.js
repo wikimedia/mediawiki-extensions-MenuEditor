@@ -11,10 +11,8 @@ ext.menueditor.ui.data.tree.Tree = function ( cfg ) {
 	ext.menueditor.ui.data.tree.Tree.parent.call( this, cfg );
 };
 
-// eslint-disable-next-line no-undef
 OO.inheritClass( ext.menueditor.ui.data.tree.Tree, OOJSPlus.ui.data.Tree );
 
-// eslint-disable-next-line no-unused-vars
 ext.menueditor.ui.data.tree.Tree.prototype.createItemWidget = function ( item, lvl, isLeaf ) {
 	var classname = ext.menueditor.registry.node.registry[ item.type ];
 	if ( !classname ) {

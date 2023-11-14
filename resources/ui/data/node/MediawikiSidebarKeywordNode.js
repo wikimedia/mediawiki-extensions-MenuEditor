@@ -16,7 +16,7 @@ ext.menueditor.ui.data.node.MediawikiSidebarKeywordNode = function ( cfg ) {
 OO.inheritClass( ext.menueditor.ui.data.node.MediawikiSidebarKeywordNode,
 	ext.menueditor.ui.data.node.KeywordNode );
 
-ext.menueditor.ui.data.node.MediawikiSidebarKeywordNode.prototype.getFormFields = function ( dialog ) {
+ext.menueditor.ui.data.node.MediawikiSidebarKeywordNode.prototype.getFormFields = function ( dialog ) { // eslint-disable-line max-len
 	return [
 		{
 			name: 'keyword',
