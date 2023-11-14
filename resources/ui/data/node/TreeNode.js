@@ -13,7 +13,6 @@ ext.menueditor.ui.data.node.TreeNode = function ( cfg ) {
 	this.$element.attr( 'data-level', cfg.level );
 };
 
-// eslint-disable-next-line no-undef
 OO.inheritClass( ext.menueditor.ui.data.node.TreeNode, OOJSPlus.ui.data.tree.Item );
 
 // eslint-disable-next-line no-unused-vars

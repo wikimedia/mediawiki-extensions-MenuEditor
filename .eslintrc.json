@@ -12,6 +12,7 @@
 	"globals": {
 		"ext": "readonly",
 		"mediaWiki": "readonly",
+		"OOJSPlus": "readonly",
 		"jQuery": "readonly"
 	}
 }

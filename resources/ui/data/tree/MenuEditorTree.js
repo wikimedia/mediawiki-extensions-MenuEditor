@@ -11,7 +11,6 @@ ext.menueditor.ui.data.tree.Tree = function ( cfg ) {
 	ext.menueditor.ui.data.tree.Tree.parent.call( this, cfg );
 };
 
-// eslint-disable-next-line no-undef
 OO.inheritClass( ext.menueditor.ui.data.tree.Tree, OOJSPlus.ui.data.Tree );
 
 ext.menueditor.ui.data.tree.Tree.prototype.createItemWidget = function ( item, lvl, isLeaf ) {
