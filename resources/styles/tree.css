@@ -65,6 +65,10 @@ li > ul.tree-node-list li:last-child::before {
 	height: 45px;
 }
 
+.oo-ui-tool-name-save > a:focus {
+	text-decoration: none;
+}
+
 .oo-ui-tool-name-cancel {
 	width: 45px;
 	background-color: #eaecf0;
