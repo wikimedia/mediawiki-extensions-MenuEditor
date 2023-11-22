@@ -40,5 +40,6 @@
 	"menueditor-toolbar-add": "Title for toolbar action new item",
 	"menueditor-toolbar-add-label": "Title for toolbar action new item",
 	"menueditor-ui-edit-label": "Button label for edit node element\n{{identical|Edit}}",
-	"menueditor-ui-add-sub-element-label": "Label for action add sub element"
+	"menueditor-ui-add-sub-element-label": "Label for action add sub element",
+	"menueditor-footerlinks-banner-text": "Label for banner on [MediaWiki:FooterLinks]"
 }

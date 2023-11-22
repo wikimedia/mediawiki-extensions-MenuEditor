@@ -38,5 +38,6 @@
 	"menueditor-toolbar-add": "Add new element",
 	"menueditor-toolbar-add-label": "Add element",
 	"menueditor-ui-edit-label": "Edit",
-	"menueditor-ui-add-sub-element-label": "Add sub element"
+	"menueditor-ui-add-sub-element-label": "Add sub element",
+	"menueditor-footerlinks-banner-text": "Some links may be added automatically by extensions. Please check the extension's configuration to learn more."
 }
