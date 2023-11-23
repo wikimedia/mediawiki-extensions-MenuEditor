@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"MarcoAurelio"
+			"MarcoAurelio",
+			"No se"
 		]
 	},
-	"menueditor-ui-dialog-action-done": "Hecho"
+	"menueditor-ui-dialog-action-done": "Hecho",
+	"menueditor-ui-add-sub-element-label": "Agregar subelemento"
 }
