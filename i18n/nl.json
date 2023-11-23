@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mainframe98"
+			"Mainframe98",
+			"McDutchie"
 		]
 	},
 	"menueditor-ui-menu-two-fold-link-spec-label": "Koppeling",
@@ -17,5 +18,24 @@
 	"menueditor-ui-cancel": "Annuleren",
 	"menueditor-ui-redlink-notice": "Dit menu bestaat nog niet!",
 	"menueditor-action-menueditsource": "Bron bewerken",
-	"menueditor-action-menuedit": "Bewerken"
+	"menueditor-action-menuedit": "Bewerken",
+	"menueditor-desc": "Grafische editor voor menupagina’s",
+	"menueditor-ui-menu-wiki-link-label": "Wiki-koppeling",
+	"menueditor-ui-menu-wiki-link-label-edit": "Wiki-koppeling bewerken",
+	"menueditor-ui-menu-wiki-link-help": "Koppeling naar een wikipagina",
+	"menueditor-ui-menu-two-fold-link-spec-label-edit": "Koppeling bewerken",
+	"menueditor-ui-menu-two-fold-link-spec-help": "Koppelingsspecificatie.<br>Doel kan zijn:<ul><li>een berichtsleutel, die wordt omgezet in een paginanaam</li><li>een externe koppeling</li><li>Naam van de pagina op de wiki</li><li> interwiki-koppeling</li></ul>",
+	"menueditor-ui-menu-raw-text-label-edit": "Tekst of berichtsleutel bewerken",
+	"menueditor-ui-menu-keyword-label-edit": "Sleutelwoord bewerken",
+	"menueditor-ui-form-field-text": "Tekst of een berichtsleutel",
+	"menueditor-ui-node-type-selector-label": "Knooppunttype",
+	"menueditor-ui-dialog-title": "Element bewerken",
+	"menueditor-ui-mediawiki-sidebar-keyword-label-edit": "Sleutelwoord bewerken",
+	"menueditor-ui-mediawiki-sidebar-keyword-label": "Sleutelwoord",
+	"menueditor-toolbar-submit": "Wijzigingen opslaan",
+	"menueditor-toolbar-cancel": "Bewerking annuleren",
+	"menueditor-toolbar-add-label": "Element toevoegen",
+	"menueditor-ui-edit-label": "Bewerken",
+	"menueditor-ui-add-sub-element-label": "Subelement toevoegen",
+	"menueditor-footerlinks-banner-text": "Sommige koppelingen kunnen automatisch door uitbreidingen worden toegevoegd. Bekijk de instellingen van de uitbreiding om meer te weten te komen."
 }
