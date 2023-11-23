@@ -37,5 +37,6 @@
 	"menueditor-ui-menu-raw-text-label-edit": "עריכת טקסט או מפתח הודעה",
 	"menueditor-toolbar-add-label": "הוספת רכיב",
 	"menueditor-ui-edit-label": "עריכה",
-	"menueditor-ui-add-sub-element-label": "הוסף רכיב־משנה"
+	"menueditor-ui-add-sub-element-label": "הוסף רכיב־משנה",
+	"menueditor-footerlinks-banner-text": "חלק מהקישורים עשויים להתווסף באופן אוטומטי על־ידי הרחבות. נא לבדוק את תצורת ההרחבה למידע נוסף."
 }

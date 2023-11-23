@@ -37,5 +37,6 @@
 	"menueditor-toolbar-add": "Dodaj nov element",
 	"menueditor-toolbar-add-label": "Dodaj element",
 	"menueditor-ui-edit-label": "Uredi",
-	"menueditor-ui-add-sub-element-label": "Dodaj podelement"
+	"menueditor-ui-add-sub-element-label": "Dodaj podelement",
+	"menueditor-footerlinks-banner-text": "Nekatere povzave lahko samodejno dodajo razširitve. Prosimo, preverite konfiguracijo razširitve, da izveste več."
 }
