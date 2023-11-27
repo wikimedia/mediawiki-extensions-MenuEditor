@@ -36,5 +36,6 @@
 	"menueditor-toolbar-cancel": "Откажи уредување",
 	"menueditor-toolbar-add-label": "Додај елемент",
 	"menueditor-ui-edit-label": "Уреди",
-	"menueditor-ui-add-sub-element-label": "Додај поделемент"
+	"menueditor-ui-add-sub-element-label": "Додај поделемент",
+	"menueditor-footerlinks-banner-text": "Некои врски може да бидат ставени автоматски од додаток. Погледајте ја поставеноста на додатокот за да дознаете повеќе."
 }
