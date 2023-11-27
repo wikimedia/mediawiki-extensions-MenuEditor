@@ -37,5 +37,6 @@
 	"menueditor-toolbar-add": "Adder nove elemento",
 	"menueditor-toolbar-add-label": "Adder elemento",
 	"menueditor-ui-edit-label": "Modificar",
-	"menueditor-ui-add-sub-element-label": "Adder subelemento"
+	"menueditor-ui-add-sub-element-label": "Adder subelemento",
+	"menueditor-footerlinks-banner-text": "Alcun ligamines pote esser addite automaticamente per extensiones. Per favor examina le configuration del extension pro apprender plus."
 }
