@@ -4,7 +4,7 @@ namespace MediaWiki\Extension\MenuEditor\Tests\Node;
 
 use MediaWiki\Extension\MenuEditor\Node\TwoFoldLinkSpec;
 
-class TwoFoldLinkSpecTest extends MenuNodeTest {
+class TwoFoldLinkSpecTest extends MenuNodeTestBase {
 
 	/**
 	 * @param array $input

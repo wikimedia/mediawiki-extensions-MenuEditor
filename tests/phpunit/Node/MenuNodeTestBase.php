@@ -5,7 +5,7 @@ namespace MediaWiki\Extension\MenuEditor\Tests\Node;
 use MWStake\MediaWiki\Lib\Nodes\INode;
 use PHPUnit\Framework\TestCase;
 
-abstract class MenuNodeTest extends TestCase {
+abstract class MenuNodeTestBase extends TestCase {
 
 	/**
 	 * @param array $input

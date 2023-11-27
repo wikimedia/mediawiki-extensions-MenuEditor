@@ -4,7 +4,7 @@ namespace MediaWiki\Extension\MenuEditor\Tests\Node;
 
 use MediaWiki\Extension\MenuEditor\Node\RawText;
 
-class RawTextNodeTest extends MenuNodeTest {
+class RawTextNodeTest extends MenuNodeTestBase {
 
 	/**
 	 * @param array $input
