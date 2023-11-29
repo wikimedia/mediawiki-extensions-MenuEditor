@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Caiofernandes",
 			"Hamilton Abreu"
 		]
 	},
@@ -34,5 +35,6 @@
 	"menueditor-ui-mediawiki-sidebar-keyword-label": "Palavra-chave",
 	"menueditor-toolbar-submit": "Gravar alterações",
 	"menueditor-toolbar-cancel": "Cancelar edição",
-	"menueditor-toolbar-add": "Adicionar elemento novo"
+	"menueditor-toolbar-add": "Adicionar elemento novo",
+	"menueditor-footerlinks-banner-text": "Alguns links podem ser adicionados automaticamente por extensões. Verifique a configuração da extensão para saber mais."
 }
