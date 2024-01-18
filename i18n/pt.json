@@ -36,5 +36,8 @@
 	"menueditor-toolbar-submit": "Gravar alterações",
 	"menueditor-toolbar-cancel": "Cancelar edição",
 	"menueditor-toolbar-add": "Adicionar elemento novo",
-	"menueditor-footerlinks-banner-text": "Alguns links podem ser adicionados automaticamente por extensões. Verifique a configuração da extensão para saber mais."
+	"menueditor-footerlinks-banner-text": "Alguns links podem ser adicionados automaticamente por extensões. Verifique a configuração da extensão para saber mais.",
+	"menueditor-toolbar-add-label": "Adicionar elemento",
+	"menueditor-ui-edit-label": "Editar",
+	"menueditor-ui-add-sub-element-label": "Adicionar subelemento"
 }
