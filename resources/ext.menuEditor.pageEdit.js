@@ -6,8 +6,12 @@
 		}
 
 		var data = $c.data();
+		var revId = mw.config.get( 'wgRevisionId' );
+		if ( mw.util.getParamValue( 'oldid' ) ) {
+			revId = mw.util.getParamValue( 'oldid' );
+		}
 		ext.menueditor.init.getPanelForPage(
-			mw.config.get( 'wgPageName' ), data.menuKey, mw.config.get( 'wgRevisionId' ), data.mode, {
+			mw.config.get( 'wgPageName' ), data.menuKey, revId, data.mode, {
 				defaultData: $c.data( 'default' )
 			}
 		).done( function ( panel ) {
