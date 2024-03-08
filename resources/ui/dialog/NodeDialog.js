@@ -113,6 +113,13 @@ ext.menueditor.ui.dialog.NodeDialog.prototype.getAllowedNodeOptions = function (
 		// * menueditor-ui-menu-keyword-label
 		var msg = mw.message( 'menueditor-ui-' + x + '-label' ),
 			label = msg.exists() ? msg.text() : x;
+
+		// Allow other extensions to show a readable name
+		// without using message prefix 'menueditor-ui-'
+		// eslint-disable-next-line mediawiki/msg-doc
+		msg = mw.message( x + '-label' );
+		label = msg.exists() ? msg.text() : label;
+
 		return new OO.ui.MenuOptionWidget( {
 			data: x,
 			label: label
