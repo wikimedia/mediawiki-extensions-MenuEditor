@@ -33,7 +33,16 @@ ext.menueditor.ui.data.node.TreeNode.prototype.getForm = function ( dialog ) {
 		// * menueditor-ui-menu-two-fold-link-spec-label
 		// * menueditor-ui-menu-raw-text-label
 		// * menueditor-ui-menu-keyword-label
-		var labelText = mw.message( 'menueditor-ui-' + this.nodeData.type + '-label-edit' ).text();
+		var msg = mw.message( 'menueditor-ui-' + this.nodeData.type + '-label-edit' );
+
+		// Allow other extensions to show a readable name
+		// without using message prefix 'menueditor-ui-'
+		if ( !msg.exists() ) {
+			// eslint-disable-next-line mediawiki/msg-doc
+			msg = mw.message( this.nodeData.type + '-label-edit' );
+		}
+
+		var labelText = msg.text();
 
 		var form = new mw.ext.forms.standalone.Form( $.extend( {
 			data: this.getNodeData(),
