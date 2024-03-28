@@ -2,6 +2,8 @@
 
 namespace MediaWiki\Extension\MenuEditor\Node;
 
+use MediaWiki\MediaWikiServices;
+
 class TwoFoldLinkSpec extends MenuNode {
 	/** @var \TitleFactory */
 	private $titleFactory;
@@ -83,7 +85,8 @@ class TwoFoldLinkSpec extends MenuNode {
 	 * @return bool
 	 */
 	protected function isLink( string $target ) {
-		return (bool)preg_match( '/^(?i:' . wfUrlProtocols() . ')/', $target );
+		$urlUtils = MediaWikiServices::getInstance()->getUrlUtils();
+		return (bool)preg_match( '/^(?i:' . $urlUtils->validProtocols() . ')/', $target );
 	}
 
 	/**
