@@ -69,6 +69,10 @@ class EditActionHookHandler implements
 			return true;
 		}
 
+		if ( $action === 'edit' && $request->getVal( 'undo' ) !== null ) {
+			return true;
+		}
+
 		if ( $action === 'menueditsource' ) {
 			$request->setVal( 'action', 'edit' );
 			return true;
