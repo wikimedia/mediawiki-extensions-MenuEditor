@@ -21,7 +21,7 @@ class AddFooterLinksBanner implements BeforePageDisplayHook {
 	 * @inheritDoc
 	 */
 	public function onBeforePageDisplay( $out, $skin ): void {
-		if ( $out->getTitle()->equals( $this->footerLinksTitle ) ) {
+		if ( $out->getTitle() && $out->getTitle()->equals( $this->footerLinksTitle ) ) {
 			$out->addModules( [ 'ext.menuEditor.footerlinks.banner' ] );
 		}
 	}
