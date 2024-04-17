@@ -6,7 +6,9 @@ ext.menueditor.ui.widget.MenuToolbar = function ( cfg ) {
 
 	this.toolFactory = new OO.ui.ToolFactory();
 	this.toolGroupFactory = new OO.ui.ToolGroupFactory();
-	this.toolbar = new OO.ui.Toolbar( this.toolFactory, this.toolGroupFactory );
+	this.toolbar = new OO.ui.Toolbar( this.toolFactory, this.toolGroupFactory, {
+		classes: [ 'menueditor-toolbar' ]
+	} );
 	mw.loader.using( this.modules ).done( function () {
 		this.addNewItemTool();
 		var groups = this.buildGroups();

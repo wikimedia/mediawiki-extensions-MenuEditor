@@ -93,8 +93,15 @@
 	],
 	"ResourceModules": {
 		"ext.menuEditor.pageEditOverride": {
-			"scripts": [
-				"ext.menuEditor.pageEdit.js"
+			"packageFiles": [
+				"ext.menuEditor.pageEdit.js",
+				{
+					"name": "addToolbarOffset.json",
+					"config": [ "MenuEditorToolbarOffset" ]
+				}
+			],
+			"styles": [
+				"styles/toolbar.css"
 			]
 		},
 		"ext.menuEditor.boostrap": {
@@ -280,6 +287,10 @@
 	"config": {
 		"MenuEditorMediawikiSidebarAllowedKeywords": {
 			"value": [ "SEARCH", "TOOLBOX", "LANGUAGES" ]
+		},
+		"MenuEditorToolbarOffset": {
+			"value": 0,
+			"public": true
 		}
 	},
 	"RestRoutes": [
