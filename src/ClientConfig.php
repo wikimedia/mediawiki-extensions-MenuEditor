@@ -56,9 +56,9 @@ class ClientConfig {
 					'classes' => $classes
 				]
 			];
-			// if ( !in_array( $toolConfig[ 'module' ], $modules ) ) {
+			if ( !in_array( $toolConfig[ 'module' ], $modules ) ) {
 				$modules[ $tool ] = $toolConfig[ 'module' ];
-			// }
+			}
 		}
 		return [
 			'tools' => $tools,

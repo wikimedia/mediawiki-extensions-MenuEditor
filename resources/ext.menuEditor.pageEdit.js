@@ -34,4 +34,28 @@
 			console.error( e ); // eslint-disable-line no-console
 		} );
 	} );
+
+	var toolbarOffsetJson = require( './addToolbarOffset.json' );
+	var toolbarOffsetHeight = toolbarOffsetJson.MenuEditorToolbarOffset;
+
+	$( window ).on( 'scroll', function () {
+		var windowTop = $( this ).scrollTop();
+		var $toolbar = $( '.menueditor-toolbar' ); // eslint-disable-line no-jquery/no-global-selector
+		var contentWidth = getContentWidth();
+		if ( windowTop > toolbarOffsetHeight ) {
+			$toolbar.addClass( 'floating' );
+			$toolbar.css( 'top', toolbarOffsetHeight );
+			$toolbar.css( 'width', contentWidth );
+		} else {
+			$toolbar.removeAttr( 'style' );
+			// eslint-disable-next-line no-jquery/no-class-state
+			if ( $toolbar.hasClass( 'floating' ) ) {
+				$toolbar.removeClass( 'floating' );
+			}
+		}
+	} );
+
+	function getContentWidth() {
+		return $( '#mw-content-text' ).innerWidth(); // eslint-disable-line no-jquery/no-global-selector
+	}
 }( mediaWiki, jQuery ) );
