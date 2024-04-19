@@ -18,6 +18,7 @@ class MenuRegistry {
 		foreach ( $menuFactory->getAllMenus() as $key => $menu ) {
 			$res[$key] = [
 				'classname' => $menu->getJSClassname(),
+				'toolbar' => $menu->getToolbarItems(),
 				'module' => $menu->getRLModule()
 			];
 		}

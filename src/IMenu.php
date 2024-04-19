@@ -33,4 +33,9 @@ interface IMenu {
 	 * @return INode[]
 	 */
 	public function getEmptyContent(): array;
+
+	/**
+	 * @return array
+	 */
+	public function getToolbarItems(): array;
 }

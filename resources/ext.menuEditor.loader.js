@@ -28,7 +28,7 @@
 			register( require( './menus.json' ), ext.menueditor.registry.menu, dfd ),
 			register( require( './nodes.json' ), ext.menueditor.registry.node, dfd )
 		).then( function () {
-			dfd.resolve();
+			dfd.resolve( require( './menus.json' ) );
 		}, function ( e ) {
 			console.error( e ); // eslint-disable-line no-console
 			dfd.reject( e );
