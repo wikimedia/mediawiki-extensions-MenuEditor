@@ -70,4 +70,11 @@ class MediawikiSidebar implements ParsableMenu {
 			$revision, $this->parserFactory->getNodeProcessors()
 		);
 	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public function getToolbarItems(): array {
+		return [];
+	}
 }

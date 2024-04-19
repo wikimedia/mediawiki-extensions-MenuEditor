@@ -2,6 +2,8 @@ ext.menueditor.ui.panel.MenuPanel = function ( cfg, treeData, menuType ) {
 	ext.menueditor.ui.panel.MenuPanel.parent.call( this, cfg );
 
 	this.pagename = cfg.pagename;
+	this.toolbarItems = cfg.toolbar;
+
 	this.allowEdit = cfg.mode && cfg.mode === 'edit';
 	var classname = ext.menueditor.util.callbackFromString(
 		ext.menueditor.registry.menu.registry[ menuType ]
@@ -25,7 +27,9 @@ ext.menueditor.ui.panel.MenuPanel = function ( cfg, treeData, menuType ) {
 
 	if ( this.allowEdit ) {
 		mw.loader.using( [ 'ext.menuEditor.toolbar' ] ).done( function () {
-			var menuToolbar = new ext.menueditor.ui.widget.MenuToolbar();
+			var menuToolbar = new ext.menueditor.ui.widget.MenuToolbar( {
+				toolbarItems: this.toolbarItems
+			} );
 			this.$element.prepend( menuToolbar.toolbar.$element );
 
 			menuToolbar.toolbar.connect( this, {

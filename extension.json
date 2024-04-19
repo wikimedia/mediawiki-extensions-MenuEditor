@@ -50,6 +50,33 @@
 					"classname": "ext.menueditor.ui.data.node.MediawikiSidebarKeywordNode",
 					"module": "ext.menuEditor.node.keyword"
 				}
+			},
+			"ToolbarTools": {
+				"newItem": {
+					"classname": "ext.menueditor.ui.tools.NewItemTool",
+					"group": {
+						"name": "new",
+						"priority": 1
+					},
+					"module": "ext.menuEditor.tools"
+				},
+				"cancel": {
+					"classname": "ext.menueditor.ui.tools.CancelTool",
+					"group": {
+						"name": "page-actions",
+						"priority": 10
+					},
+					"module": "ext.menuEditor.tools"
+				},
+				"save": {
+					"classname": "ext.menueditor.ui.tools.SaveTool",
+					"group": {
+						"name": "page-actions",
+						"priority": 10,
+						"classes": [ "toolbar-actions" ]
+					},
+					"module": "ext.menuEditor.tools"
+				}
 			}
 		}
 	},
@@ -167,8 +194,12 @@
 			]
 		},
 		"ext.menuEditor.toolbar": {
-			"scripts": [
-				"ui/widget/MenuToolbar.js"
+			"packageFiles": [
+				"ui/widget/MenuToolbar.js",
+				{
+					"name": "ui/widget/tools.json",
+					"callback": "MediaWiki\\Extension\\MenuEditor\\ClientConfig::getToolbarTools"
+				}
 			],
 			"messages": [
 				"menueditor-toolbar-submit",
@@ -202,6 +233,13 @@
 			],
 			"messages": [
 				"menueditor-footerlinks-banner-text"
+			]
+		},
+		"ext.menuEditor.tools": {
+			"scripts": [
+				"ui/tools/SaveTool.js",
+				"ui/tools/CancelTool.js",
+				"ui/tools/NewItemTool.js"
 			]
 		}
 	},
