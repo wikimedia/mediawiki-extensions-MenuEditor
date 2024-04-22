@@ -36,13 +36,11 @@ li > ul.tree-node-list li:last-child::before {
 	height: 50%;
 }
 
-/* stylelint-disable unit-disallowed-list */
 /* stylelint-disable selector-max-id */
 #menuEditor-container .oojsplus-data-tree-label .oo-ui-iconElement-icon {
 	font-size: 0.8rem;
 	margin-left: 6px;
 }
-/* stylelint-enable unit-disallowed-list */
 
 #menuEditor-container .oojsplus-data-tree-expander .oo-ui-iconElement-icon {
 	opacity: 0.6;
@@ -135,12 +133,10 @@ li > ul.tree-node-list li:last-child::before {
 	padding-left: 20px;
 }
 
-/* stylelint-disable unit-disallowed-list */
 #menuEditor-container .oojsplus-data-tree-expander {
 	top: 0;
 	margin-left: 20px;
 }
-/* stylelint-enable unit-disallowed-list */
 
 #menuEditor-container .oo-ui-buttonElement-button > span {
 	font-weight: normal;

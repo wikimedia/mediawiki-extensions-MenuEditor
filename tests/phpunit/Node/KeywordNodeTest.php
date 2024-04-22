@@ -11,9 +11,9 @@ class KeywordNodeTest extends RawTextNodeTest {
 	 * @param array $mutate
 	 * @param string $expected
 	 * @dataProvider provideData
-	 * @covers Keyword::setKeyword
-	 * @covers Keyword::getKeyword
-	 * @covers Keyword::getCurrentData
+	 * @covers \MediaWiki\Extension\MenuEditor\Node\Keyword::setKeyword
+	 * @covers \MediaWiki\Extension\MenuEditor\Node\Keyword::getKeyword
+	 * @covers \MediaWiki\Extension\MenuEditor\Node\Keyword::getCurrentData
 	 */
 	public function testNode( $input, $mutate, $expected ) {
 		parent::testNode( $input, $mutate, $expected );

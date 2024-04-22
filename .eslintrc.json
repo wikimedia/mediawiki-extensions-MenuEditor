@@ -7,7 +7,9 @@
 	],
 	"rules": {
 		"no-undef": "warn",
-		"es-x/no-regexp-prototype-flags": "warn"
+		"es-x/no-regexp-prototype-flags": "warn",
+		"es-x/no-string-prototype-includes": "warn",
+		"es-x/no-array-prototype-includes": "warn"
 	},
 	"globals": {
 		"ext": "readonly",

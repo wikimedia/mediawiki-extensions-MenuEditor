@@ -36,7 +36,6 @@ ext.menueditor.ui.widget.MenuToolbar.prototype.callbackFromString = function ( c
 ext.menueditor.ui.widget.MenuToolbar.prototype.getTools = function ( allTools ) {
 	var tools = [];
 	for ( var tool in allTools ) {
-		// eslint-disable-next-line no-restricted-syntax
 		if ( this.toolbarItems.includes( tool ) ) {
 			tools[ tool ] = allTools[ tool ];
 		}
@@ -47,7 +46,6 @@ ext.menueditor.ui.widget.MenuToolbar.prototype.getTools = function ( allTools ) 
 ext.menueditor.ui.widget.MenuToolbar.prototype.getToolsModules = function ( allModules ) {
 	var modules = [];
 	for ( var module in allModules ) {
-		// eslint-disable-next-line no-restricted-syntax
 		if ( this.toolbarItems.includes( module ) && !modules.includes( allModules[ module ] ) ) {
 			modules.push( allModules[ module ] );
 		}
@@ -66,7 +64,7 @@ ext.menueditor.ui.widget.MenuToolbar.prototype.buildGroups = function () {
 			continue;
 		}
 		var groupName = this.tools[ tool ].group.name;
-		// eslint-disable-next-line no-restricted-syntax, no-loop-func
+		// eslint-disable-next-line no-loop-func
 		var element = groups.find( function ( e ) {
 			return e.name === groupName;
 		} );
