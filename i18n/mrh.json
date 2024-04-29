@@ -5,12 +5,12 @@
 		]
 	},
 	"menueditor-ui-menu-two-fold-link-spec-label": "Link",
-	"menueditor-ui-menu-raw-text-label": "Châ acv bietapa châhbi",
+	"menueditor-ui-menu-raw-text-label": "Ch\u00e2 acv bietapa ch\u00e2hbi",
 	"menueditor-ui-edit-node-label": "Node taopathi",
-	"menueditor-ui-dialog-action-done": "Patlô",
+	"menueditor-ui-dialog-action-done": "Patl\u00f4",
 	"menueditor-ui-node-type-selector-label": "Node pho",
-	"menueditor-ui-submit": "Pachô",
-	"menueditor-ui-cancel": "Châvei",
+	"menueditor-ui-submit": "Pach\u00f4",
+	"menueditor-ui-cancel": "Ch\u00e2vei",
 	"menueditor-action-menueditsource": "Hnawh rohpathi",
 	"menueditor-action-menuedit": "Taopathi"
 }
