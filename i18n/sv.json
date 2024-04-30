@@ -1,38 +1,38 @@
 {
 	"@metadata": {
 		"authors": [
-			"Sabel\u00f6ga"
+			"Sabelöga"
 		]
 	},
-	"menueditor-desc": "Grafisk redigerare f\u00f6r menysidor",
-	"menueditor-ui-menu-wiki-link-label": "Wikil\u00e4nk",
-	"menueditor-ui-menu-wiki-link-label-edit": "Redigera wikil\u00e4nk",
-	"menueditor-ui-menu-wiki-link-help": "L\u00e4nk till en wikisida",
-	"menueditor-ui-menu-two-fold-link-spec-label": "L\u00e4nk",
-	"menueditor-ui-menu-two-fold-link-spec-label-edit": "Redigera l\u00e4nk",
-	"menueditor-ui-menu-two-fold-link-spec-help": "L\u00e4nkspecifikation.<br>M\u00e5l kan vara:<ul><li>ett meddelandenyckel som l\u00f6sas till en sidnamn<\/li><li>en extern l\u00e4nk<\/li><li>Namnet p\u00e5 en sida p\u00e5 wikin<\/li><li>interwiki-l\u00e4nk<\/li><\/ul>",
+	"menueditor-desc": "Grafisk redigerare för menysidor",
+	"menueditor-ui-menu-wiki-link-label": "Wikilänk",
+	"menueditor-ui-menu-wiki-link-label-edit": "Redigera wikilänk",
+	"menueditor-ui-menu-wiki-link-help": "Länk till en wikisida",
+	"menueditor-ui-menu-two-fold-link-spec-label": "Länk",
+	"menueditor-ui-menu-two-fold-link-spec-label-edit": "Redigera länk",
+	"menueditor-ui-menu-two-fold-link-spec-help": "Länkspecifikation.<br>Mål kan vara:<ul><li>ett meddelandenyckel som lösas till en sidnamn</li><li>en extern länk</li><li>Namnet på en sida på wikin</li><li>interwiki-länk</li></ul>",
 	"menueditor-ui-menu-raw-text-label": "Text eller meddelandenyckel",
 	"menueditor-ui-menu-raw-text-label-edit": "Redigera text eller meddelandenyckel",
 	"menueditor-ui-menu-keyword-label": "Nyckelord",
 	"menueditor-ui-menu-keyword-label-edit": "Redigera nyckelord",
-	"menueditor-ui-menu-keyword-help": "En av de tillg\u00e4ngliga '''nyckelorden''', som kommer visa l\u00e4mpliga widgetar",
+	"menueditor-ui-menu-keyword-help": "En av de tillgängliga '''nyckelorden''', som kommer visa lämpliga widgetar",
 	"menueditor-ui-edit-node-label": "Redigeringsnod",
 	"menueditor-ui-form-field-keyword": "Nyckelord",
 	"menueditor-ui-form-field-text": "Text eller en meddelandenyckel",
-	"menueditor-ui-form-field-target": "L\u00e4nkm\u00e5l",
-	"menueditor-ui-form-field-label": "L\u00e4nketikett",
+	"menueditor-ui-form-field-target": "Länkmål",
+	"menueditor-ui-form-field-label": "Länketikett",
 	"menueditor-ui-dialog-action-done": "Klar",
 	"menueditor-ui-dialog-action-cancel": "Avbryt",
 	"menueditor-ui-node-type-selector-label": "Nodtyp",
 	"menueditor-ui-submit": "Spara",
 	"menueditor-ui-cancel": "Avbryt",
-	"menueditor-ui-redlink-notice": "Menyn finns \u00e4nnu inte",
-	"menueditor-action-menueditsource": "Redigera k\u00e4lla",
+	"menueditor-ui-redlink-notice": "Menyn finns ännu inte",
+	"menueditor-action-menueditsource": "Redigera källa",
 	"menueditor-action-menuedit": "Redigera",
 	"menueditor-ui-dialog-title": "Redigera element",
 	"menueditor-ui-mediawiki-sidebar-keyword-label-edit": "Redigera nyckelord",
 	"menueditor-ui-mediawiki-sidebar-keyword-label": "Nyckelord",
-	"menueditor-toolbar-submit": "Spara \u00e4ndringar",
+	"menueditor-toolbar-submit": "Spara ändringar",
 	"menueditor-toolbar-cancel": "Avbryt redigering",
-	"menueditor-toolbar-add": "L\u00e4gg till nytt element"
+	"menueditor-toolbar-add": "Lägg till nytt element"
 }
