@@ -12,12 +12,12 @@
 	"menueditor-ui-dialog-action-cancel": "Cancelar",
 	"menueditor-ui-submit": "Salvar",
 	"menueditor-ui-cancel": "Cancelar",
-	"menueditor-action-menueditsource": "Editar c\u00f3digo-fonte",
+	"menueditor-action-menueditsource": "Editar código-fonte",
 	"menueditor-action-menuedit": "Editar",
 	"menueditor-ui-dialog-title": "Editar elemento",
 	"menueditor-ui-mediawiki-sidebar-keyword-label-edit": "Editar palavra-chave",
 	"menueditor-ui-mediawiki-sidebar-keyword-label": "Palavras-chave",
-	"menueditor-toolbar-submit": "Salvar altera\u00e7\u00f5es",
-	"menueditor-toolbar-cancel": "Cancelar as edi\u00e7\u00f5es",
+	"menueditor-toolbar-submit": "Salvar alterações",
+	"menueditor-toolbar-cancel": "Cancelar as edições",
 	"menueditor-toolbar-add": "Adicionar elemento novo"
 }
