@@ -41,6 +41,7 @@ ext.menueditor.ui.panel.MenuPanel = function ( cfg, treeData, menuType ) {
 				},
 				save: 'saveEdit'
 			} );
+			mw.hook( 'menueditor.toolbar' ).fire( menuToolbar );
 		}.bind( this ) );
 	}
 
