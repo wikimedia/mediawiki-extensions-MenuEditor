@@ -119,6 +119,10 @@ li > ul.tree-node-list li:last-child:before {
 	border-radius: 2px;
 }
 
+#menuEditor-container li.dragged > :not( ul ) {
+	opacity: 0.5;
+}
+
 #menuEditor-container li:hover > :not( ul ) {
 	cursor: grabbing;
 }
