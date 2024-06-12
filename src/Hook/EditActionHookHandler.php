@@ -91,7 +91,7 @@ class EditActionHookHandler implements
 			return true;
 		}
 
-		$userCanEdit = $user->isAllowed( 'editinterface' );
+		$userCanEdit = $user->isAllowed( $appliedMenu->getEditRight() );
 		if ( !$userCanEdit ) {
 			return true;
 		}

@@ -77,4 +77,11 @@ class MediawikiSidebar implements ParsableMenu {
 	public function getToolbarItems(): array {
 		return [];
 	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public function getEditRight(): string {
+		return 'editinterface';
+	}
 }
