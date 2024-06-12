@@ -38,4 +38,9 @@ interface IMenu {
 	 * @return array
 	 */
 	public function getToolbarItems(): array;
+
+	/**
+	 * @return string
+	 */
+	public function getEditRight(): string;
 }
