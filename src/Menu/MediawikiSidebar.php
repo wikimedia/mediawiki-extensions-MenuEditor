@@ -2,6 +2,7 @@
 
 namespace MediaWiki\Extension\MenuEditor\Menu;
 
+use MediaWiki\Extension\MenuEditor\EditPermissionProvider;
 use MediaWiki\Extension\MenuEditor\ParsableMenu;
 use MediaWiki\Extension\MenuEditor\Parser\IMenuParser;
 use MediaWiki\Extension\MenuEditor\Parser\WikitextMenuParser;
@@ -9,7 +10,7 @@ use MediaWiki\Revision\RevisionRecord;
 use MWStake\MediaWiki\Component\Wikitext\ParserFactory;
 use Title;
 
-class MediawikiSidebar implements ParsableMenu {
+class MediawikiSidebar implements ParsableMenu, EditPermissionProvider {
 	/** @var ParserFactory */
 	private $parserFactory;
 
