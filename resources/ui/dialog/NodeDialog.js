@@ -99,12 +99,11 @@ ext.menueditor.ui.dialog.NodeDialog.prototype.getAllowedNodeOptions = function (
 	var all = Object.keys( ext.menueditor.registry.node.registry ),
 		allowedConfig = this.allowedNodes;
 	this.allowedValid = this.allowedNodes.length === 0 ?
-		all : all.filter( function ( x ) {
-			return allowedConfig.indexOf( x ) !== -1;
+		[] : all.filter( function ( x ) {
+			return allowedConfig.indexOf( x ) >= 0;
 		} );
 
 	this.initializeItems();
-
 	return this.allowedValid.map( function ( x ) {
 		// The following messages are used here
 		// * menueditor-ui-menu-wiki-link-label
