@@ -3,24 +3,12 @@
 namespace MediaWiki\Extension\MenuEditor\Menu;
 
 use MediaWiki\Extension\MenuEditor\EditPermissionProvider;
-use MediaWiki\Extension\MenuEditor\ParsableMenu;
 use MediaWiki\Extension\MenuEditor\Parser\IMenuParser;
 use MediaWiki\Extension\MenuEditor\Parser\WikitextMenuParser;
 use MediaWiki\Revision\RevisionRecord;
-use MWStake\MediaWiki\Component\Wikitext\ParserFactory;
 use Title;
 
-class FooterLinks implements ParsableMenu, EditPermissionProvider {
-
-	/** @var ParserFactory */
-	private $parserFactory;
-
-	/**
-	 * @param ParserFactory $parserFactory
-	 */
-	public function __construct( ParserFactory $parserFactory ) {
-		$this->parserFactory = $parserFactory;
-	}
+class FooterLinks extends GenericMenu implements EditPermissionProvider {
 
 	/**
 	 * @inheritDoc
@@ -51,13 +39,6 @@ class FooterLinks implements ParsableMenu, EditPermissionProvider {
 	}
 
 	/**
-	 * @inheritDoc
-	 */
-	public function getEmptyContent(): array {
-		return [];
-	}
-
-	/**
 	 * @param Title $title
 	 * @param RevisionRecord|null $revision
 	 * @return IMenuParser
@@ -68,7 +49,7 @@ class FooterLinks implements ParsableMenu, EditPermissionProvider {
 			$revision = $this->parserFactory->getRevisionForText( '', $title );
 		}
 		return new WikitextMenuParser(
-			$revision, $this->parserFactory->getNodeProcessors()
+			$revision, $this->getProcessors()
 		);
 	}
 
@@ -84,5 +65,12 @@ class FooterLinks implements ParsableMenu, EditPermissionProvider {
 	 */
 	public function getEditRight(): string {
 		return 'editinterface';
+	}
+
+	/**
+	 * @return string[]
+	 */
+	public function getAllowedNodes(): array {
+		return [ 'menu-two-fold-link-spec' ];
 	}
 }

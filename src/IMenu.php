@@ -38,4 +38,9 @@ interface IMenu {
 	 * @return array
 	 */
 	public function getToolbarItems(): array;
+
+	/**
+	 * @return array
+	 */
+	public function getAllowedNodes(): array;
 }

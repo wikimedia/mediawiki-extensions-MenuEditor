@@ -7,19 +7,9 @@ use MediaWiki\Extension\MenuEditor\ParsableMenu;
 use MediaWiki\Extension\MenuEditor\Parser\IMenuParser;
 use MediaWiki\Extension\MenuEditor\Parser\WikitextMenuParser;
 use MediaWiki\Revision\RevisionRecord;
-use MWStake\MediaWiki\Component\Wikitext\ParserFactory;
 use Title;
 
-class MediawikiSidebar implements ParsableMenu, EditPermissionProvider {
-	/** @var ParserFactory */
-	private $parserFactory;
-
-	/**
-	 * @param ParserFactory $parserFactory
-	 */
-	public function __construct( ParserFactory $parserFactory ) {
-		$this->parserFactory = $parserFactory;
-	}
+class MediawikiSidebar extends GenericMenu implements ParsableMenu, EditPermissionProvider {
 
 	/**
 	 * @inheritDoc
@@ -50,13 +40,6 @@ class MediawikiSidebar implements ParsableMenu, EditPermissionProvider {
 	}
 
 	/**
-	 * @inheritDoc
-	 */
-	public function getEmptyContent(): array {
-		return [];
-	}
-
-	/**
 	 * @param Title $title
 	 * @param RevisionRecord|null $revision
 	 *
@@ -68,8 +51,15 @@ class MediawikiSidebar implements ParsableMenu, EditPermissionProvider {
 			$revision = $this->parserFactory->getRevisionForText( '', $title );
 		}
 		return new WikitextMenuParser(
-			$revision, $this->parserFactory->getNodeProcessors()
+			$revision, $this->getProcessors()
 		);
+	}
+
+	/**
+	 * @return string[]
+	 */
+	public function getAllowedNodes(): array {
+		return [ 'menu-raw-text', 'menu-two-fold-link-spec', 'mediawiki-sidebar-keyword' ];
 	}
 
 	/**
