@@ -32,8 +32,5 @@ ext.menueditor.ui.data.node.MediawikiSidebarKeywordNode.prototype.getFormFields 
 };
 
 ext.menueditor.ui.data.node.MediawikiSidebarKeywordNode.prototype.shouldRender = function () {
-	if ( this.keywords.length ) {
-		return true;
-	}
-	return false;
+	return this.keywords.length > 0;
 };
