@@ -45,9 +45,9 @@ class ClientConfig {
 				continue;
 			}
 			$classname = $toolConfig['classname'];
-			$groupname = $toolConfig['group']['name'] ? $toolConfig['group']['name'] : '';
-			$prio = $toolConfig['group']['priority'] ? $toolConfig['group']['priority'] : 3;
-			$classes = $toolConfig['group']['classes'] ? $toolConfig['group']['classes'] : [];
+			$groupname = $toolConfig['group']['name'] ?? '';
+			$prio = $toolConfig['group']['priority'] ?? 3;
+			$classes = $toolConfig['group']['classes'] ?? [];
 			$tools[ $tool ] = [
 				'classname' => $classname,
 				'group' => [
