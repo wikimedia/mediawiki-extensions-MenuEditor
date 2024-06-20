@@ -19,7 +19,7 @@ ext.menueditor = {
 					function ( loadResult, nodes ) {
 						// TODO: Check results, that menuType is registered...
 						dfd.resolve(
-							new ext.menueditor.ui.panel.MenuPanel( $.extend( {
+							new ext.menueditor.ui.panel.MenuPanel( Object.assign( {
 								pagename: pagename, expanded: false, mode: mode,
 								toolbar: loadResult[ menuType ].toolbar
 							}, cfg ), nodes, menuType )
