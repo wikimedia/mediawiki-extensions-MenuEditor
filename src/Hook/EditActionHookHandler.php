@@ -5,7 +5,7 @@ namespace MediaWiki\Extension\MenuEditor\Hook;
 use Article;
 use Html;
 use MediaWiki;
-use MediaWiki\Extension\MenuEditor\EditPermissionProvide;
+use MediaWiki\Extension\MenuEditor\EditPermissionProvider;
 use MediaWiki\Extension\MenuEditor\MenuFactory;
 use MediaWiki\Hook\MediaWikiPerformActionHook;
 use MediaWiki\Hook\SkinTemplateNavigation__UniversalHook;
@@ -93,7 +93,7 @@ class EditActionHookHandler implements
 		}
 
 		$editRight = 'editinterface';
-		if ( $appliedMenu instanceof EditPermissionProvide ) {
+		if ( $appliedMenu instanceof EditPermissionProvider ) {
 			$editRight = $appliedMenu->getEditRight();
 		}
 
