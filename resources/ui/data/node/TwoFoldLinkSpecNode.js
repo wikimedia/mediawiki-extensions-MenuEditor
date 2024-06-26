@@ -21,7 +21,7 @@ ext.menueditor.ui.data.node.TwoFoldLinkSpecNode.prototype.getFormFields = functi
 	return [
 		{
 			name: 'target',
-			type: 'text',
+			type: 'title',
 			required: true,
 			label: mw.message( 'menueditor-ui-form-field-target' ).text(),
 			help: new OO.ui.HtmlSnippet( mw.message( 'menueditor-ui-menu-two-fold-link-spec-help' ).text() )
