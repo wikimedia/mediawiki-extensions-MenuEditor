@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Lakejason0",
+			"LittlePaw365",
 			"Wzl19371"
 		]
 	},
@@ -14,11 +15,11 @@
 	"menueditor-ui-menu-two-fold-link-spec-help": "链接格式。<br>目标可以是：<ul><li>可解析到一个页面名称的系统消息键名</li><li>外部链接</li><li>wiki上的某个页面的名称</li><li>跨wiki链接</li></ul>",
 	"menueditor-ui-menu-raw-text-label": "文本或系统消息键名",
 	"menueditor-ui-menu-raw-text-label-edit": "编辑文本或系统消息键名",
-	"menueditor-ui-menu-keyword-label": "关键字",
-	"menueditor-ui-menu-keyword-label-edit": "编辑关键字",
-	"menueditor-ui-menu-keyword-help": "显示适当的微件的可用的'''关键字'''之一",
+	"menueditor-ui-menu-keyword-label": "关键词",
+	"menueditor-ui-menu-keyword-label-edit": "编辑关键词",
+	"menueditor-ui-menu-keyword-help": "会显示适当小组件的可用'''关键词'''之一",
 	"menueditor-ui-edit-node-label": "编辑节点",
-	"menueditor-ui-form-field-keyword": "关键字",
+	"menueditor-ui-form-field-keyword": "关键词",
 	"menueditor-ui-form-field-text": "文本或系统消息键名",
 	"menueditor-ui-form-field-target": "链接目标",
 	"menueditor-ui-form-field-label": "链接文本",
