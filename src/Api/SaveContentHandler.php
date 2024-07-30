@@ -3,6 +3,7 @@
 namespace MediaWiki\Extension\MenuEditor\Api;
 
 use MediaWiki\Rest\HttpException;
+use MediaWiki\Rest\Validator\JsonBodyValidator;
 use RequestContext;
 use Wikimedia\ParamValidator\ParamValidator;
 
@@ -40,5 +41,17 @@ class SaveContentHandler extends MenuHandler {
 				ParamValidator::PARAM_TYPE => 'string',
 			]
 		];
+	}
+
+	/**
+	 * @param string $contentType
+	 * @return JsonBodyValidator
+	 * @throws HttpException
+	 */
+	public function getBodyValidator( $contentType ) {
+		if ( $contentType !== 'application/json' ) {
+			throw new HttpException( 'ContentType header must be application/json' );
+		}
+		return new JsonBodyValidator( [] );
 	}
 }
