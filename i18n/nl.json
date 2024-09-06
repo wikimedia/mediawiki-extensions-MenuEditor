@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Mainframe98",
-			"McDutchie"
+			"McDutchie",
+			"Siebrand"
 		]
 	},
 	"menueditor-desc": "Grafische editor voor menupagina’s",
@@ -16,7 +17,7 @@
 	"menueditor-ui-menu-raw-text-label-edit": "Tekst of berichtsleutel bewerken",
 	"menueditor-ui-menu-keyword-label": "Trefwoord",
 	"menueditor-ui-menu-keyword-label-edit": "Sleutelwoord bewerken",
-	"menueditor-ui-menu-keyword-help": "Een van de beschikbare '''trefwoorden'''', die de bijbehorende widget tonen",
+	"menueditor-ui-menu-keyword-help": "Een van de beschikbare '''trefwoorden'''', die de bijbehorende widget weergeven",
 	"menueditor-ui-form-field-keyword": "Trefwoord",
 	"menueditor-ui-form-field-text": "Tekst of een berichtsleutel",
 	"menueditor-ui-form-field-target": "Koppelingsdoel",
@@ -31,7 +32,7 @@
 	"menueditor-action-menuedit": "Bewerken",
 	"menueditor-ui-dialog-title": "Element bewerken",
 	"menueditor-ui-mediawiki-sidebar-keyword-label-edit": "Sleutelwoord bewerken",
-	"menueditor-ui-mediawiki-sidebar-keyword-label": "Sleutelwoord",
+	"menueditor-ui-mediawiki-sidebar-keyword-label": "Trefwoord",
 	"menueditor-toolbar-submit": "Wijzigingen opslaan",
 	"menueditor-toolbar-cancel": "Bewerking annuleren",
 	"menueditor-toolbar-add-label": "Element toevoegen",
