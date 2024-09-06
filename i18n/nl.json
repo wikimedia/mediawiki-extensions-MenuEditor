@@ -2,13 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"Mainframe98",
-			"McDutchie"
+			"McDutchie",
+			"Siebrand"
 		]
 	},
 	"menueditor-ui-menu-two-fold-link-spec-label": "Koppeling",
 	"menueditor-ui-menu-raw-text-label": "Tekst of berichtnaam",
 	"menueditor-ui-menu-keyword-label": "Trefwoord",
-	"menueditor-ui-menu-keyword-help": "Een van de beschikbare '''trefwoorden'''', die de bijbehorende widget tonen",
+	"menueditor-ui-menu-keyword-help": "Een van de beschikbare '''trefwoorden'''', die de bijbehorende widget weergeven",
 	"menueditor-ui-form-field-keyword": "Trefwoord",
 	"menueditor-ui-form-field-target": "Koppelingsdoel",
 	"menueditor-ui-form-field-label": "Koppelingslabel",
@@ -31,7 +32,7 @@
 	"menueditor-ui-node-type-selector-label": "Knooppunttype",
 	"menueditor-ui-dialog-title": "Element bewerken",
 	"menueditor-ui-mediawiki-sidebar-keyword-label-edit": "Sleutelwoord bewerken",
-	"menueditor-ui-mediawiki-sidebar-keyword-label": "Sleutelwoord",
+	"menueditor-ui-mediawiki-sidebar-keyword-label": "Trefwoord",
 	"menueditor-toolbar-submit": "Wijzigingen opslaan",
 	"menueditor-toolbar-cancel": "Bewerking annuleren",
 	"menueditor-toolbar-add-label": "Element toevoegen",
