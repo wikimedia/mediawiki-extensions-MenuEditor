@@ -44,7 +44,7 @@ ext.menueditor.ui.data.node.TreeNode.prototype.getForm = function ( dialog ) {
 
 		var labelText = msg.text();
 
-		var form = new mw.ext.forms.standalone.Form( $.extend( {
+		var form = new mw.ext.forms.standalone.Form( Object.assign( {
 			data: this.getNodeData(),
 			definition: {
 				items: [
@@ -111,14 +111,14 @@ ext.menueditor.ui.data.node.TreeNode.prototype.onEdit = function () {
 };
 
 ext.menueditor.ui.data.node.TreeNode.prototype.getNodeData = function () {
-	var node = $.extend( {}, this.nodeData );
+	var node = Object.assign( {}, this.nodeData );
 	delete ( node.items );
 	delete ( node.name );
 	return node;
 };
 
 ext.menueditor.ui.data.node.TreeNode.prototype.updateData = function ( data ) {
-	this.nodeData = $.extend( this.nodeData, data );
+	this.nodeData = Object.assign( this.nodeData, data );
 	this.label = this.labelFromData( this.nodeData );
 	this.labelWidget.setLabel( this.label );
 	this.$element.attr( 'data-type', this.nodeData.type );
@@ -130,7 +130,7 @@ ext.menueditor.ui.data.node.TreeNode.prototype.shouldRender = function () {
 
 ext.menueditor.ui.data.node.TreeNode.prototype.addLabel = function () {
 	this.labelWidget = new OOJSPlus.ui.widget.LabelWidget(
-		$.extend( {},
+		Object.assign( {},
 			{
 				icon: this.getIcon()
 			}, this.buttonCfg
