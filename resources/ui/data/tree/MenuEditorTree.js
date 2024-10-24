@@ -5,7 +5,7 @@ ext.menueditor.ui.data.tree.Tree = function ( cfg ) {
 		cfg.allowDeletions = false;
 		cfg.fixed = true;
 	} else {
-		cfg.$containTo = 'self';
+		cfg.$containTo = null;
 	}
 
 	ext.menueditor.ui.data.tree.Tree.parent.call( this, cfg );
