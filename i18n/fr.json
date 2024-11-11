@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Mahabarata",
 			"McDutchie",
 			"Verdy p"
 		]
@@ -36,5 +37,6 @@
 	"menueditor-toolbar-cancel": "Annuler les modifications",
 	"menueditor-toolbar-add-label": "Ajouter un élément",
 	"menueditor-ui-edit-label": "Modifier",
-	"menueditor-ui-add-sub-element-label": "Ajouter un sous-élément"
+	"menueditor-ui-add-sub-element-label": "Ajouter un sous-élément",
+	"menueditor-footerlinks-banner-text": "Certains liens peuvent être ajoutés automatiquement par des extensions. Veuillez vérifier la configuration de l'extension pour en savoir plus."
 }
