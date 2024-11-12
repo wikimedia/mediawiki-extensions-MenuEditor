@@ -6,8 +6,10 @@
 		]
 	},
 	"menueditor-ui-menu-wiki-link-label": "Wiki-Link",
+	"menueditor-ui-menu-wiki-link-label-edit": "Wikilink änneren",
 	"menueditor-ui-menu-wiki-link-help": "Link op eng Wikisäit",
 	"menueditor-ui-menu-two-fold-link-spec-label": "Link",
+	"menueditor-ui-menu-two-fold-link-spec-label-edit": "Link änneren",
 	"menueditor-ui-menu-raw-text-label": "Text oder e Schlëssel vun engem Message",
 	"menueditor-ui-menu-keyword-label": "Schlësselwuert",
 	"menueditor-ui-form-field-keyword": "Schlësselwuert",
