@@ -52,19 +52,19 @@
 				}
 			},
 			"ToolbarTools": {
-				"newItem": {
-					"classname": "ext.menueditor.ui.tools.NewItemTool",
+				"cancel": {
+					"classname": "ext.menueditor.ui.tools.CancelTool",
 					"group": {
 						"name": "new",
 						"priority": 1
 					},
 					"module": "ext.menuEditor.tools"
 				},
-				"cancel": {
-					"classname": "ext.menueditor.ui.tools.CancelTool",
+				"newItem": {
+					"classname": "ext.menueditor.ui.tools.NewItemTool",
 					"group": {
-						"name": "page-actions",
-						"priority": 10
+						"name": "new",
+						"priority": 1
 					},
 					"module": "ext.menuEditor.tools"
 				},
@@ -209,7 +209,7 @@
 				}
 			],
 			"messages": [
-				"menueditor-toolbar-submit",
+				"menueditor-toolbar-save",
 				"menueditor-toolbar-cancel",
 				"menueditor-toolbar-add-label"
 			],

@@ -69,7 +69,7 @@ li > ul.tree-node-list li:last-child::before {
 
 .oo-ui-tool-name-cancel {
 	width: 45px;
-	background-color: #eaecf0;
+	border-right: 1px solid #eaecf0;
 }
 
 #menuEditor-container .oojsplus-data-tree-expander a .oo-ui-iconElement-icon {
@@ -77,7 +77,7 @@ li > ul.tree-node-list li:last-child::before {
 }
 
 #mw-content-text .oo-ui-tool-name-cancel a:hover {
-	background-color: #c8ccd1;
+	background-color: #eaecf0;
 }
 
 .oo-ui-barToolGroup-tools > .oo-ui-tool + .oo-ui-tool {
@@ -133,7 +133,6 @@ li > ul.tree-node-list li:last-child::before {
 	padding-left: 20px;
 }
 
-/* stylelint-disable unit-disallowed-list */
 #menuEditor-container .oojsplus-data-tree-expander {
 	top: 0;
 	margin-left: 5px;

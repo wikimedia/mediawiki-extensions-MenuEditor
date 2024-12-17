@@ -35,5 +35,6 @@
 	"menueditor-toolbar-cancel": "Bearbeitung abbrechen",
 	"menueditor-toolbar-add-label": "Element hinzufügen",
 	"menueditor-ui-edit-label": "Bearbeiten",
-	"menueditor-ui-add-sub-element-label": "Unterpunkt hinzufügen"
+	"menueditor-ui-add-sub-element-label": "Unterpunkt hinzufügen",
+	"menueditor-toolbar-save": "Speichern"
 }

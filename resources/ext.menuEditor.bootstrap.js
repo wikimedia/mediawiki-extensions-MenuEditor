@@ -19,6 +19,7 @@ ext.menueditor = {
 					function ( loadResult, nodes ) {
 						// TODO: Check results, that menuType is registered...
 						dfd.resolve(
+							// eslint-disable-next-line es-x/no-object-assign
 							new ext.menueditor.ui.panel.MenuPanel( Object.assign( {
 								pagename: pagename, expanded: false, mode: mode,
 								toolbar: loadResult[ menuType ].toolbar
