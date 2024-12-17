@@ -53,6 +53,7 @@ ext.menueditor.ui.data.tree.Tree.prototype.openNodeDialog = function ( node, cfg
 	var windowManager = new OO.ui.WindowManager();
 	$( document.body ).append( windowManager.$element );
 
+	// eslint-disable-next-line es-x/no-object-assign
 	var dialog = new ext.menueditor.ui.dialog.NodeDialog( Object.assign( { size: 'large' }, cfg || {} ), node );
 	windowManager.addWindows( [ dialog ] );
 	return windowManager.openWindow( dialog );
@@ -134,6 +135,7 @@ ext.menueditor.ui.data.tree.Tree.prototype.getMaxLevels = function () {
 ext.menueditor.ui.data.tree.Tree.prototype.getNodes = function () {
 	var nodes = ext.menueditor.ui.data.tree.Tree.parent.prototype.getNodes.call( this );
 	return nodes.map( function ( e ) {
+		// eslint-disable-next-line es-x/no-object-assign
 		return Object.assign( e.getNodeData(), { level: e.getLevel() + 1 } );
 	} );
 };

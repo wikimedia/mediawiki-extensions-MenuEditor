@@ -43,7 +43,7 @@ ext.menueditor.ui.data.node.TreeNode.prototype.getForm = function ( dialog ) {
 		}
 
 		var labelText = msg.text();
-
+		// eslint-disable-next-line es-x/no-object-assign
 		var form = new mw.ext.forms.standalone.Form( Object.assign( {
 			data: this.getNodeData(),
 			definition: {
@@ -111,13 +111,14 @@ ext.menueditor.ui.data.node.TreeNode.prototype.onEdit = function () {
 };
 
 ext.menueditor.ui.data.node.TreeNode.prototype.getNodeData = function () {
-	var node = Object.assign( {}, this.nodeData );
+	var node = Object.assign( {}, this.nodeData ); // eslint-disable-line es-x/no-object-assign
 	delete ( node.items );
 	delete ( node.name );
 	return node;
 };
 
 ext.menueditor.ui.data.node.TreeNode.prototype.updateData = function ( data ) {
+	// eslint-disable-next-line es-x/no-object-assign
 	this.nodeData = Object.assign( this.nodeData, data );
 	this.label = this.labelFromData( this.nodeData );
 	this.labelWidget.setLabel( this.label );
@@ -130,7 +131,7 @@ ext.menueditor.ui.data.node.TreeNode.prototype.shouldRender = function () {
 
 ext.menueditor.ui.data.node.TreeNode.prototype.addLabel = function () {
 	this.labelWidget = new OOJSPlus.ui.widget.LabelWidget(
-		Object.assign( {},
+		Object.assign( {}, // eslint-disable-line es-x/no-object-assign
 			{
 				icon: this.getIcon()
 			}, this.buttonCfg
