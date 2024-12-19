@@ -2,16 +2,17 @@
 	"@metadata": {
 		"authors": [
 			"Alshamiri1",
+			"Meno25",
 			"محمد أحمد عبد الفتاح"
 		]
 	},
 	"menueditor-desc": "محرر رسومي لصفحات القائمة",
 	"menueditor-ui-menu-wiki-link-label": "رابط الويكي",
-	"menueditor-ui-menu-wiki-link-label-edit": "تحرير رابط wiki",
-	"menueditor-ui-menu-wiki-link-help": "رابط بصفحة wiki",
+	"menueditor-ui-menu-wiki-link-label-edit": "تعديل رابط الويكي",
+	"menueditor-ui-menu-wiki-link-help": "رابط لصفحة الويكي",
 	"menueditor-ui-menu-two-fold-link-spec-label": "وصلة",
 	"menueditor-ui-menu-two-fold-link-spec-label-edit": "عدل الوصلة",
-	"menueditor-ui-menu-two-fold-link-spec-help": "مواصفات الارتباط.<br> يمكن أن يكون الهدف:<ul style=\";text-align:right;direction:rtl\"><li style=\";text-align:right;direction:rtl\"> مفتاح الرسالة ، الذي يتحول إلى اسم الصفحة</li><li style=\";text-align:right;direction:rtl\"> ارتباط خارجي</li><li style=\";text-align:right;direction:rtl\"> اسم الصفحة في الويكي</li><li style=\";text-align:right;direction:rtl\"> ارتباط interwiki</li></ul>",
+	"menueditor-ui-menu-two-fold-link-spec-help": "مواصفات الرابط الهدف يمكن أن يكون: مفتاح رسالة، الذي يصل إلى رابط خارجي لـ \"موقع\"<br/><ul><li>مفتاح الرسالة ، والذي ينطلق إلى اسم الصفحة</li><li>رابط خارجي</li><li>اسم الصفحة على الويكي</li><li>رابط بين ويكي</li></ul>",
 	"menueditor-ui-menu-raw-text-label": "مفتاح النص أو الرسالة",
 	"menueditor-ui-menu-raw-text-label-edit": "تحرير النص أو مفتاح الرسالة",
 	"menueditor-ui-menu-keyword-label": "الكلمة الرئيسية",
