@@ -23,6 +23,6 @@
 	"menueditor-ui-redlink-notice": "Dëse Menü gëtt et nach net!",
 	"menueditor-action-menueditsource": "Quelltext änneren",
 	"menueditor-action-menuedit": "Änneren",
-	"menueditor-toolbar-submit": "Ännerunge späicheren",
-	"menueditor-ui-edit-label": "Änneren"
+	"menueditor-ui-edit-label": "Änneren",
+	"menueditor-toolbar-save": "Späicheren"
 }
