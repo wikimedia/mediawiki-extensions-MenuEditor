@@ -33,10 +33,10 @@
 	"menueditor-ui-dialog-title": "Modifier l’élément",
 	"menueditor-ui-mediawiki-sidebar-keyword-label-edit": "Modifier le mot-clé",
 	"menueditor-ui-mediawiki-sidebar-keyword-label": "Mot-clé",
-	"menueditor-toolbar-submit": "Enregistrer les modifications",
 	"menueditor-toolbar-cancel": "Annuler les modifications",
 	"menueditor-toolbar-add-label": "Ajouter un élément",
 	"menueditor-ui-edit-label": "Modifier",
 	"menueditor-ui-add-sub-element-label": "Ajouter un sous-élément",
-	"menueditor-footerlinks-banner-text": "Certains liens peuvent être ajoutés automatiquement par des extensions. Veuillez vérifier la configuration de l'extension pour en savoir plus."
+	"menueditor-footerlinks-banner-text": "Certains liens peuvent être ajoutés automatiquement par des extensions. Veuillez vérifier la configuration de l'extension pour en savoir plus.",
+	"menueditor-toolbar-save": "Enregistrer"
 }
