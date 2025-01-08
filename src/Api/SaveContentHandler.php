@@ -18,7 +18,7 @@ class SaveContentHandler extends MenuHandler {
 		$body = $this->getValidatedBody();
 
 		$parser = $this->getParserForRevision( $page );
-		$parser->addNodesFromData( $body );
+		$parser->addNodesFromData( $body['data'] );
 
 		$rev = $parser->saveRevision( RequestContext::getMain()->getUser() );
 		if ( !$rev ) {
@@ -38,6 +38,19 @@ class SaveContentHandler extends MenuHandler {
 				self::PARAM_SOURCE => 'path',
 				ParamValidator::PARAM_REQUIRED => true,
 				ParamValidator::PARAM_TYPE => 'string',
+			]
+		];
+	}
+
+	/**
+	 * @return array[]
+	 */
+	public function getBodyParamSettings(): array {
+		return [
+			'data' => [
+				ParamValidator::PARAM_TYPE => 'array',
+				ParamValidator::PARAM_REQUIRED => false,
+				ParamValidator::PARAM_DEFAULT => ''
 			]
 		];
 	}

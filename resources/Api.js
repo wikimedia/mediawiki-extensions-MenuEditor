@@ -48,7 +48,7 @@
 
 	ext.menueditor.api.Api.prototype.post = function ( path, params ) {
 		params = params || {};
-		return this.ajax( path, JSON.stringify( params ), 'POST' );
+		return this.ajax( path, JSON.stringify( { data: params } ), 'POST' );
 	};
 
 	ext.menueditor.api.Api.prototype.delete = function ( path, params ) {
