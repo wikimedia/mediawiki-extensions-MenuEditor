@@ -162,6 +162,7 @@
 			],
 			"dependencies": [
 				"ext.menuEditor.tree",
+				"oojs-ui.styles.icons-editing-core",
 				"oojs-ui.styles.icons-editing-styling",
 				"oojs-ui.styles.icons-editing-advanced"
 			],
