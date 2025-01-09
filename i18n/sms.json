@@ -9,5 +9,6 @@
 	"menueditor-ui-submit": "Ruõkk",
 	"menueditor-ui-cancel": "Jõõsk",
 	"menueditor-action-menueditsource": "Muuʹtt wikiteeʹkst",
-	"menueditor-action-menuedit": "Muuʹtt"
+	"menueditor-action-menuedit": "Muuʹtt",
+	"menueditor-toolbar-save": "Ruõkk"
 }
