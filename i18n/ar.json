@@ -24,6 +24,7 @@
 	"menueditor-ui-form-field-label": "تسمية الرابط",
 	"menueditor-ui-dialog-action-done": "تم",
 	"menueditor-ui-dialog-action-cancel": "إلغاء",
+	"menueditor-ui-node-type-selector-label": "نوع العقدة",
 	"menueditor-ui-submit": "احفظ",
 	"menueditor-ui-cancel": "إلغاء",
 	"menueditor-ui-redlink-notice": "هذه القائمة غير موجودة بعد!",
@@ -35,5 +36,7 @@
 	"menueditor-toolbar-cancel": "إلغاء التحرير",
 	"menueditor-toolbar-add-label": "أضف عنصرًا",
 	"menueditor-ui-edit-label": "تعديل",
-	"menueditor-ui-add-sub-element-label": "أضف عنصرًا فرعيًا"
+	"menueditor-ui-add-sub-element-label": "أضف عنصرًا فرعيًا",
+	"menueditor-footerlinks-banner-text": "قد تتم إضافة بعض الروابط تلقائيًا بواسطة الامتدادات. يرجى التحقق من تكوين الامتداد لمعرفة المزيد.",
+	"menueditor-toolbar-save": "حفظ"
 }
