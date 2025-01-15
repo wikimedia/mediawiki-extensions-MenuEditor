@@ -27,5 +27,6 @@
 	"menueditor-toolbar-cancel": "Отменить изменения",
 	"menueditor-toolbar-add-label": "Добавить элемент",
 	"menueditor-ui-edit-label": "Править",
-	"menueditor-ui-add-sub-element-label": "Добавить подэлемент"
+	"menueditor-ui-add-sub-element-label": "Добавить подэлемент",
+	"menueditor-toolbar-save": "Сохранить"
 }

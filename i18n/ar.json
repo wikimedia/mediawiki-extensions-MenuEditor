@@ -2,8 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Alshamiri1",
-			"محمد أحمد عبد الفتاح",
-			"Meno25"
+			"Meno25",
+			"محمد أحمد عبد الفتاح"
 		]
 	},
 	"menueditor-desc": "محرر رسومي لصفحات القائمة",
@@ -38,5 +38,6 @@
 	"menueditor-toolbar-add-label": "أضف عنصرًا",
 	"menueditor-ui-edit-label": "تعديل",
 	"menueditor-ui-add-sub-element-label": "أضف عنصرًا فرعيًا",
-	"menueditor-footerlinks-banner-text": "قد تتم إضافة بعض الروابط تلقائيًا بواسطة الامتدادات. يرجى التحقق من تكوين الامتداد لمعرفة المزيد."
+	"menueditor-footerlinks-banner-text": "قد تتم إضافة بعض الروابط تلقائيًا بواسطة الامتدادات. يرجى التحقق من تكوين الامتداد لمعرفة المزيد.",
+	"menueditor-toolbar-save": "حفظ"
 }

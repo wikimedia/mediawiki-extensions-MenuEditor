@@ -5,5 +5,6 @@
 		]
 	},
 	"menueditor-toolbar-add-label": "Додај елемент",
-	"menueditor-ui-edit-label": "Уреди"
+	"menueditor-ui-edit-label": "Уреди",
+	"menueditor-toolbar-save": "Сачувај"
 }
