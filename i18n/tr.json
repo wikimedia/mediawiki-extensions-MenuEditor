@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Hedda",
-			"Rapsar"
+			"Rapsar",
+			"Vito Genovese"
 		]
 	},
 	"menueditor-desc": "Menü sayfaları için grafik düzenleyici",
@@ -24,6 +25,6 @@
 	"menueditor-ui-submit": "Kaydet",
 	"menueditor-ui-cancel": "İptal",
 	"menueditor-ui-redlink-notice": "Bu menü henüz mevcut değil!",
-	"menueditor-action-menueditsource": "Kaynağı değiştir",
+	"menueditor-action-menueditsource": "Kaynağı düzenle",
 	"menueditor-action-menuedit": "Değiştir"
 }

@@ -24,5 +24,6 @@
 	"menueditor-toolbar-submit": "Ännerunge späicheren",
 	"menueditor-ui-edit-label": "Änneren",
 	"menueditor-ui-menu-wiki-link-label-edit": "Wikilink änneren",
-	"menueditor-ui-menu-two-fold-link-spec-label-edit": "Link änneren"
+	"menueditor-ui-menu-two-fold-link-spec-label-edit": "Link änneren",
+	"menueditor-toolbar-save": "Späicheren"
 }

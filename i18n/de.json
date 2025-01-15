@@ -35,5 +35,6 @@
 	"menueditor-ui-add-sub-element-label": "Unterpunkt hinzufügen",
 	"menueditor-ui-menu-raw-text-label": "Text oder Nachrichtenschlüssel",
 	"menueditor-ui-menu-raw-text-label-edit": "Text oder Nachrichtenschlüssel bearbeiten",
-	"menueditor-ui-form-field-text": "Text oder ein Nachrichtenschlüssel"
+	"menueditor-ui-form-field-text": "Text oder ein Nachrichtenschlüssel",
+	"menueditor-toolbar-save": "Speichern"
 }
