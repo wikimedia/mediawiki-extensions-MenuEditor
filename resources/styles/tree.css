@@ -129,10 +129,6 @@ li > ul.tree-node-list li:last-child::before {
 	margin-left: 5px;
 }
 
-#menuEditor-container .oojs-ui-data-tree-item {
-	padding-left: 20px;
-}
-
 #menuEditor-container .oojsplus-data-tree-expander {
 	top: 0;
 	margin-left: 5px;
