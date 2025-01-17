@@ -10,6 +10,7 @@ use MediaWiki\Extension\MenuEditor\Parser\WikitextMenuParser;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\MutableRevisionRecord;
 use MediaWiki\Revision\SlotRecord;
+use MediaWiki\Title\Title;
 use MWStake\MediaWiki\Lib\Nodes\INodeProcessor;
 use PHPUnit\Framework\TestCase;
 
@@ -71,7 +72,7 @@ class MenuParserTest extends TestCase {
 	 */
 	private function getRevision( $text ) {
 		$content = new \WikitextContent( $text );
-		$title = \Title::newMainPage();
+		$title = Title::newMainPage();
 		$revisionRecord = new MutableRevisionRecord( $title );
 		$revisionRecord->setSlot(
 			SlotRecord::newUnsaved(

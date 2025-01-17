@@ -3,6 +3,7 @@
 namespace MediaWiki\Extension\MenuEditor\Tests\Node;
 
 use MediaWiki\Extension\MenuEditor\Node\TwoFoldLinkSpec;
+use MediaWiki\Title\Title;
 
 class TwoFoldLinkSpecTest extends MenuNodeTestBase {
 
@@ -32,7 +33,7 @@ class TwoFoldLinkSpecTest extends MenuNodeTestBase {
 			if ( strpos( $name, '@' ) ) {
 				return null;
 			}
-			return $this->createMock( \Title::class );
+			return $this->createMock( Title::class );
 		} );
 
 		return $titleFactoryMock;

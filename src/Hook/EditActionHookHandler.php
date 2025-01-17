@@ -11,9 +11,9 @@ use MediaWiki\Hook\MediaWikiPerformActionHook;
 use MediaWiki\Hook\SkinTemplateNavigation__UniversalHook;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Permissions\PermissionManager;
+use MediaWiki\Title\Title;
 use OutputPage;
 use SkinTemplate;
-use Title;
 use User;
 use WebRequest;
 

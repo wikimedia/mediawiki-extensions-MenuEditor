@@ -3,6 +3,7 @@
 namespace MediaWiki\Extension\MenuEditor\HookHandler;
 
 use MediaWiki\Hook\BeforePageDisplayHook;
+use MediaWiki\Title\Title;
 use TitleFactory;
 
 class AddFooterLinksBanner implements BeforePageDisplayHook {
