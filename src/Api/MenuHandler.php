@@ -8,9 +8,9 @@ use MediaWiki\Extension\MenuEditor\Parser\WikitextMenuParser;
 use MediaWiki\Rest\Handler;
 use MediaWiki\Rest\HttpException;
 use MediaWiki\Revision\RevisionRecord;
+use MediaWiki\Title\Title;
 use MWStake\MediaWiki\Component\Wikitext\ParserFactory;
 use MWStake\MediaWiki\Lib\Nodes\IParser;
-use Title;
 use TitleFactory;
 
 abstract class MenuHandler extends Handler {

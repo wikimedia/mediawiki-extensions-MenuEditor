@@ -5,8 +5,8 @@ namespace MediaWiki\Extension\MenuEditor\Hook;
 use MediaWiki;
 use MediaWiki\Extension\MenuEditor\MenuFactory;
 use MediaWiki\Hook\BeforeInitializeHook;
+use MediaWiki\Title\Title;
 use OutputPage;
-use Title;
 use User;
 use WebRequest;
 

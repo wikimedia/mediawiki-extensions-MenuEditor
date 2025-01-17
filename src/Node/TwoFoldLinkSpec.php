@@ -3,6 +3,7 @@
 namespace MediaWiki\Extension\MenuEditor\Node;
 
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Title\Title;
 
 class TwoFoldLinkSpec extends MenuNode {
 	/** @var \TitleFactory */
@@ -95,7 +96,7 @@ class TwoFoldLinkSpec extends MenuNode {
 	 */
 	protected function isValidPageName( $target ) {
 		$title = $this->titleFactory->newFromText( $target );
-		return $title instanceof \Title;
+		return $title instanceof Title;
 	}
 
 	/**
