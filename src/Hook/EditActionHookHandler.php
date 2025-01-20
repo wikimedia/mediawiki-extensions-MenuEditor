@@ -12,9 +12,9 @@ use MediaWiki\Hook\SkinTemplateNavigation__UniversalHook;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Title\Title;
+use MediaWiki\User\User;
 use OutputPage;
 use SkinTemplate;
-use User;
 use WebRequest;
 
 class EditActionHookHandler implements
