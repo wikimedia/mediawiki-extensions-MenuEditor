@@ -4,6 +4,7 @@ namespace MediaWiki\Extension\MenuEditor\Tests\Node;
 
 use MediaWiki\Extension\MenuEditor\Node\TwoFoldLinkSpec;
 use MediaWiki\Title\Title;
+use MediaWiki\Title\TitleFactory;
 
 class TwoFoldLinkSpecTest extends MenuNodeTestBase {
 
@@ -28,7 +29,7 @@ class TwoFoldLinkSpecTest extends MenuNodeTestBase {
 	}
 
 	protected function getTitleFactoryMock() {
-		$titleFactoryMock = $this->createMock( \TitleFactory::class );
+		$titleFactoryMock = $this->createMock( TitleFactory::class );
 		$titleFactoryMock->method( 'newFromText' )->willReturnCallback( function ( $name ) {
 			if ( strpos( $name, '@' ) ) {
 				return null;
