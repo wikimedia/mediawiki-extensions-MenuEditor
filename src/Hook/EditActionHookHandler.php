@@ -11,11 +11,11 @@ use MediaWiki\Hook\MediaWikiPerformActionHook;
 use MediaWiki\Hook\SkinTemplateNavigation__UniversalHook;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Permissions\PermissionManager;
+use MediaWiki\Request\WebRequest;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
 use OutputPage;
 use SkinTemplate;
-use WebRequest;
 
 class EditActionHookHandler implements
 	MediaWikiPerformActionHook,
