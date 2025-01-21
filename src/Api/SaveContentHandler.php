@@ -2,8 +2,8 @@
 
 namespace MediaWiki\Extension\MenuEditor\Api;
 
+use MediaWiki\Context\RequestContext;
 use MediaWiki\Rest\HttpException;
-use RequestContext;
 use Wikimedia\ParamValidator\ParamValidator;
 
 class SaveContentHandler extends MenuHandler {
