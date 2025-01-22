@@ -23,6 +23,8 @@ ext.menueditor.ui.data.node.TwoFoldLinkSpecNode.prototype.getFormFields = functi
 			name: 'target',
 			type: 'title',
 			required: true,
+			// eslint-disable-next-line camelcase
+			widget_$overlay: dialog.$overlay,
 			label: mw.message( 'menueditor-ui-form-field-target' ).text(),
 			help: new OO.ui.HtmlSnippet( mw.message( 'menueditor-ui-menu-two-fold-link-spec-help' ).text() )
 		},
