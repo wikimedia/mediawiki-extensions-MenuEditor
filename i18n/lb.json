@@ -25,5 +25,12 @@
 	"menueditor-ui-edit-label": "Änneren",
 	"menueditor-ui-menu-wiki-link-label-edit": "Wikilink änneren",
 	"menueditor-ui-menu-two-fold-link-spec-label-edit": "Link änneren",
-	"menueditor-toolbar-save": "Späicheren"
+	"menueditor-toolbar-save": "Späicheren",
+	"menueditor-ui-menu-keyword-label-edit": "Schlësselwuert änneren",
+	"menueditor-ui-dialog-title": "Element änneren",
+	"menueditor-ui-mediawiki-sidebar-keyword-label-edit": "Schlësselwuert änneren",
+	"menueditor-ui-mediawiki-sidebar-keyword-label": "Schlësselwuert",
+	"menueditor-toolbar-cancel": "Ännerung ofbriechen",
+	"menueditor-toolbar-add-label": "Element derbäisetzen",
+	"menueditor-ui-add-sub-element-label": "Ënnerelement derbäisetzen"
 }
