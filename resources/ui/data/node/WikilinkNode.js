@@ -24,6 +24,8 @@ ext.menueditor.ui.data.node.WikilinkNode.prototype.getFormFields = function ( di
 		{
 			name: 'target',
 			type: 'title',
+			// eslint-disable-next-line camelcase
+			widget_$overlay: dialog.$overlay,
 			required: true,
 			label: mw.message( 'menueditor-ui-form-field-target' ).text(),
 			help: mw.message( 'menueditor-ui-menu-wiki-link-help' ).text()
