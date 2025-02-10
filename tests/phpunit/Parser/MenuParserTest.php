@@ -2,6 +2,7 @@
 
 namespace MWStake\MediaWiki\Component\Wikitext\Tests\Parser;
 
+use MediaWiki\Content\WikitextContent;
 use MediaWiki\Extension\MenuEditor\Node\Keyword;
 use MediaWiki\Extension\MenuEditor\Node\RawText;
 use MediaWiki\Extension\MenuEditor\Node\TwoFoldLinkSpec;
@@ -71,7 +72,7 @@ class MenuParserTest extends TestCase {
 	 * @throws \MWException
 	 */
 	private function getRevision( $text ) {
-		$content = new \WikitextContent( $text );
+		$content = new WikitextContent( $text );
 		$title = Title::newMainPage();
 		$revisionRecord = new MutableRevisionRecord( $title );
 		$revisionRecord->setSlot(
