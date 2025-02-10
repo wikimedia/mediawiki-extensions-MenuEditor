@@ -2,7 +2,7 @@
 
 namespace MediaWiki\Extension\MenuEditor\HookHandler;
 
-use MediaWiki\Hook\BeforePageDisplayHook;
+use MediaWiki\Output\Hook\BeforePageDisplayHook;
 use MediaWiki\Title\Title;
 use MediaWiki\Title\TitleFactory;
 
