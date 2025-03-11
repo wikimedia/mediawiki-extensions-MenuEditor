@@ -35,5 +35,6 @@
 	"menueditor-toolbar-add-label": "Element hinzufügen",
 	"menueditor-ui-edit-label": "Bearbeiten",
 	"menueditor-ui-add-sub-element-label": "Unterpunkt hinzufügen",
+	"menueditor-footerlinks-banner-text": "Einige Links können von Erweiterungen automatisch hinzugefügt werden. Bitte überprüfe die Konfiguration der Erweiterung, um mehr zu erfahren.",
 	"menueditor-toolbar-save": "Speichern"
 }
