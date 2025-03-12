@@ -2,7 +2,6 @@ ext.menueditor.ui.data.node.TwoFoldLinkSpecNode = function ( cfg ) {
 	ext.menueditor.ui.data.node.TwoFoldLinkSpecNode.parent.call( this, cfg );
 };
 
-// eslint-disable-next-line max-len
 OO.inheritClass( ext.menueditor.ui.data.node.TwoFoldLinkSpecNode, ext.menueditor.ui.data.node.TreeNode );
 
 ext.menueditor.ui.data.node.TwoFoldLinkSpecNode.static.canHaveChildren = false;
@@ -16,7 +15,6 @@ ext.menueditor.ui.data.node.TwoFoldLinkSpecNode.prototype.getIcon = function ( d
 	return 'link';
 };
 
-// eslint-disable-next-line no-unused-vars
 ext.menueditor.ui.data.node.TwoFoldLinkSpecNode.prototype.getFormFields = function ( dialog ) {
 	return [
 		{
