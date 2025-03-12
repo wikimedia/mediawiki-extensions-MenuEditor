@@ -18,7 +18,6 @@ ext.menueditor.ui.data.node.WikilinkNode.prototype.getIcon = function ( data ) {
 	return 'wikiText';
 };
 
-// eslint-disable-next-line no-unused-vars
 ext.menueditor.ui.data.node.WikilinkNode.prototype.getFormFields = function ( dialog ) {
 	return [
 		{

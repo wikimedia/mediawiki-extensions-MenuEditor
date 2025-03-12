@@ -6,7 +6,7 @@ OO.inheritClass( ext.menueditor.ui.tools.SaveTool, OO.ui.Tool );
 ext.menueditor.ui.tools.SaveTool.static.name = 'save';
 ext.menueditor.ui.tools.SaveTool.static.icon = '';
 ext.menueditor.ui.tools.SaveTool.static.title = mw.message( 'menueditor-toolbar-save' );
-// eslint-disable-next-line es-x/no-regexp-prototype-flags
+
 ext.menueditor.ui.tools.SaveTool.static.flags = [ 'primary', 'progressive' ];
 ext.menueditor.ui.tools.SaveTool.static.displayBothIconAndLabel = true;
 ext.menueditor.ui.tools.SaveTool.prototype.onSelect = function () {
