@@ -36,5 +36,6 @@
 	"menueditor-ui-menu-raw-text-label": "Text oder Nachrichtenschlüssel",
 	"menueditor-ui-menu-raw-text-label-edit": "Text oder Nachrichtenschlüssel bearbeiten",
 	"menueditor-ui-form-field-text": "Text oder ein Nachrichtenschlüssel",
-	"menueditor-toolbar-save": "Speichern"
+	"menueditor-toolbar-save": "Speichern",
+	"menueditor-footerlinks-banner-text": "Einige Links können von Erweiterungen automatisch hinzugefügt werden. Bitte überprüfe die Konfiguration der Erweiterung, um mehr zu erfahren."
 }
