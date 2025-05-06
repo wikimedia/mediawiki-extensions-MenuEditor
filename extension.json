@@ -102,6 +102,9 @@
 			],
 			"styles": [
 				"styles/toolbar.css"
+			],
+			"messages": [
+				"menueditor-ui-cancel-confirmation"
 			]
 		},
 		"ext.menuEditor.boostrap": {
