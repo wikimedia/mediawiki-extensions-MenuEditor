@@ -26,7 +26,12 @@
 					window.location = mw.util.getUrl( mw.config.get( 'wgPageName' ) );
 				},
 				cancel: function () {
-					window.location = mw.util.getUrl( mw.config.get( 'wgPageName' ) );
+					OO.ui.confirm( mw.message( 'menueditor-ui-cancel-confirmation' ).text() )
+						.done( ( confirmed ) => {
+							if ( confirmed ) {
+								window.location = mw.util.getUrl( mw.config.get( 'wgPageName' ) );
+							}
+						} );
 				}
 			} );
 			$c.html( panel.$element );
