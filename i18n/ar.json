@@ -38,5 +38,6 @@
 	"menueditor-ui-edit-label": "تعديل",
 	"menueditor-ui-add-sub-element-label": "أضف عنصرًا فرعيًا",
 	"menueditor-footerlinks-banner-text": "قد تتم إضافة بعض الروابط تلقائيًا بواسطة الامتدادات. يرجى التحقق من تكوين الامتداد لمعرفة المزيد.",
-	"menueditor-toolbar-save": "حفظ"
+	"menueditor-toolbar-save": "حفظ",
+	"menueditor-ui-cancel-confirmation": "هل أنت متأكد من إلغاء التعديل؟ سيتم فقدان جميع التغييرات غير المحفوظة."
 }
