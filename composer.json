@@ -8,7 +8,7 @@
 	"license": "GPL-3.0-only",
 	"require": {
 		"composer/installers": "~1.0|~2",
-		"mwstake/mediawiki-component-wikitext": "~7"
+		"mwstake/mediawiki-component-wikitext": "~6"
 	},
 	"require-dev": {
 		"mediawiki/mediawiki-codesniffer": "45.0.0",
