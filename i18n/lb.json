@@ -32,5 +32,6 @@
 	"menueditor-ui-mediawiki-sidebar-keyword-label": "Schlësselwuert",
 	"menueditor-toolbar-cancel": "Ännerung ofbriechen",
 	"menueditor-toolbar-add-label": "Element derbäisetzen",
-	"menueditor-ui-add-sub-element-label": "Ënnerelement derbäisetzen"
+	"menueditor-ui-add-sub-element-label": "Ënnerelement derbäisetzen",
+	"menueditor-ui-cancel-confirmation": "Sidd Dir sécher, datt Dir d'Ännerung annuléiere wëllt? All net gespäichert Ännerunge gi verluer."
 }
