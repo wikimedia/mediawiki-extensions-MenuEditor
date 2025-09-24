@@ -38,7 +38,7 @@ ext.menueditor.ui.widget.MenuToolbar.prototype.callbackFromString = function ( c
 ext.menueditor.ui.widget.MenuToolbar.prototype.getTools = function ( allTools ) {
 	const tools = [];
 	for ( const tool in allTools ) {
-		// eslint-disable-next-line es-x/no-array-prototype-includes
+
 		if ( this.toolbarItems.includes( tool ) ) {
 			tools[ tool ] = allTools[ tool ];
 		}
@@ -49,7 +49,7 @@ ext.menueditor.ui.widget.MenuToolbar.prototype.getTools = function ( allTools ) 
 ext.menueditor.ui.widget.MenuToolbar.prototype.getToolsModules = function ( allModules ) {
 	const modules = [];
 	for ( const module in allModules ) {
-		// eslint-disable-next-line es-x/no-array-prototype-includes
+
 		if ( this.toolbarItems.includes( module ) && !modules.includes( allModules[ module ] ) ) {
 			modules.push( allModules[ module ] );
 		}

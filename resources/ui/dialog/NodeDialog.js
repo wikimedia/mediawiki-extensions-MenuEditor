@@ -99,7 +99,7 @@ ext.menueditor.ui.dialog.NodeDialog.prototype.getAllowedNodeOptions = function (
 	const all = Object.keys( ext.menueditor.registry.node.registry ),
 		allowedConfig = this.allowedNodes;
 	this.allowedValid = this.allowedNodes.length === 0 ?
-		[] : all.filter( ( x ) => allowedConfig.indexOf( x ) >= 0 );
+		[] : all.filter( ( x ) => allowedConfig.includes( x ) );
 
 	this.initializeItems();
 	return this.allowedValid.map( ( x ) => {

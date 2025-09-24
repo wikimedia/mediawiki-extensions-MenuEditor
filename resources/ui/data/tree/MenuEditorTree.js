@@ -84,7 +84,7 @@ ext.menueditor.ui.data.tree.Tree.prototype.onDragStart = function ( item, $targe
 		const lvl = $( el ).data( 'level' ),
 			allowed = this.getPossibleNodesForLevel( lvl );
 		if (
-			( allowed.length > 0 && allowed.indexOf( item.getNodeData().type ) === -1 ) ||
+			( allowed.length > 0 && !allowed.includes( item.getNodeData().type ) ) ||
 			( this.getMaxLevels() && lvl >= this.getMaxLevels() ) ||
 			( !this.isLeaf( item.getName() ) && !this.allowedNestedDrag( item ) )
 		) {
