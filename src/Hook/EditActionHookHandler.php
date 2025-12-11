@@ -123,7 +123,7 @@ class EditActionHookHandler implements
 	 * @param array &$links
 	 */
 	public function onSkinTemplateNavigation__Universal( $sktemplate, &$links ): void {
-		if ( !$this->title ) {
+		if ( $this->shouldSkipProcessing( $sktemplate ) ) {
 			return;
 		}
 
@@ -147,4 +147,25 @@ class EditActionHookHandler implements
 			];
 		}
 	}
+
+	/**
+	 * @param SkinTemplate $sktemplate
+	 * @return bool
+	 */
+	protected function shouldSkipProcessing( SkinTemplate $sktemplate ) {
+		if ( !$this->title ) {
+			return true;
+		}
+
+		$allowedModels = [
+			CONTENT_MODEL_WIKITEXT,
+			CONTENT_MODEL_JSON,
+		];
+
+		return !in_array(
+			$this->title->getContentModel(),
+			$allowedModels
+		);
+	}
+
 }
