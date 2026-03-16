@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"YeBoy371",
 			"Ykhwong"
 		]
 	},
@@ -15,6 +16,8 @@
 	"menueditor-ui-menu-keyword-label-edit": "키워드 편집",
 	"menueditor-ui-form-field-keyword": "키워드",
 	"menueditor-ui-form-field-text": "텍스트 또는 메시지 키",
+	"menueditor-ui-form-field-target": "링크 대상",
+	"menueditor-ui-form-field-label": "링크 레이블",
 	"menueditor-ui-dialog-action-done": "완료",
 	"menueditor-ui-dialog-action-cancel": "취소",
 	"menueditor-ui-submit": "저장",
@@ -25,5 +28,6 @@
 	"menueditor-ui-mediawiki-sidebar-keyword-label-edit": "키워드 편집",
 	"menueditor-ui-mediawiki-sidebar-keyword-label": "키워드",
 	"menueditor-toolbar-cancel": "편집 취소",
+	"menueditor-ui-edit-label": "편집",
 	"menueditor-toolbar-save": "저장"
 }
