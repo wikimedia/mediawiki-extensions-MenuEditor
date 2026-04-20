@@ -114,6 +114,9 @@
 			],
 			"messages": [
 				"menueditor-ui-cancel-confirmation"
+			],
+			"dependencies": [
+				"mediawiki.util"
 			]
 		},
 		"ext.menuEditor.boostrap": {

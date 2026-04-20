@@ -23,8 +23,21 @@ class MenuFactory {
 		$this->objectFactory = $objectFactory;
 	}
 
+	/**
+	 * @return void
+	 */
 	public function initialize() {
 		$this->assertLoaded();
+	}
+
+	/**
+	 * @param string $key
+	 * @param IMenu $menu
+	 * @return void
+	 */
+	public function register( string $key, IMenu $menu ) {
+		$this->assertLoaded();
+		$this->menus[$key] = $menu;
 	}
 
 	/**
