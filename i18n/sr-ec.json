@@ -8,5 +8,6 @@
 	"menueditor-ui-edit-label": "Уреди",
 	"menueditor-toolbar-save": "Сачувај",
 	"menueditor-ui-cancel-confirmation": "Сигурно желите да откажете измену? Све несачуване измене ће бити изгубљене.",
+	"menueditor-ui-notices": "Обавештење",
 	"menueditor-ui-oldrevision-notice": "Уређујете стару измену ове странице. Ако је сачувате, све новије измене биће изгубљене."
 }
