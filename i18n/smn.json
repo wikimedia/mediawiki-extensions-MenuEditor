@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Seipinne",
 			"Yupik"
 		]
 	},
@@ -8,5 +9,6 @@
 	"menueditor-toolbar-submit": "Vuorkkii nubástusâid",
 	"menueditor-ui-menu-two-fold-link-spec-label": "Liŋkkâ",
 	"menueditor-toolbar-save": "Vuorkkii",
-	"menueditor-ui-menu-two-fold-link-spec-label-edit": "Mute liiŋkâ"
+	"menueditor-ui-menu-two-fold-link-spec-label-edit": "Mute liiŋkâ",
+	"menueditor-ui-dialog-action-done": "Vaalmâš"
 }
