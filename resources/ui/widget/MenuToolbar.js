@@ -81,7 +81,7 @@ ext.menueditor.ui.widget.MenuToolbar.prototype.buildGroups = function () {
 			continue;
 		}
 		const index = this.tools[ tool ].group.priority;
-		// eslint-disable-next-line mediawiki/class-doc
+
 		groups.splice( index, 0, {
 			name: groupName,
 			type: 'bar',
