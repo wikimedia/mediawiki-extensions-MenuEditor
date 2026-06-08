@@ -3,11 +3,24 @@
 namespace MediaWiki\Extension\MenuEditor\Api;
 
 use MediaWiki\Context\RequestContext;
-use MediaWiki\MediaWikiServices;
+use MediaWiki\Extension\MenuEditor\MenuFactory;
+use MediaWiki\Extension\MenuEditor\Parser\WikitextMenuParser;
 use MediaWiki\Rest\HttpException;
+use MediaWiki\Revision\RevisionLookup;
+use MediaWiki\Title\TitleFactory;
+use MWStake\MediaWiki\Component\Wikitext\ParserFactory;
 use Wikimedia\ParamValidator\ParamValidator;
 
-class SaveContentHandler extends MenuHandler {
+class AppendNodeHandler extends MenuHandler {
+
+	public function __construct(
+		TitleFactory $titleFactory,
+		MenuFactory $menuFactory,
+		ParserFactory $parserFactory,
+		private readonly RevisionLookup $revisionLookup
+	) {
+		parent::__construct( $titleFactory, $menuFactory, $parserFactory );
+	}
 
 	/**
 	 * @return \MediaWiki\Rest\Response|mixed
@@ -18,10 +31,22 @@ class SaveContentHandler extends MenuHandler {
 		$page = $this->makeTitle( $params['pagename'] );
 		$body = $this->getValidatedBody();
 
-		$revision = MediaWikiServices::getInstance()->getRevisionLookup()->getRevisionByTitle( $page );
+		$revision = $this->revisionLookup->getRevisionByTitle( $page );
 		$parser = $this->getParserForRevision( $page, $revision );
+		if ( !( $parser instanceof WikitextMenuParser ) ) {
+			throw new HttpException( 'invalid-menu-type' );
+		}
 
-		$parser->addNodesFromData( $body['data'] );
+		$data = $body['data'] ?? [];
+		$insertAfter = $data['after'] ?? null;
+		$nodes = $data['nodes'] ?? [];
+		foreach ( $nodes as $node ) {
+			$nodeObject = $parser->getNodeFromData( $node );
+			if ( !$nodeObject ) {
+				continue;
+			}
+			$parser->addNodeAfter( $nodeObject, $insertAfter );
+		}
 
 		$rev = $parser->saveRevision( RequestContext::getMain()->getUser() );
 		if ( !$rev ) {
