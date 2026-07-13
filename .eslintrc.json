@@ -1,10 +1,13 @@
 {
 	"root": true,
 	"extends": [
-		"wikimedia/client-es6",
+		"wikimedia/client",
 		"wikimedia/jquery",
 		"wikimedia/mediawiki"
 	],
+	"parserOptions": {
+		"sourceType": "commonjs"
+	},
 	"globals": {
 		"ext": "readonly",
 		"jQuery": "readonly",
@@ -12,6 +15,7 @@
 		"OOJSPlus": "readonly"
 	},
 	"rules": {
-		"max-len": "off"
+		"max-len": "off",
+		"mediawiki/no-unlabeled-buttonwidget": "off"
 	}
 }
