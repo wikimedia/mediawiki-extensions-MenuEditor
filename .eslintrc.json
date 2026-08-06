@@ -16,6 +16,7 @@
 	},
 	"rules": {
 		"max-len": "off",
-		"no-jquery/no-done-fail": "warn"
+		"no-jquery/no-done-fail": "warn",
+		"no-jquery/no-jquery-ui": "warn"
 	}
 }
