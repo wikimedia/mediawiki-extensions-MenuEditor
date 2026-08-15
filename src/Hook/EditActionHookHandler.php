@@ -21,27 +21,13 @@ class EditActionHookHandler implements
 	MediaWikiPerformActionHook,
 	SkinTemplateNavigation__UniversalHook
 {
-	/** @var Title|null */
-	private $title = null;
+	private ?Title $title = null;
 
-	/** @var MenuFactory */
-	private $menuFactory;
-
-	/** @var PermissionManager */
-	private $permissionManager;
-
-	/**
-	 * @param HookContainer $hookContainer
-	 * @param MenuFactory $menuFactory
-	 * @param PermissionManager $permissionManager
-	 */
 	public function __construct(
 		HookContainer $hookContainer,
-		MenuFactory $menuFactory,
-		PermissionManager $permissionManager
+		private readonly MenuFactory $menuFactory,
+		private readonly PermissionManager $permissionManager,
 	) {
-		$this->menuFactory = $menuFactory;
-		$this->permissionManager = $permissionManager;
 		$hookContainer->register( 'MediaWikiPerformAction', [ $this, 'onMediaWikiPerformAction' ] );
 		$hookContainer->register(
 			'SkinTemplateNavigation::Universal',

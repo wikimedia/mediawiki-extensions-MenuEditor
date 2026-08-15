@@ -3,17 +3,12 @@
 namespace MediaWiki\Extension\MenuEditor\Node;
 
 class Keyword extends MenuNode {
-	/** @var string */
-	private $keyword;
-
-	/**
-	 * @param int $level
-	 * @param string $keyword
-	 * @param string|null $originalWikitext
-	 */
-	public function __construct( int $level, $keyword, $originalWikitext = null ) {
+	public function __construct(
+		int $level,
+		private string $keyword,
+		?string $originalWikitext = null,
+	) {
 		parent::__construct( $level, $originalWikitext );
-		$this->keyword = $keyword;
 	}
 
 	/**

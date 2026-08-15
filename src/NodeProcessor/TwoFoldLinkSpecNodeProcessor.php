@@ -9,14 +9,9 @@ use MWStake\MediaWiki\Lib\Nodes\INode;
 use MWStake\MediaWiki\Lib\Nodes\INodeSource;
 
 class TwoFoldLinkSpecNodeProcessor extends MenuNodeProcessor {
-	/** @var TitleFactory */
-	private $titleFactory;
-
-	/**
-	 * @param TitleFactory $titleFactory
-	 */
-	public function __construct( TitleFactory $titleFactory ) {
-		$this->titleFactory = $titleFactory;
+	public function __construct(
+		private readonly TitleFactory $titleFactory,
+	) {
 	}
 
 	/**

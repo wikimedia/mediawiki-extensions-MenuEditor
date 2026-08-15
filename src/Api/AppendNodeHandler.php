@@ -17,7 +17,7 @@ class AppendNodeHandler extends MenuHandler {
 		TitleFactory $titleFactory,
 		MenuFactory $menuFactory,
 		ParserFactory $parserFactory,
-		private readonly RevisionLookup $revisionLookup
+		private readonly RevisionLookup $revisionLookup,
 	) {
 		parent::__construct( $titleFactory, $menuFactory, $parserFactory );
 	}

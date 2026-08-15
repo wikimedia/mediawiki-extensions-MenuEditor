@@ -9,14 +9,9 @@ use MediaWiki\Extension\MenuEditor\MenuFactory;
 
 class DiscoverySkin implements BlueSpiceDiscoveryTemplateDataProviderAfterInit {
 
-	/** @var MenuFactory */
-	private $menuFactory;
-
-	/**
-	 * @param MenuFactory $menuFactory
-	 */
-	public function __construct( MenuFactory $menuFactory ) {
-		$this->menuFactory = $menuFactory;
+	public function __construct(
+		private readonly MenuFactory $menuFactory,
+	) {
 	}
 
 	/**

@@ -7,14 +7,9 @@ use MWStake\MediaWiki\Component\Wikitext\ParserFactory;
 
 abstract class GenericMenu implements ParsableMenu {
 
-	/** @var ParserFactory */
-	protected $parserFactory;
-
-	/**
-	 * @param ParserFactory $parserFactory
-	 */
-	public function __construct( ParserFactory $parserFactory ) {
-		$this->parserFactory = $parserFactory;
+	public function __construct(
+		protected readonly ParserFactory $parserFactory,
+	) {
 	}
 
 	/**

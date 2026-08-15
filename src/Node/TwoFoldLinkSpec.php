@@ -7,25 +7,14 @@ use MediaWiki\Title\Title;
 use MediaWiki\Title\TitleFactory;
 
 class TwoFoldLinkSpec extends MenuNode {
-	/** @var TitleFactory */
-	private $titleFactory;
-	/** @var string */
-	private $label;
-	/** @var string */
-	private $target;
-
-	/**
-	 * @param string $target
-	 * @param string $label
-	 * @param string $originalWikitext
-	 * @param TitleFactory $titleFactory
-	 * @param int|null $level
-	 */
-	public function __construct( $target, $label, $originalWikitext, TitleFactory $titleFactory, ?int $level = 2 ) {
+	public function __construct(
+		private string $target,
+		private string $label,
+		string $originalWikitext,
+		private readonly TitleFactory $titleFactory,
+		?int $level = 2,
+	) {
 		parent::__construct( $level, $originalWikitext );
-		$this->titleFactory = $titleFactory;
-		$this->target = $target;
-		$this->label = $label;
 	}
 
 	/**

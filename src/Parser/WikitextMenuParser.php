@@ -15,16 +15,13 @@ use MWStake\MediaWiki\Lib\Nodes\IParser;
 
 class WikitextMenuParser extends MutableWikitextParser implements IParser, IMenuParser {
 	/** @var INodeProcessor[] */
-	private $nodeProcessors;
+	private readonly array $nodeProcessors;
 	/** @var INode[] */
-	private $nodes = [];
+	private array $nodes = [];
 
-	/**
-	 * @param RevisionRecord $revision
-	 * @param array $nodeProcessors
-	 */
 	public function __construct(
-		RevisionRecord $revision, $nodeProcessors
+		RevisionRecord $revision,
+		array $nodeProcessors,
 	) {
 		parent::__construct( $revision );
 		$this->nodeProcessors = array_filter(

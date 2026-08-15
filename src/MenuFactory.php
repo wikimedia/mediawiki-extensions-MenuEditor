@@ -7,20 +7,13 @@ namespace MediaWiki\Extension\MenuEditor;
 use Wikimedia\ObjectFactory\ObjectFactory;
 
 class MenuFactory {
-	/** @var MenuAttributeRegistry */
-	private $registry;
-	/** @var ObjectFactory */
-	private $objectFactory;
 	/** @var null */
 	private $menus = null;
 
-	/**
-	 * @param MenuAttributeRegistry $registry
-	 * @param ObjectFactory $objectFactory
-	 */
-	public function __construct( MenuAttributeRegistry $registry, ObjectFactory $objectFactory ) {
-		$this->registry = $registry;
-		$this->objectFactory = $objectFactory;
+	public function __construct(
+		private readonly MenuAttributeRegistry $registry,
+		private readonly ObjectFactory $objectFactory,
+	) {
 	}
 
 	/**

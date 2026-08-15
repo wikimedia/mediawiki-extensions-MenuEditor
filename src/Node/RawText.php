@@ -3,17 +3,12 @@
 namespace MediaWiki\Extension\MenuEditor\Node;
 
 class RawText extends MenuNode {
-	/** @var string */
-	private $text;
-
-	/**
-	 * @param int $level
-	 * @param string $text
-	 * @param string $originalWikitext
-	 */
-	public function __construct( int $level, $text, $originalWikitext = '' ) {
+	public function __construct(
+		int $level,
+		private string $text,
+		string $originalWikitext = '',
+	) {
 		parent::__construct( $level, $originalWikitext );
-		$this->text = $text;
 	}
 
 	/**

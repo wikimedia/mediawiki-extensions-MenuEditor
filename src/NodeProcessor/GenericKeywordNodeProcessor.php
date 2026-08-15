@@ -9,23 +9,10 @@ use MWStake\MediaWiki\Lib\Nodes\INodeSource;
 
 class GenericKeywordNodeProcessor extends KeywordNodeProcessor {
 
-	/**
-	 * @var string
-	 */
-	private $type = '';
-
-	/**
-	 * @var array
-	 */
-	private $keywords = [];
-
-	/**
-	 * @param string $type
-	 * @param array $keywords
-	 */
-	public function __construct( $type, $keywords ) {
-		$this->type = $type;
-		$this->keywords = $keywords;
+	public function __construct(
+		private readonly string $type,
+		private readonly array $keywords,
+	) {
 	}
 
 	/**

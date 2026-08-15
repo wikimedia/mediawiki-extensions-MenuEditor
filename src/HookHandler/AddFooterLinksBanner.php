@@ -8,12 +8,8 @@ use MediaWiki\Title\TitleFactory;
 
 class AddFooterLinksBanner implements BeforePageDisplayHook {
 
-	/** @var Title */
-	private $footerLinksTitle;
+	private readonly Title $footerLinksTitle;
 
-	/**
-	 * @param TitleFactory $titleFactory
-	 */
 	public function __construct( TitleFactory $titleFactory ) {
 		$this->footerLinksTitle = $titleFactory->newFromText( 'FooterLinks', NS_MEDIAWIKI );
 	}

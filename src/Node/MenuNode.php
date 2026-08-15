@@ -5,15 +5,14 @@ namespace MediaWiki\Extension\MenuEditor\Node;
 use MWStake\MediaWiki\Lib\Nodes\MutableNode;
 
 abstract class MenuNode extends MutableNode {
-	/** @var int */
-	private $level = 0;
-
 	/**
 	 * @param int $level
 	 * @param string|null $wikitext
 	 */
-	public function __construct( int $level, $wikitext = '' ) {
-		$this->level = $level;
+	public function __construct(
+		private int $level,
+		?string $wikitext = '',
+	) {
 		parent::__construct( $wikitext );
 	}
 

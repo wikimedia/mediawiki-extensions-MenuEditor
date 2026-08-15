@@ -15,21 +15,13 @@ use MWStake\MediaWiki\Lib\Nodes\INode;
 use Wikimedia\ParamValidator\ParamValidator;
 
 class ParseHandler extends MenuHandler {
-	/** @var RevisionStore */
-	private $revisionStore;
-
-	/**
-	 * @param TitleFactory $titleFactory
-	 * @param MenuFactory $menuFactory
-	 * @param ParserFactory $parserFactory
-	 * @param RevisionStore $revisionStore
-	 */
 	public function __construct(
-		TitleFactory $titleFactory, MenuFactory $menuFactory,
-		ParserFactory $parserFactory, RevisionStore $revisionStore
+		TitleFactory $titleFactory,
+		MenuFactory $menuFactory,
+		ParserFactory $parserFactory,
+		private readonly RevisionStore $revisionStore,
 	) {
 		parent::__construct( $titleFactory, $menuFactory, $parserFactory );
-		$this->revisionStore = $revisionStore;
 	}
 
 	/**

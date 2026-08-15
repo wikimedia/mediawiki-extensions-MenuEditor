@@ -14,24 +14,11 @@ use MWStake\MediaWiki\Component\Wikitext\ParserFactory;
 use MWStake\MediaWiki\Lib\Nodes\IParser;
 
 abstract class MenuHandler extends Handler {
-	/** @var TitleFactory */
-	private $titleFactory;
-	/** @var MenuFactory */
-	private $menuFactory;
-	/** @var ParserFactory */
-	private $parserFactory;
-
-	/**
-	 * @param TitleFactory $titleFactory
-	 * @param MenuFactory $menuFactory
-	 * @param ParserFactory $parserFactory
-	 */
 	public function __construct(
-		TitleFactory $titleFactory, MenuFactory $menuFactory, ParserFactory $parserFactory
+		private readonly TitleFactory $titleFactory,
+		private readonly MenuFactory $menuFactory,
+		private readonly ParserFactory $parserFactory,
 	) {
-		$this->titleFactory = $titleFactory;
-		$this->menuFactory = $menuFactory;
-		$this->parserFactory = $parserFactory;
 	}
 
 	/**
