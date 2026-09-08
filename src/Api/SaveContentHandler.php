@@ -18,7 +18,8 @@ class SaveContentHandler extends MenuHandler {
 		$body = $this->getValidatedBody();
 
 		$parser = $this->getParserForRevision( $page );
-		$parser->addNodesFromData( $body['data'] );
+
+		$parser->addNodesFromData( $body['data'], true );
 
 		$rev = $parser->saveRevision( RequestContext::getMain()->getUser() );
 		if ( !$rev ) {

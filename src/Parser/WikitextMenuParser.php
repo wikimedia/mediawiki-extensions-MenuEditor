@@ -55,8 +55,8 @@ class WikitextMenuParser extends MutableWikitextParser implements IParser, IMenu
 	 */
 	public function addNodesFromData( array $nodes, bool $replace = false ) {
 		if ( $replace ) {
-			// Clear wikitext
 			$this->setRawData( '' );
+			$this->setRevisionContent();
 		}
 		foreach ( $nodes as $nodeData ) {
 			if ( !isset( $nodeData['type'] ) ) {
