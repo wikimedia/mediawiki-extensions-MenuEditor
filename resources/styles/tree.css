@@ -130,7 +130,6 @@ li > ul.tree-node-list li:last-child::before {
 }
 
 #menuEditor-container .oojsplus-data-tree-expander {
-	top: 0;
 	margin-left: 5px;
 }
 
