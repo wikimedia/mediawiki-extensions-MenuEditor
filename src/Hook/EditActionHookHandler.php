@@ -2,19 +2,14 @@
 
 namespace MediaWiki\Extension\MenuEditor\Hook;
 
-use Article;
-use MediaWiki;
 use MediaWiki\Extension\MenuEditor\EditPermissionProvider;
 use MediaWiki\Extension\MenuEditor\MenuFactory;
 use MediaWiki\Hook\MediaWikiPerformActionHook;
 use MediaWiki\Hook\SkinTemplateNavigation__UniversalHook;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\Html\Html;
-use MediaWiki\Output\OutputPage;
 use MediaWiki\Permissions\PermissionManager;
-use MediaWiki\Request\WebRequest;
 use MediaWiki\Title\Title;
-use MediaWiki\User\User;
 use SkinTemplate;
 
 class EditActionHookHandler implements
@@ -50,13 +45,7 @@ class EditActionHookHandler implements
 	}
 
 	/**
-	 * @param OutputPage $output
-	 * @param Article $article
-	 * @param Title $title
-	 * @param User $user
-	 * @param WebRequest $request
-	 * @param MediaWiki $mediaWiki
-	 * @return bool|void
+	 * @inheritDoc
 	 */
 	public function onMediaWikiPerformAction( $output, $article, $title, $user, $request, $mediaWiki ) {
 		$action = $request->getText( 'action', $request->getText( 'veaction', 'view' ) );
