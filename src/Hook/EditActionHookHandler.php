@@ -13,9 +13,9 @@ use MediaWiki\Output\OutputPage;
 use MediaWiki\Page\Article;
 use MediaWiki\Permissions\PermissionManager;
 use MediaWiki\Request\WebRequest;
+use MediaWiki\Skin\SkinTemplate;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
-use SkinTemplate;
 
 class EditActionHookHandler implements
 	MediaWikiPerformActionHook,
