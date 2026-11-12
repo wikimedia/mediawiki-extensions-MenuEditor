@@ -22,9 +22,13 @@ ext.menueditor.ui.data.node.TwoFoldLinkSpecNode.prototype.getFormFields = functi
 			type: 'title',
 			required: true,
 			// eslint-disable-next-line camelcase
-			widget_$overlay: dialog.$overlay,
+			widget_validate: function ( value ) {
+				return value !== '';
+			},
 			label: mw.message( 'menueditor-ui-form-field-target' ).text(),
-			help: new OO.ui.HtmlSnippet( mw.message( 'menueditor-ui-menu-two-fold-link-spec-help' ).text() )
+			help: new OO.ui.HtmlSnippet( mw.message( 'menueditor-ui-menu-two-fold-link-spec-help' ).text() ),
+			widget_$overlay: dialog.$overlay, // eslint-disable-line camelcase
+			widget_localInstanceOnly: true // eslint-disable-line camelcase
 		},
 		{
 			name: 'label',
